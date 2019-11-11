@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Contact", "Team","News"],[]];
+    var menuArr = [["Home", "Course", "Contact", "Team","News"],["index.js","course.js","contact.js","team.js","news.js"]];
 
 
 
@@ -36,12 +36,26 @@ for (i = 0; i < menuArr[0].length; i++) {
    		</li>
    		`)
 
+	   	if(i>0){
+			var script = document.createElement('script');
+			script.onload = function () {
+			};
+			script.src = "js/"+menuArr[1][i];
+			script.type = "text/javascript";
+			console.log(script)
+			document.head.appendChild(script);
+		}
+
    		$("#nav"+i).on("click",function(e){
-			console.log(e.target.id);
 			tempId=($(this).attr("id")).slice(3);
-			console.log(tempId);
+
    			$("main").empty();
-   			window['init'+menuArr[0][tempId]]();
+
+   			if (tempId==0){
+
+   			}else{
+   				window['init'+menuArr[0][tempId]]();
+   			}
 			
    		});
 }
