@@ -29,12 +29,21 @@
 
 //---------------------------------------End Site Builder---------------------------------------------------
 //-------------------------------------------Nav Builder---------------------------------------------------_
-    for (i = 0; i < menuArr[0].length; i++) {
-    	$("nav ul").append(`
-    		<li class="nav-item">
- 				<a class="nav-link" href="#">${menuArr[0][i]}</a>
-    		</li>
-    		`)
-    }
+for (i = 0; i < menuArr[0].length; i++) {
+   	$("nav ul").append(`
+   		<li class="nav-item" id="nav${i}">
+			<a class="nav-link" >${menuArr[0][i]}</a>
+   		</li>
+   		`)
+
+   		$("#nav"+i).on("click",function(e){
+			console.log(e.target.id);
+			tempId=$(this).attr("id")
+			console.log(tempId)
+   			$("main").empty();
+			
+   		});
+}
+
 
 //---------------------------------------End-Nav Builder---------------------------------------------------_
