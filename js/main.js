@@ -8,8 +8,8 @@
 	$("title").text("The New Codefactory");
 	$("body").append(`
 		<header>
-			<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-			  <a class="navbar-brand" href="#">J₂SR</a>
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+			  <a class="navbar-brand" href="index.html">J₂SR</a>
 
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
 
 //---------------------------------------End Site Builder---------------------------------------------------
 //-------------------------------------------Nav Builder---------------------------------------------------_
-for (i = 0; i < menuArr[0].length; i++) {
+for (i = 1; i < menuArr[0].length; i++) {
    	$("nav ul").append(`
    		<li class="nav-item" id="nav${i}">
 			<a class="nav-link" >${menuArr[0][i]}</a>
