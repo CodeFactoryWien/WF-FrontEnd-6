@@ -6,55 +6,76 @@ function initContact() {
 function renderContact() {
 	
 	document.querySelector("main").innerHTML = `
-			<address>
-				<strong>Logo</strong><br>
-				Kettenbrückengasse 23/2/12<br>
-				1150 Wien<br>
-				+43 699 12255185<br>
-				<a href="office@j2rs.at" style="color: blue">office@j2rs.at</a><br>
-				<a href="https://codefactory.wien/">https://codefactory.wien/</a><br>
-			</address>
-		
-			<div class="bd-example">
-			  <details>
-				<summary><strong>OPEN HOURS</strong></summary>
-				<table class="table" width="60%">
-					<tr>
-						<th scope="col">Monday</th>
-						<td scope="col">09:00 - 17:00</td>
-					</tr>
+		<div class="container p-5">
+			<table>
+				<tr>
+					<td><strong>LOGO</strong></td>
+				</tr>
+				
+				<tr>
+					<td><i class="fas fa-map-marker-alt"></i></td>
+					<td>1150 Wien, Kettenbrückengasse 23/2/12</td>
+				</tr>
 
-					<tr>
-						<th scope="col">Tuesday</th>
-						<td scope="col">09:00 - 17:00</td>
-					</tr>
-					
-					<tr>
-						<th scope="col">Wednesday</th>
-						<td scope="col">09:00 - 17:00</td>
-					</tr>
-					
-					<tr>
-						<th scope="col">Thursday</th>
-						<td scope="col">09:00 - 17:00</td>
-					</tr>
-					
-					<tr>
-						<th scope="col">Friday</th>
-						<td scope="col">09:00 - 15:30</td>
-					</tr>
-					
-					<tr>
-						<th scope="col">Saturday</th>
-						<td scope="col">closed</td>
-					</tr>
-					
-					<tr>
-						<th scope="col">Sunday</th>
-						<td scope="col">closed</td>
-					</tr>
-				</table>			
-			  </details>
+				<tr>
+					<td><i class="fas fa-phone"></i></td>
+					<td>+43 699 12255185</td>
+				</tr>
+
+				<tr>
+					<td><i class="fas fa-envelope"></i></td>
+					<td><a href="office@j2rs.at" style="color: blue">office@j2rs.at</a></td>
+				</tr>
+				
+				<tr>
+					<td><i class="fas fa-home"></i></td>
+					<td><a href="https://codefactory.wien/" style="color: blue">https://codefactory.wien/</a></td>
+				</tr>
+				</table>
+			
+				<div class="accordion" id="accordionExample">
+					<button class="btn collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+					  <i class="fas fa-clock"></i> <strong class=" ml-4">Open hours</strong><br>
+					</button>
+				</div>
+				
+				<div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionExample">
+					<table class="table ml-5" width="30%">
+						<tr>
+							<th scope="col">Monday</th>
+							<td scope="col">09:00 - 17:00</td>
+						</tr>
+						
+						<tr>
+							<th scope="col">Tuesday</th>
+							<td scope="col">09:00 - 17:00</td>
+						</tr>
+						
+						<tr>
+							<th scope="col">Wednesday</th>
+							<td scope="col">09:00 - 17:00</td>
+						</tr>
+						
+						<tr>
+							<th scope="col">Thursday</th>
+							<td scope="col">09:00 - 17:00</td>
+						</tr>
+						
+						<tr>
+							<th scope="col">Friday</th>
+							<td scope="col">09:00 - 15:30</td>
+						</tr>
+						
+						<tr>
+							<th scope="col">Saturday</th>
+							<td scope="col">closed</td>
+						</tr>
+						
+						<tr>
+							<th scope="col">Sunday</th>
+							<td scope="col">closed</td>
+						</tr>
+					</table>			
 			</div>
 
 			<center>
@@ -67,6 +88,9 @@ function renderContact() {
 				<a href="https://myaccount.google.com" class="fa fa-google opacity"></a>
 				<a href="https://at.linkedin.com/" class="fa fa-linkedin opacity"></a>
 				<a href="https://www.instagram.com/" class="fa fa-instagram opacity"></a>
-			</div>`
+			</div>
+		</div>
+			
+			`
 }
 
