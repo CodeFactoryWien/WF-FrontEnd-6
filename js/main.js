@@ -1,9 +1,15 @@
+//-------------------------------------------Daten bereitstellen--------------------------------------------
+    var menuArr = [["Home", "Course", "Contact"],[]];
+
+
+
+//-------------------------------------------Daten bereitstellen--------------------------------------------
 //-------------------------------------------Site Builder---------------------------------------------------
 	$("title").text("The New Codefactory");
 	$("body").append(`
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-			  <a class="navbar-brand" href="#">Navbar</a>
+			  <a class="navbar-brand" href="#">J₂SR</a>
 
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -11,9 +17,6 @@
 
 			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto">
-			      <li class="nav-item active">
-			        <a class="nav-link" href="#">Home</a>
-			      </li>
 			    </ul>
 			  </div>
 			</nav>
@@ -25,3 +28,13 @@
 	`);
 
 //---------------------------------------End Site Builder---------------------------------------------------
+//-------------------------------------------Nav Builder---------------------------------------------------_
+    for (i = 0; i < menuArr[0].length; i++) {
+    	$("nav ul").append(`
+    		<li class="nav-item">
+ 				<a class="nav-link" href="#">${menuArr[0][i]}</a>
+    		</li>
+    		`)
+    }
+
+//---------------------------------------End-Nav Builder---------------------------------------------------_
