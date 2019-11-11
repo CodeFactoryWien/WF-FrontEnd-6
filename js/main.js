@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Contact"],[]];
+    var menuArr = [["Home", "Course", "Contact", "Team","News"],[]];
 
 
 
@@ -21,7 +21,7 @@
 			  </div>
 			</nav>
 		</header>
-		<main>
+		<main class="container">
 			hier liegt der hauptinhalt der seite, der von der navbar aus gelöscht und neubefüllt wird indem für die jeweilige unterseite eine function aufgerufen wird, die im jeweiligen seitenname.js liegt. Dafür müssen wir noch eine Namenskonvention festlegen.
 		</main>
 		<footer>&copy; J₂SR</footer>
@@ -38,9 +38,10 @@ for (i = 0; i < menuArr[0].length; i++) {
 
    		$("#nav"+i).on("click",function(e){
 			console.log(e.target.id);
-			tempId=$(this).attr("id")
-			console.log(tempId)
+			tempId=($(this).attr("id")).slice(3);
+			console.log(tempId);
    			$("main").empty();
+   			window['init'+menuArr[0][tempId]]();
 			
    		});
 }
