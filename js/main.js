@@ -1,5 +1,15 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Contact", "Team","News"],["index.js","course.js","contact.js","team.js","news.js"]];
+    var menuArr = [["", "Course", "Contact", "Team","News"],["index.js","course.js","contact.js","team.js","news.js"]];
+    window.addEventListener('scroll', function (e) {
+        var nav = document.getElementById('myNav');
+        if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
+                nav.classList.add('nav-colored');
+                nav.classList.remove('nav-transparent');
+            } else {
+                nav.classList.add('nav-transparent');
+                nav.classList.remove('nav-colored');
+            }
+    });
 
 
 
@@ -8,7 +18,7 @@
 	$("title").text("The New Codefactory");
 	$("body").append(`
 		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-colored nav-transparent" id="myNav">
 			  <a class="navbar-brand" href="index.html">J₂SR</a>
 
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +39,7 @@
 
 //---------------------------------------End Site Builder---------------------------------------------------
 //-------------------------------------------Nav Builder---------------------------------------------------_
-for (i = 1; i < menuArr[0].length; i++) {
+for (i = 0; i < menuArr[0].length; i++) {
    	$("nav ul").append(`
    		<li class="nav-item" id="nav${i}">
 			<a class="nav-link" >${menuArr[0][i]}</a>
@@ -61,4 +71,4 @@ for (i = 1; i < menuArr[0].length; i++) {
 }
 
 
-//---------------------------------------End-Nav Builder---------------------------------------------------_
+//---------------------------------------End-Nav Builder---------------------------------------------------
