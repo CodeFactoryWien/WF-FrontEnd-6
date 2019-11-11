@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Contact", "Team","News"],[]];
+    var menuArr = [["Home", "Course", "Contact", "Team","News"],["index.js","course.js","contact.js","team.js","news.js"]];
 
 
 
@@ -8,8 +8,8 @@
 	$("title").text("The New Codefactory");
 	$("body").append(`
 		<header>
-			<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-			  <a class="navbar-brand" href="#">J₂SR</a>
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+			  <a class="navbar-brand" href="index.html">J₂SR</a>
 
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -29,19 +29,33 @@
 
 //---------------------------------------End Site Builder---------------------------------------------------
 //-------------------------------------------Nav Builder---------------------------------------------------_
-for (i = 0; i < menuArr[0].length; i++) {
+for (i = 1; i < menuArr[0].length; i++) {
    	$("nav ul").append(`
    		<li class="nav-item" id="nav${i}">
 			<a class="nav-link" >${menuArr[0][i]}</a>
    		</li>
    		`)
 
+	   	if(i>0){
+			var script = document.createElement('script');
+			script.onload = function () {
+			};
+			script.src = "js/"+menuArr[1][i];
+			script.type = "text/javascript";
+			console.log(script)
+			document.head.appendChild(script);
+		}
+
    		$("#nav"+i).on("click",function(e){
-			console.log(e.target.id);
 			tempId=($(this).attr("id")).slice(3);
-			console.log(tempId);
+
    			$("main").empty();
-   			window['init'+menuArr[0][tempId]]();
+
+   			if (tempId==0){
+
+   			}else{
+   				window['init'+menuArr[0][tempId]]();
+   			}
 			
    		});
 }

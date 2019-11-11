@@ -1,3 +1,9 @@
 header{
-	height: 25vh;
+	height: 45vh;
+	background: url('../img/dna-3d-molecule-blue-background.jpg') no-repeat;
+	background-position: bottom;
+}
+
+li a {
+	cursor: pointer;
 }
