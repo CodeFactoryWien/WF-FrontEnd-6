@@ -49,12 +49,13 @@ for (i = 0; i < menuArr[0].length; i++) {
    		$("#nav"+i).on("click",function(e){
 			tempId=($(this).attr("id")).slice(3);
 
-			//$("body").append(`<script src="js/${menuArr[1][tempId]}" type="text/javascript" charset="utf-8" async defer></script>`);
-
-
    			$("main").empty();
 
-   			window['init'+menuArr[0][tempId]]();
+   			if (tempId==0){
+
+   			}else{
+   				window['init'+menuArr[0][tempId]]();
+   			}
 			
    		});
 }
