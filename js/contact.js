@@ -5,89 +5,68 @@ function initContact() {
 
 function renderContact() {
 	
+	document.querySelector("main").innerHTML = `
+			<address>
+				<strong>Logo</strong><br>
+				Kettenbrückengasse 23/2/12<br>
+				1150 Wien<br>
+				+43 699 12255185<br>
+				<a href="office@j2rs.at" style="color: blue">office@j2rs.at</a><br>
+				<a href="https://codefactory.wien/">https://codefactory.wien/</a><br>
+			</address>
+		
+			<div class="bd-example">
+			  <details>
+				<summary><strong>OPEN HOURS</strong></summary>
+				<table class="table" width="60%">
+					<tr>
+						<th scope="col">Monday</th>
+						<td scope="col">09:00 - 17:00</td>
+					</tr>
+
+					<tr>
+						<th scope="col">Tuesday</th>
+						<td scope="col">09:00 - 17:00</td>
+					</tr>
+					
+					<tr>
+						<th scope="col">Wednesday</th>
+						<td scope="col">09:00 - 17:00</td>
+					</tr>
+					
+					<tr>
+						<th scope="col">Thursday</th>
+						<td scope="col">09:00 - 17:00</td>
+					</tr>
+					
+					<tr>
+						<th scope="col">Friday</th>
+						<td scope="col">09:00 - 15:30</td>
+					</tr>
+					
+					<tr>
+						<th scope="col">Saturday</th>
+						<td scope="col">closed</td>
+					</tr>
+					
+					<tr>
+						<th scope="col">Sunday</th>
+						<td scope="col">closed</td>
+					</tr>
+				</table>			
+			  </details>
+			</div>
+
+			<center>
+				<iframe class="shadow mb-5 bg-white rounded" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10638.112420921236!2d16.359416!3d48.196443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe543f0731e2b5529!2sCodeFactory!5e0!3m2!1sde!2sat!4v1573477257105!5m2!1sde!2sat" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+			</center>
+			
+			<div class="center">
+				<a href="https://www.facebook.com" class="fa fa-facebook opacity"></a>
+				<a href="https://twitter.com/" class="fa fa-twitter opacity"></a>
+				<a href="https://myaccount.google.com" class="fa fa-google opacity"></a>
+				<a href="https://at.linkedin.com/" class="fa fa-linkedin opacity"></a>
+				<a href="https://www.instagram.com/" class="fa fa-instagram opacity"></a>
+			</div>`
 }
 
-
-
-
-
-/*-- LOCATION MAP --*/
-<link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css'></link>
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-
-/*-- FONT AWESOME --*/
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-
-
-<article>
-	<div class="contact table">
-		<div class="tr">
-			<div class="td"><p><i class="fas fa-map-marker-alt"></i></div>
-			<div class="td"><p><b>Sun-Fun</b><br>Musterstaße 3<br>1010 Wien</p></div>
-		</div>
-		
-		<div class="tr">
-			<div class="td"><p><i class="fas fa-phone"></i></div>
-			<div class="td"><p>+43 (1) 23 45 678</p></div>
-		</div>
-		
-		<div class="tr">
-			<div class="td"><p><i class="fas fa-envelope"></i></div>
-			<div class="td"><a href="office@sun-fun.com" style="color: blue">office@sun-fun.com</a></div>
-		</div>
-	</div>
-	
-	<div class="location shadow">
-		<div id="map"></div>
-	</div>
-	
-	<div class="center">
-		<a href="https://www.facebook.com" class="fa fa-facebook opacity"></a>
-		<a href="https://twitter.com/" class="fa fa-twitter opacity"></a>
-		<a href="https://myaccount.google.com" class="fa fa-google opacity"></a>
-		<a href="https://at.linkedin.com/" class="fa fa-linkedin opacity"></a>
-		<a href="https://www.instagram.com/" class="fa fa-instagram opacity"></a>
-	</div>
-</article>
-
-/*-- LOCATION MAP --*/
-mapboxgl.accessToken = 'pk.eyJ1IjoidG9tNDcxMSIsImEiOiJjanV1bzNkbmUwa3V6NGVueXg4eWd4MXJrIn0.kFzTfsVyjtDGA6L_gNU1LQ';
-var map = new mapboxgl.Map({
-	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v11',
-	center: [16.3712936, 48.2097532],
-	zoom: 13
-});
-
-// Add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.NavigationControl());
-	
-// TARGET-IMAGE	
-map.on('load', function() {
-	map.loadImage('img/symbol/target.png', function(error, image) {
-		if (error) { throw error; }
-				
-		map.addImage('target', image);
-		map.addLayer({
-			"id": "points",
-			"type": "symbol",
-			"source": {
-				"type": "geojson",
-				"data": {
-					"type": "FeatureCollection",
-					"features": [{
-						"type": "Feature",
-						"geometry": {
-							"type": "Point",
-							"coordinates": [16.3712936, 48.2097532]
-						}
-					}]
-				}
-			},
-			"layout": {
-				"icon-image": "target",
-				"icon-size": 0.6
-			}
-		});
-	});
-});	
