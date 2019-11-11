@@ -1,5 +1,10 @@
-function initCourse(){}
-	body.innerHTML+=`<div>
+function initCourse(){
+	displayTeam()
+
+}
+
+function displayTeam(){
+	document.querySelector("main").innerHTML+=`<div>
 		<h3>Trainer</h3>
 		<div>
     <img src="" alt="">
@@ -41,3 +46,4 @@ function initCourse(){}
 	<div>
 		
 	</div>`
+}
