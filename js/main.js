@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Contact", "Team","News"],["","course.js","contact.js","team.js","news.js"]];
+    var menuArr = [["Home", "Course", "Contact", "Team","News"],["index.js","course.js","contact.js","team.js","news.js"]];
 
 
 
@@ -36,17 +36,21 @@ for (i = 0; i < menuArr[0].length; i++) {
    		</li>
    		`)
 
+	   	if(i>0){
+			var script = document.createElement('script');
+			script.onload = function () {
+			};
+			script.src = "js/"+menuArr[1][i];
+			script.type = "text/javascript";
+			console.log(script)
+			document.head.appendChild(script);
+		}
+
    		$("#nav"+i).on("click",function(e){
 			tempId=($(this).attr("id")).slice(3);
 
 			//$("body").append(`<script src="js/${menuArr[1][tempId]}" type="text/javascript" charset="utf-8" async defer></script>`);
 
-			var script = document.createElement('script');
-			script.onload = function () {
-			};
-			script.src = "js/"+menuArr[1][tempId];
-			console.log(script)
-			document.head.appendChild(script);
 
    			$("main").empty();
 
