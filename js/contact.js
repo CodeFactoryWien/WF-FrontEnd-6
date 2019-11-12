@@ -27,30 +27,30 @@ document.querySelector("main").innerHTML = `
 		
 		<tr>
 			<td><i class="fas fa-phone"></i></td>
-			<td class="lead pb-3">+43 699 12255185</td>
+			<td class="lead">+43 699 12255185</td>
 		</tr>
 
 		<tr>
 			<td><i class="fas fa-envelope"></i></td>
-			<td class="lead pb-3"><a href="office@j2rs.at" style="color: blue">office@j2rs.at</a></td>
+			<td class="lead"><a href="office@j2rs.at" style="color: blue">office@j2rs.at</a></td>
 		</tr>
 
 		<tr>
 			<td><i class="fas fa-home"></i></td>
-			<td class="lead pb-3"><a href="https://codefactory.wien/" style="color: blue">https://codefactory.wien/</a></td>
+			<td class="lead"><a href="https://codefactory.wien/" style="color: blue">https://codefactory.wien/</a></td>
 		</tr>
 	</table>
 	
 
 	<!-- OPEN HOURS -->
-	<div class="accordion" style="margin-left: 13px" id="accordionExample">
+	<div class="accordion mt-3" style="margin-left: 13px" id="accordionExample">
 		<button class="btn collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
 			<i class="fas fa-clock"></i><strong class="lead ml-4"><strong>OPEN HOURS</strong><br>
 		</button>
 	</div>
 	
 	<div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionExample">
-		<table class="table table-sm">
+		<table class="table table-sm" width="60%">
 			<tr>
 				<th scope="col">Monday</th>
 				<td scope="col">09:00 - 17:00</td>
@@ -97,7 +97,7 @@ document.querySelector("main").innerHTML = `
 	<hr>
 	<div>
 		<form>
-			<h3>LEAVE A MESSAGE</h3>
+			<h4>LEAVE A MESSAGE</h4>
 			<div class="form-group">
 				<label for="exampleInputName">Name*</label>
 				<div class="form-row">
@@ -132,7 +132,7 @@ document.querySelector("main").innerHTML = `
 				<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
 			</div>
 			<small class="form-text text-muted">* Required Fields</small>
-			<button type="submit" class="btn btn-primary btn-block mt-2 opacity" style="background-color: #2c5c8c; border: none">Send Message</button>
+			<button type="submit" class="btn btn-primary btn-block mt-2 opacity" style="background-color: #2c5c8c; border: none">SEND MESSAGE</button>
 		</form>
 	</div>
 	<hr>
