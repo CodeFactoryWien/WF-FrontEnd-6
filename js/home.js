@@ -84,7 +84,8 @@ function courseFeed(){
 		courseCardBuilder(course);
 	};
 	$(".card-course-item").on("click",function(e){
-		alert("link zu "+ $(this).attr("id"))
+		initCourse($(this).attr("id").slice(6));
+		//alert("link zu "+ $(this).attr("id"))
 		//function($(this).attr("name"));
 	})
 
