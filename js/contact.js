@@ -102,37 +102,37 @@ document.querySelector("main").innerHTML = `
 				<label for="exampleInputName">Name*</label>
 				<div class="form-row">
 					<div class="col">
-						<input type="text" class="form-control" placeholder="First name">
+						<input type="text" class="form-control" placeholder="First name" required>
 					</div>
 					
 					<div class="col">
-						<input type="text" class="form-control" placeholder="Last name">
+						<input type="text" class="form-control" placeholder="Last name" required>
 					</div>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address*</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
 				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 			</div>
 
 			<div class="form-group">
 				<label for="exampleInputPhone">Phone*</label>
-				<input type="text" class="form-control" id="exampleInputPhone">
+				<input type="text" class="form-control" id="exampleInputPhone" required>
 			</div>
 			
 			<div class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" id="customCheck1">
+			  <input type="checkbox" class="custom-control-input" id="customCheck1" required>
 			  <small class="form-text text-muted custom-control-label mb-3" for="customCheck1">Please call back</small>
 			</div>
 			
 			<div class="form-group">
 				<label for="exampleFormControlTextarea1">Message*</label>
-				<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+				<textarea class="form-control" id="exampleFormControlTextarea1" rows="5" required></textarea>
 			</div>
 			<small class="form-text text-muted">* Required Fields</small>
-			<button type="submit" class="btn btn-primary btn-block mt-2 opacity" style="background-color: #2c5c8c; border: none">SEND MESSAGE</button>
+			<button type="submit" class="btn btn-dark btn-block mt-2 opacity" style="border: none">SEND MESSAGE</button>
 		</form>
 	</div>
 	<hr>
@@ -146,7 +146,6 @@ document.querySelector("main").innerHTML = `
 		<a href="https://www.instagram.com/" class="fa fa-instagram opacity"></a>
 	</div>
 </div>
-
 `
 }
 
