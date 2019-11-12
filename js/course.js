@@ -1,7 +1,7 @@
 //---------------------------------------Contact------Builder--------------------------------------------------
 
 function initCourse(id){
-	id = 0;
+	console.log(id)
 	for(i=0; i<coursesJSON.length; i++){
 		if(coursesJSON.id == id && id.isNaN() == false){
 			id = coursesJSON.id;
