@@ -1,7 +1,13 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
+	news = JSON.stringify(newsJson);
+	news = JSON.parse(news);
+	news.splice(0,1);
+
+
 
 //---------------------------------------Main Content Builder-----------------------------------------------
-function home(){	$("main").append(`
+function home(){
+	$("main").append(`
 			<div class="container-marketing">
 				<div class="row">
 					<div class="col-md-4">
@@ -20,14 +26,56 @@ function home(){	$("main").append(`
 			</div>
 			<div class="container-marketing">
 				<div class="row">
-					<div class="col-10">
-						courses
-					</div>
-					<div class="col-2" id="news">
-						news
-					</div>
+					<div class="col-10" id="courses">					courses					</div>
+					<div class="col-2" id="news"></div>
 				</div>
 			</div>
 
 		`)
+
+newsFeed();
+
 };
+
+//--------------------------------------- insert News -----------------------------------------------
+function newsFeed(){
+	$("#news").append(`
+		<h3> coding news </h3>
+		<div class="card-deck" id="newsDeck">
+		</div>
+		`)
+	for(let article of news){
+		newsCardBuilder(article);
+	};
+}
+
+function newsCardBuilder(article){
+	redText = article.text.slice(0,70);
+	$("#newsDeck").append(`
+		<div id="article${article.newsId}"
+			<div class="card">
+				<div class="card-body">
+				    <h4 class="card-title">${article.title}</h4>
+				    <p class="card-text">${redText}</p>
+				    <p class="btn btn-secondary  card-news-item" id="news${article.newsId}">read more</p>
+				</div>
+			 </div>
+		</div>
+		`)
+	$(".card-news-item").on("click",function(e){
+		alert("link zu "+ $(this).attr("id"))
+		//function($(this).attr("name"));
+	})
+
+}
+//--------------------------------------- insert Courses -----------------------------------------------
+function courseFeed(){
+	$("#news").append(`
+		<h3> coding news </h3>
+		<div class="card-deck" id="courseDeck">
+		</div>
+		`)
+	for(let course of news){
+		newsCardBuilder(article);
+	};
+}
