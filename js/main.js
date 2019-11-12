@@ -108,7 +108,8 @@ function navBuilder(){
 	}
 	$("#dd-course .dropdown-item").on("click", function(e){
 			tempId=($(this).attr("id"));
-			alert(tempId);
+			initCourse($(this).attr("id").slice(6))
+			//alert(tempId);
 		})
 
 
