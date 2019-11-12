@@ -1,0 +1,99 @@
+let coursesJSON = [
+
+    {
+        "id": "0",
+        "name": "",
+        "description": "",
+        "image": "",
+        "price": "",
+        "duration": "",
+        "language": "",
+        "location": "",   
+        "frontEndTech": [],
+        "backEndTech": [],
+        "times": "",
+        "benefits": []
+    },
+
+    {    
+        "id": "1",
+        "name": "Full Stack Web Developer",
+        "description": "The CodeFactory Full Stack Web Developer training course prepares you for your versatile career 
+        as a Junior Web Developer. From back-end to front-end programming languages and frameworks you will learn how to use the most popular programs, 
+        such as Angular, PHP, WordPress, HTML, CSS and JavaScript. As a Full Stack Web Developer you have comprehensive knowledge in the area of software 
+        development and are proficient in currently relevant programming languages. This allows you to work in both web and software development.
+        As a generalist you can perform almost any task with your coding skills and often work closely together with project managers by taking care of requirements management, software and test planning as well as programming activities.",
+        "image": "./img/course/fullstack.jpg",
+        "price": "3.990,00 € incl. VAT.",
+        "duration": "15 weeks",
+        "language": "english",
+        "location": "CodeFactory, Kettenbrückengasse 23/2/12, 1050 Vienna",   
+        "frontEndTech": 
+            ["Version Control (Git - GitHub)",
+            "HTML5","CSS3","JavaScript","jQuery",
+            "Bootstrap","Project Documentation",
+            "TypeScript","Angular 6.0"],
+        "backEndTech": 
+            ["SQL (MySQL)","SCRUM & Requirements Engineering"
+            ,"PHP","AJAX","Symfony PHP framework",
+            "WordPress","Software Testing",
+            "Complementary skills"],
+        "times": "Monday to Thursday 9-16 o’clock @ CodeFactory",
+        "benefits": ["Learn coding in less than 4 months","Be job-ready immediately after completing your training
+        ","Secure job opportunities by gaining highly demanded IT skills","Experience an innovative training format that is unique in Austria and based on US coding schools"]
+    },
+    {     
+        "id": "2",
+        "name": "Full Stack Web Developer",
+        "description": "The CodeFactory Full Stack Web Developer training course prepares you for your versatile career 
+        as a Junior Web Developer. From back-end to front-end programming languages and frameworks you will learn how to use the most popular programs, 
+        such as Angular, PHP, WordPress, HTML, CSS and JavaScript. As a Full Stack Web Developer you have comprehensive knowledge in the area of software 
+        development and are proficient in currently relevant programming languages. This allows you to work in both web and software development.
+        As a generalist you can perform almost any task with your coding skills and often work closely together with project managers by taking care of requirements management, software and test planning as well as programming activities.",
+        "image": "./img/course/fullstack.jpg",
+        "price": "3.990,00 € incl. VAT.",
+        "duration": "15 weeks",
+        "language": "english",
+        "location": "CodeFactory, Kettenbrückengasse 23/2/12, 1050 Vienna",   
+        "frontEndTech": 
+            ["Version Control (Git - GitHub)",
+            "HTML5","CSS3","JavaScript","jQuery",
+            "Bootstrap","Project Documentation",
+            "TypeScript","Angular 6.0"],
+        "backEndTech": 
+            ["SQL (MySQL)","SCRUM & Requirements Engineering"
+            ,"PHP","AJAX","Symfony PHP framework",
+            "WordPress","Software Testing",
+            "Complementary skills"],
+        "times": "Monday to Thursday 9-16 o’clock @ CodeFactory",
+        "benefits": ["Learn coding in less than 4 months","Be job-ready immediately after completing your training
+        ","Secure job opportunities by gaining highly demanded IT skills","Experience an innovative training format that is unique in Austria and based on US coding schools"]
+    },
+    {     
+        "id": "3",
+        "name": "Full Stack Web Developer",
+        "description": "The CodeFactory Full Stack Web Developer training course prepares you for your versatile career 
+        as a Junior Web Developer. From back-end to front-end programming languages and frameworks you will learn how to use the most popular programs, 
+        such as Angular, PHP, WordPress, HTML, CSS and JavaScript. As a Full Stack Web Developer you have comprehensive knowledge in the area of software 
+        development and are proficient in currently relevant programming languages. This allows you to work in both web and software development.
+        As a generalist you can perform almost any task with your coding skills and often work closely together with project managers by taking care of requirements management, software and test planning as well as programming activities.",
+        "image": "./img/course/fullstack.jpg",
+        "price": "3.990,00 € incl. VAT.",
+        "duration": "15 weeks",
+        "language": "english",
+        "location": "CodeFactory, Kettenbrückengasse 23/2/12, 1050 Vienna",   
+        "frontEndTech": 
+            ["Version Control (Git - GitHub)",
+            "HTML5","CSS3","JavaScript","jQuery",
+            "Bootstrap","Project Documentation",
+            "TypeScript","Angular 6.0"],
+        "backEndTech": 
+            ["SQL (MySQL)","SCRUM & Requirements Engineering"
+            ,"PHP","AJAX","Symfony PHP framework",
+            "WordPress","Software Testing",
+            "Complementary skills"],
+        "times": "Monday to Thursday 9-16 o’clock @ CodeFactory",
+        "benefits": ["Learn coding in less than 4 months","Be job-ready immediately after completing your training
+        ","Secure job opportunities by gaining highly demanded IT skills","Experience an innovative training format that is unique in Austria and based on US coding schools"]
+    }
+]
