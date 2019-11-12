@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Contact", "Team","News"],["index.js","course.js","contact.js","team.js","news.js"]];
+    var menuArr = [["Home", "Course", "Contact", "Team","News"],[]];
     window.addEventListener('scroll', function (e) {
         var nav = document.getElementById('myNav');
         if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
@@ -10,12 +10,14 @@
                 nav.classList.remove('nav-colored');
             }
     });
-
+initHome();
 
 
 //-------------------------------------------Daten bereitstellen--------------------------------------------
 //-------------------------------------------Site Builder---------------------------------------------------
+function initHome(){
 	$("title").text("The New Codefactory");
+	$("body").empty();
 	$("body").append(`
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-colored nav-transparent" id="myNav">
@@ -31,47 +33,56 @@
 			  </div>
 			</nav>
 		</header>
-		<main class="container">
-			hier liegt der hauptinhalt der seite, der von der navbar aus gelöscht und neubefüllt wird indem für die jeweilige unterseite eine function aufgerufen wird, die im jeweiligen seitenname.js liegt. Dafür müssen wir noch eine Namenskonvention festlegen.
-		</main>
-		<footer>&copy; J₂SR</footer>
+		<main class="container"></main>  
+		<footer class="p-4  border-top" >
+			<div class="row">
+			    <div class="col col-6-md">
+					<p>J₂S</p>
+					&copy; 2019
+			    </div>
+			    <div class="col col-6-md">
+			      	<ul>
+						<li> irgendwas</li>
+						<li> irgendwas</li>
+			      	</ul>
+			    </div>
+			    <div class="col col-6-md">
+			      	
+			    </div>
+			</div>
+		</footer>
 	`);
-
-//---------------------------------------End Site Builder---------------------------------------------------
-//-------------------------------------------Nav Builder---------------------------------------------------_
-for (i = 0; i < menuArr[0].length; i++) {
-   	$("nav ul").append(`
-   		<li class="nav-item" id="nav${i}">
-			<a class="nav-link" >${menuArr[0][i]}</a>
-   		</li>
-   		`)
-
-	   	if(i>0){
-			var script = document.createElement('script');
-			script.onload = function () {};
-			let path = menuArr[0][i].toLowerCase();
-			script.src = "js/"+path+".js";
-			script.type = "text/javascript";
-			document.head.appendChild(script);
-		}
-
-   		$("#nav"+i).on("click",function(e){
-			tempId=($(this).attr("id")).slice(3);
-  			$("main").empty();
-  			if(tempId==0){
-  				$("header").css({height: "45vh", transition:"2s"});
-  			}else{
-  				$("header").css({height: "15vh", transition:"2s"});
-  			}
-
-   			if (tempId==0){
-   			}else{
-   				window['init'+menuArr[0][tempId]]();
-   				console.log('init'+menuArr[0][tempId]);
-   			}
-			
-   		});
+navBuilder();
 }
+//---------------------------------------End Site Builder---------------------------------------------------
+//-------------------------------------------Nav Builder----------------------------------------------------
+function navBuilder(){
+	for (i = 0; i < menuArr[0].length; i++) {
+	   	$("nav ul").append(`
+	   		<li class="nav-item" id="nav${i}">
+				<a class="nav-link" >${menuArr[0][i]}</a>
+	   		</li>
+	   		`)
 
+				var script = document.createElement('script');
+				script.onload = function () {};
+				let path = menuArr[0][i].toLowerCase();
+				script.src = "js/"+path+".js";
+				script.type = "text/javascript";
+				document.head.appendChild(script);
 
+	   		$("#nav"+i).on("click",function(e){
+				tempId=($(this).attr("id")).slice(3);
+	  			$("main").empty();
+				window['init'+menuArr[0][tempId]]();
+
+	  			if(tempId==0){
+	  				$("header").css({height: "45vh", transition:"2s"});
+	  			}else{
+	  				$("header").css({height: "15vh", transition:"2s"});
+	  			}	
+	   		});
+	}
+	home();
+}
 //---------------------------------------End-Nav Builder---------------------------------------------------
