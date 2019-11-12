@@ -1,5 +1,16 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
     var menuArr = [["Home", "Course", "Contact", "Team","News"],[]];
+   	for (i = 0; i < menuArr[0].length; i++) {
+				var script = document.createElement('script');
+				script.onload = function () {};
+				let path = menuArr[0][i].toLowerCase();
+				script.src = "data/"+path+".json";
+				script.type = "text/javascript";
+				document.head.appendChild(script);
+	};
+
+
+initHome();
     window.addEventListener('scroll', function (e) {
         var nav = document.getElementById('myNav');
         if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
@@ -10,18 +21,6 @@
                 nav.classList.remove('nav-colored');
             }
     })
-   	for (i = 0; i < menuArr[0].length; i++) {
-				var script = document.createElement('script');
-				script.onload = function () {};
-				let path = menuArr[0][i].toLowerCase();
-				script.src = "data/"+path+".json";
-				script.type = "text/javascript";
-				document.head.appendChild(script);
-				console.log(script)
-	};
-
-
-initHome();
 
 
 //-------------------------------------------Daten bereitstellen--------------------------------------------
@@ -31,7 +30,7 @@ function initHome(){
 	$("body").empty();
 	$("body").append(`
 		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-colored nav-transparent" id="myNav">
+			<nav class="navbar navbar-expand-sm navbar-dark fixed-top nav-colored nav-transparent" id="myNav">
 			  <p class="navbar-brand" href="index.html">J₂SR</p>
 
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +62,8 @@ function initHome(){
 			</div>
 		</footer>
 	`);
-navBuilder();
+	home();
+	navBuilder();
 }
 //---------------------------------------End Site Builder---------------------------------------------------
 //-------------------------------------------Nav Builder----------------------------------------------------
@@ -71,10 +71,10 @@ function navBuilder(){
 	for (i = 0; i < menuArr[0].length; i++) {
 	   	$("nav ul").append(`
 	   		<li class="nav-item" id="nav${i}">
-				<a class="nav-link" >${menuArr[0][i]}</a>
+				<a class="nav-link" id="m-${menuArr[0][i]}">${menuArr[0][i]}</a>
 	   		</li>
 	   		`)
-
+	   	
 				var script = document.createElement('script');
 				script.onload = function () {};
 				let path = menuArr[0][i].toLowerCase();
@@ -94,6 +94,24 @@ function navBuilder(){
 	  			}	
 	   		});
 	}
-	home();
+	$("#nav1").empty().addClass("dropdown").append(`
+		 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ${menuArr[0][1]}
+        </a>
+        <div id="dd-course" class="dropdown-menu" aria-labelledby="navbarDropdown">
+        </div>
+		`)
+	for (let item of courses){
+		$("#dd-course").append(`
+			<a class="dropdown-item" id="course${item.id}" >${item.name}</a>
+		`)
+	}
+	$("#dd-course .dropdown-item").on("click", function(e){
+			tempId=($(this).attr("id"));
+			alert(tempId);
+		})
+
+
+
 }
 //---------------------------------------End-Nav Builder---------------------------------------------------
