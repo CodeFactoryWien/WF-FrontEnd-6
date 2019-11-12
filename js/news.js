@@ -7,7 +7,7 @@ function renderNews() {
 
 
 document.querySelector("main").innerHTML += `
-<h3>NEWS</h3>
+<h1 class=" text-light mt-2 rounded text-center">NEWS</h1>
 <div class="card-columns"></div>`;
 
 	newsJson.forEach(function(news) {
