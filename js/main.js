@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["", "Course", "Contact", "Team","News"],["index.js","course.js","contact.js","team.js","news.js"]];
+    var menuArr = [["Home", "Course", "Contact", "Team","News"],["index.js","course.js","contact.js","team.js","news.js"]];
     window.addEventListener('scroll', function (e) {
         var nav = document.getElementById('myNav');
         if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
@@ -19,7 +19,7 @@
 	$("body").append(`
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-colored nav-transparent" id="myNav">
-			  <a class="navbar-brand" href="index.html">J₂SR</a>
+			  <p class="navbar-brand" href="index.html">J₂SR</p>
 
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -48,23 +48,26 @@ for (i = 0; i < menuArr[0].length; i++) {
 
 	   	if(i>0){
 			var script = document.createElement('script');
-			script.onload = function () {
-			};
-			script.src = "js/"+menuArr[1][i];
+			script.onload = function () {};
+			let path = menuArr[0][i].toLowerCase();
+			script.src = "js/"+path+".js";
 			script.type = "text/javascript";
-			console.log(script)
 			document.head.appendChild(script);
 		}
 
    		$("#nav"+i).on("click",function(e){
 			tempId=($(this).attr("id")).slice(3);
-
-   			$("main").empty();
+  			$("main").empty();
+  			if(tempId==0){
+  				$("header").css({height: "45vh", transition:"2s"});
+  			}else{
+  				$("header").css({height: "15vh", transition:"2s"});
+  			}
 
    			if (tempId==0){
-
    			}else{
    				window['init'+menuArr[0][tempId]]();
+   				console.log('init'+menuArr[0][tempId]);
    			}
 			
    		});
