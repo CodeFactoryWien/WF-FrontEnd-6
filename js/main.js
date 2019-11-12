@@ -94,7 +94,7 @@ function navBuilder(){
 	  			}	
 	   		});
 	}
-	$("#nav1").empty().addClass("dropdown").append(`
+	$("#nav1").empty().off('click').addClass("dropdown").append(`
 		 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           ${menuArr[0][1]}
         </a>
@@ -107,6 +107,7 @@ function navBuilder(){
 		`)
 	}
 	$("#dd-course .dropdown-item").on("click", function(e){
+ 			$("main").empty();
 			tempId=($(this).attr("id"));
 			tempId=parseInt(tempId.slice(6));
 			initCourse(tempId)
