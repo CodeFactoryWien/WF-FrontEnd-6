@@ -33,9 +33,7 @@ function initHome(){
 			  </div>
 			</nav>
 		</header>
-		<main class="container">
-			hier liegt der hauptinhalt der seite, der von der navbar aus gelöscht und neubefüllt wird indem für die jeweilige unterseite eine function aufgerufen wird, die im jeweiligen seitenname.js liegt. Dafür müssen wir noch eine Namenskonvention festlegen.
-		</main>
+		<main class="container"></main>  
 		<footer class="p-4  border-top" >
 			<div class="row">
 			    <div class="col col-6-md">
@@ -72,7 +70,6 @@ function navBuilder(){
 				script.src = "js/"+path+".js";
 				script.type = "text/javascript";
 				document.head.appendChild(script);
-				console.log(script)
 
 	   		$("#nav"+i).on("click",function(e){
 				tempId=($(this).attr("id")).slice(3);
@@ -81,11 +78,11 @@ function navBuilder(){
 
 	  			if(tempId==0){
 	  				$("header").css({height: "45vh", transition:"2s"});
-	  				home();
 	  			}else{
 	  				$("header").css({height: "15vh", transition:"2s"});
 	  			}	
 	   		});
 	}
+	home();
 }
 //---------------------------------------End-Nav Builder---------------------------------------------------
