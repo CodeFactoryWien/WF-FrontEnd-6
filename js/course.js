@@ -6,8 +6,9 @@ function initCourse(){
 //---------------------------------------End contact Builder---------------------------------------------------
 function renderCourse(){
 
-	document.querySelector("main").innerHTML = `<div class="card mb-4 box-shadow">
-		<img class="card-img-top mx-auto img-fluid" src="./img/course/frontend.jpg" data-holder-rendered="true" style="width: 40%; display: block;">
+	document.querySelector("main").innerHTML = `
+	<div class="card mb-4 shadow">
+		<img class="card-img-top mx-auto img-fluid shadow" src="./img/course/frontend.jpg" data-holder-rendered="true" style="width: 18.5rem; display: block;">
 		<div class="card-body pt-0 row">
 			<div class="col-12 display-4 text-dark px-0 pt-0 pb-1 my-4">
 				<p class="col text-center p-1 my-0 mx-auto">Full Stack Web Developer</p>
@@ -25,8 +26,8 @@ function renderCourse(){
 	</div>
 	
 	<div class="accordion" id="courseDetails">
-  		<div class="">
-    		<div class="" id="headingOne">
+  		<div class="card">
+    		<div class="card-body" id="headingOne">
       			<h2 class="mb-0">
         			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           			Basic
@@ -40,7 +41,7 @@ function renderCourse(){
       			</div>
     		</div>
   		</div>
-	</div>
+	</div>`
 	
 	
 	
@@ -48,5 +49,5 @@ function renderCourse(){
 	
 	
 	
-	` 
+	
 }
