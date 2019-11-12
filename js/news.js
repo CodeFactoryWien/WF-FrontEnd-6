@@ -16,7 +16,7 @@ document.querySelector("main").innerHTML += `
 		  <div class="card shadow">
 			<img src="${news.picUrl}" class="card-img-top" width="100%" height="auto" style="object-fit: cover">
 			<div class="card-body">
-			  <h5 class="card-title">${news.title}</h5>
+			  <a href="${news.link}" target="_blank"><h5 class="card-title">${news.title}</h5></a>
 			  <p class="card-text">${news.text}</p>
 			</div>
 		  </div>
