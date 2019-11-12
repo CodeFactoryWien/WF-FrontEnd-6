@@ -29,8 +29,8 @@ function home(){
 			</div>
 			<div class="container-marketing">
 				<div class="row">
-					<div class="col-10" id="courses">					courses					</div>
-					<div class="col-2" id="news"></div>
+					<div class="col-sm-9 col-md-9" id="courses"></div>
+					<div class="col-sm-3 col-md-3" id="news"></div>
 				</div>
 			</div>
 
@@ -44,19 +44,24 @@ courseFeed();
 //--------------------------------------- insert News -----------------------------------------------
 function newsFeed(){
 	$("#news").append(`
-		<h3> coding news </h3>
+		<h3> codingnews </h3>
 		<div class="card-deck" id="newsDeck">
 		</div>
 		`)
 	for(let article of news){
 		newsCardBuilder(article);
 	};
+	$(".card-news-item").on("click",function(e){
+		alert("link zu "+ $(this).attr("id"))
+		//function($(this).attr("name"));
+	})
+
 }
 
 function newsCardBuilder(article){
 	redText = article.text.slice(0,70);
 	$("#newsDeck").append(`
-		<div id="article${article.newsId}"
+		<div id="article${article.newsId} class="col-12">
 			<div class="card">
 				<div class="card-body">
 				    <h4 class="card-title">${article.title}</h4>
@@ -66,10 +71,6 @@ function newsCardBuilder(article){
 			 </div>
 		</div>
 		`)
-	$(".card-news-item").on("click",function(e){
-		alert("link zu "+ $(this).attr("id"))
-		//function($(this).attr("name"));
-	})
 
 }
 //--------------------------------------- insert Courses -----------------------------------------------
@@ -82,12 +83,18 @@ function courseFeed(){
 	for(let course of courses){
 		courseCardBuilder(course);
 	};
+	$(".card-course-item").on("click",function(e){
+		alert("link zu "+ $(this).attr("id"))
+		//function($(this).attr("name"));
+	})
+
 }
 function courseCardBuilder(course){
 
 	$("#courseDeck").append(`
-		<div id="article${course.id}"
+		<div id="article${course.id}" class="col-12 col-sm-6 col-lg-4">
 			<div class="card">
+				<img class="card-img-top" src="${course.image}" alt="${course.name}">
 				<div class="card-body">
 				    <h4 class="card-title">${course.name}</h4>
 				    <p class="card-text">${course.price}</p>
@@ -96,10 +103,6 @@ function courseCardBuilder(course){
 			 </div>
 		</div>
 		`)
-	$(".card-course-item").on("click",function(e){
-		alert("link zu "+ $(this).attr("id"))
-		//function($(this).attr("name"));
-	})
 
 
 }
