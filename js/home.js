@@ -11,19 +11,19 @@
 //---------------------------------------Main Content Builder-----------------------------------------------
 function home(){
 	$("main").append(`
-			<div class="container-marketing">
+			<div class="container-marketing mt-2">
 				<div class="row">
 					<div class="col-md-4">
-						<h4>In 15 Wochen zum Juniordeveloper</h4>
-						<p>Lerne in nur 15 Wochen alles über Web-Entwicklung und IT was Du zum Berufseinstieg brauchst. Vom ersten Tag „hands-on“ an Praxisbeispielen arbeiten!</p>
+						<h4>In 15 weeks to junior developer level</h4>
+						<p>Learn everything you need about Frontend and Backend development in just 15 weeks to get your new career started. Work hands-on and with practical examples from the first day!</p>
 					</div>
 					<div class="col-md-4">
-						<h4>Hands-on learning vom ersten Tag</h4>
-						<p>All unsere Kurse zeichnen sich durch ein Maximum an praktischem Arbeiten aus. Wir glauben, dass man Programmieren nur durch Programmieren lernen kann. Deshalb wird bei uns von Tag eins an in Zweierteams und Gruppen an projektbezogenen Aufgaben gearbeitet.</p>
+						<h4>Hands-on learning</h4>
+						<p>The relatively short duration of just 15 weeks is made possible by a maximum of practical work. We believe that programming can only be learned through the act, which is why we program from day one in teams of two or larger group, solving practical problems.</p>
 					</div>
 					<div class="col-md-4">
-						<h4>Sammle Erfahrungen in realen Kundenprojekten</h4>
-						<p>Die Abschlussprojekte unserer Schüler stammen von realen Kunden, von der NGO bis zum mittelgroßen Unternehmen. Mit diesen Referenzen und Arbeitszeugnissen im Portfolio fällt der Berufseinstieg leicht.</p>
+						<h4>Gain experience in real world projects</h4>
+						<p>Many of our graduate projects are issued by real clients, ranging from NGOs to medium-sized companies. The start of your new career gets a huge boost with those references in your portfolio!</p>
 					</div>
 				</div>
 			</div>
