@@ -1,17 +1,19 @@
 //---------------------------------------Contact------Builder--------------------------------------------------
 
 function initCourse(id){
-	console.log(id)
 	for(i=0; i<coursesJSON.length; i++){
-		if(coursesJSON.id == id && id.isNaN() == false){
-			id = coursesJSON.id;
+		console.log(parseInt(coursesJSON[i].id))
+		console.log(id)
+		let x = parseInt(coursesJSON[i].id)
+		if(id === x && isNaN(id) == false){
+			var newID = coursesJSON[i].id;
+			break;
 		}
-		else{
-			id = 1;
-		}
+
 	}
-	renderCourse(id);
-	renderUsedCourseTech(id);
+	console.log(newID+"new")
+	renderCourse(newID);
+	renderUsedCourseTech(newID);
 
 }	
 
@@ -122,11 +124,9 @@ function renderCourse(id){
 // ${(this.dataset.courseDifficulty).toUpperCase()}
 function renderUsedCourseTech(id){
 	
-	
-
 	if(coursesJSON[id].frontEndTech.length > 0){
-		console.log(coursesJSON[id].frontEndTech.length)
-		console.log(coursesJSON[id].backEndTech.length)
+		// console.log(coursesJSON[id].frontEndTech.length)
+		// console.log(coursesJSON[id].backEndTech.length)
 			for(j=0; j < coursesJSON[id].frontEndTech.length; j++){
 			document.getElementById("frontEndTechList").innerHTML += `
 				<li class="mb-3 mt-1 lead">
@@ -144,8 +144,8 @@ function renderUsedCourseTech(id){
 					${coursesJSON[id].backEndTech[j]}
 				</li>`
 		}	
+		document.getElementById("backEndTechList").style.display = "block";
 	}
-	document.getElementById("backEndTechList").style.display = "block";
 }
 
 
