@@ -2,18 +2,15 @@
 
 function initCourse(id){
 	for(i=0; i<coursesJSON.length; i++){
-		console.log(parseInt(coursesJSON[i].id))
-		console.log(id)
-		let x = parseInt(coursesJSON[i].id)
-		if(id === x && isNaN(id) == false){
-			var newID = coursesJSON[i].id;
+
+		if(id === parseInt(coursesJSON[i].id) && isNaN(id) == false){
+			id = coursesJSON[i].id;
 			break;
 		}
 
 	}
-	console.log(newID+"new")
-	renderCourse(newID);
-	renderUsedCourseTech(newID);
+	renderCourse(id);
+	renderUsedCourseTech(id);
 
 }	
 
@@ -123,10 +120,11 @@ function renderCourse(id){
 }
 // ${(this.dataset.courseDifficulty).toUpperCase()}
 function renderUsedCourseTech(id){
+	console.log(coursesJSON[id].frontEndTech.length)
+		console.log(coursesJSON[id].backEndTech.length)
 	
 	if(coursesJSON[id].frontEndTech.length > 0){
-		// console.log(coursesJSON[id].frontEndTech.length)
-		// console.log(coursesJSON[id].backEndTech.length)
+		
 			for(j=0; j < coursesJSON[id].frontEndTech.length; j++){
 			document.getElementById("frontEndTechList").innerHTML += `
 				<li class="mb-3 mt-1 lead">
