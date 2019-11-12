@@ -108,7 +108,9 @@ function navBuilder(){
 	}
 	$("#dd-course .dropdown-item").on("click", function(e){
 			tempId=($(this).attr("id"));
-			initCourse($(this).attr("id").slice(6))
+			tempId=parseInt(tempId.slice(6));
+			initCourse(tempId)
+			console.log(tempId)
 			//alert(tempId);
 		})
 
