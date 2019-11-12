@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Contact", "Team","News"],[]];
+    var menuArr = [["Home", "Course", "Contact", "Team","News"],[false,true, false, false, false]];
    	for (i = 0; i < menuArr[0].length; i++) {
 				var script = document.createElement('script');
 				script.onload = function () {};
@@ -16,6 +16,7 @@ initHome();
         if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
                 nav.classList.add('nav-colored');
                 nav.classList.remove('nav-transparent');
+                $("#navbarSupportedContent").attr("aria-expanded","false");
             } else {
                 nav.classList.add('nav-transparent');
                 nav.classList.remove('nav-colored');
