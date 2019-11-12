@@ -1,8 +1,11 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-	news = JSON.stringify(newsJson);
+	var news = JSON.stringify(newsJson);
 	news = JSON.parse(news);
 	news.splice(0,1);
 
+	var courses = JSON.stringify(coursesJSON);
+	courses = JSON.parse(courses);
+	courses.splice(0,1);
 
 
 //---------------------------------------Main Content Builder-----------------------------------------------
@@ -70,12 +73,32 @@ function newsCardBuilder(article){
 }
 //--------------------------------------- insert Courses -----------------------------------------------
 function courseFeed(){
-	$("#news").append(`
-		<h3> coding news </h3>
+	$("#courses").append(`
+		<h3> Courses </h3>
 		<div class="card-deck" id="courseDeck">
 		</div>
 		`)
-	for(let course of news){
-		newsCardBuilder(article);
+	for(let course of courses){
+		courseCardBuilder(course);
 	};
+}
+function courseCardBuilder(course){
+
+	$("#courseDeck").append(`
+		<div id="article${course.id}"
+			<div class="card">
+				<div class="card-body">
+				    <h4 class="card-title">${course.name}</h4>
+				    <p class="card-text">${course.price}</p>
+				    <p class="btn btn-secondary  card-course-item" id="course${course.id}">read more</p>
+				</div>
+			 </div>
+		</div>
+		`)
+	$(".card-course-item").on("click",function(e){
+		alert("link zu "+ $(this).attr("id"))
+		//function($(this).attr("name"));
+	})
+
+
 }

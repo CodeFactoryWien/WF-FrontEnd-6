@@ -17,6 +17,7 @@
 				script.src = "data/"+path+".json";
 				script.type = "text/javascript";
 				document.head.appendChild(script);
+				console.log(script)
 	};
 
 
