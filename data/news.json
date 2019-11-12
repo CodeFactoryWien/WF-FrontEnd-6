@@ -1,7 +1,7 @@
 var newsJson = [
 	{
 	"newsId": 0,
-	"title": "Firstguide",
+	"title": "Firstsiteguide",
 	"text": "If you need help launching your first website or improving your online presence, be sure to check out Firstsiteguide.com. They have an amazing set of tutorials and guides. Bookmark their site and don’t forget to check back in for news, advice, social media and marketing articles to help you navigate the digital highway.",
 	"picUrl": "img/news/img_0.jpg",
 	"link": "https://firstsiteguide.com/"
@@ -27,7 +27,7 @@ var newsJson = [
 	"newsId": 3,
 	"title": "StackOverflow",
 	"text": "It’s just like the popular Q&A site Quora, but strictly for developers. StackOverflow is an online community providing learning resources, facilitating a community for knowledge-sharing, and career advancement resources for developers, including job listings.",
-	"picUrl": "img/news/img_3.jpg",
+	"picUrl": "img/news/img_3.gif",
 	"link": "https://stackoverflow.com/"
 	},
 
@@ -35,7 +35,7 @@ var newsJson = [
 	"newsId": 4,
 	"title": "GitHub",
 	"text": "No list of websites for developers is complete without a mention of GitHub, one of the most widely used code repositories with projects ranging the full spectrum from the open-source to private collaborations. You can host and manage your code on GitHub, make it public and available for use and comment, gather feedback from other professionals, and experiment with millions of open source projects.",
-	"picUrl": "img/news/img_4.jpg",
+	"picUrl": "img/news/img_4.gif",
 	"link": "https://github.com/"
 	},
 
@@ -51,7 +51,7 @@ var newsJson = [
 	"newsId": 6,
 	"title": "Coding Horror",
 	"text": "A fantastic blog about programming and human factors, Coding Horror is a blog started by Jeff Atwood back in 2004. Atwood says the blog has changed his life, serving as a catalyst for many of his dreams to become reality – beginning with landing his dream job at Vertigo Software in 2005 and ultimately founding Stackoverflow in 2008. Atwood has since moved on from Stackoverflow to other ventures, and he documents it all at Coding Horror.",
-	"picUrl": "img/news/img_6.jpg",
+	"picUrl": "img/news/img_6.gif",
 	"link": "https://blog.codinghorror.com/"
 	},
 
@@ -59,7 +59,7 @@ var newsJson = [
 	"newsId": 7,
 	"title": "Reddit Programming",
 	"text": "It is Reddit for developers! Reddit is the go-to community for discussing the latest development trends, tech news, and everything else on the busy developer’s mind. If you’re needing a quick fix of the day’s hottest developer news, want to discuss a programming issue that’s been weighing on your mind, or need to vent about your latest coding hiccup, Reddit is the site to visit.",
-	"picUrl": "img/news/img_7.jpg",
+	"picUrl": "img/news/img_7.gif",
 	"link": "https://www.reddit.com/r/programming/"
 	}
 ];
