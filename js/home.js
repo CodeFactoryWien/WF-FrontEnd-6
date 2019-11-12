@@ -14,15 +14,15 @@ function home(){
 			<div class="container-marketing">
 				<div class="row">
 					<div class="col-md-4">
-						<h3>In 15 Wochen zum Juniordeveloper</h3>
+						<h4>In 15 Wochen zum Juniordeveloper</h4>
 						<p>Lerne in nur 15 Wochen alles über Web-Entwicklung und IT was Du zum Berufseinstieg brauchst. Vom ersten Tag „hands-on“ an Praxisbeispielen arbeiten!</p>
 					</div>
 					<div class="col-md-4">
-						<h3>Hands-on learning vom ersten Tag</h3>
+						<h4>Hands-on learning vom ersten Tag</h4>
 						<p>All unsere Kurse zeichnen sich durch ein Maximum an praktischem Arbeiten aus. Wir glauben, dass man Programmieren nur durch Programmieren lernen kann. Deshalb wird bei uns von Tag eins an in Zweierteams und Gruppen an projektbezogenen Aufgaben gearbeitet.</p>
 					</div>
 					<div class="col-md-4">
-						<h3>Sammle Erfahrungen in realen Kundenprojekten</h3>
+						<h4>Sammle Erfahrungen in realen Kundenprojekten</h4>
 						<p>Die Abschlussprojekte unserer Schüler stammen von realen Kunden, von der NGO bis zum mittelgroßen Unternehmen. Mit diesen Referenzen und Arbeitszeugnissen im Portfolio fällt der Berufseinstieg leicht.</p>
 					</div>
 				</div>
@@ -44,7 +44,7 @@ courseFeed();
 //--------------------------------------- insert News -----------------------------------------------
 function newsFeed(){
 	$("#news").append(`
-		<h3> codingnews </h3>
+		<h3 class=" text-light mt-2 rounded text-center"> codingnews </h3>
 		<div class="card-deck" id="newsDeck">
 		</div>
 		`)
@@ -61,12 +61,12 @@ function newsFeed(){
 function newsCardBuilder(article){
 	redText = article.text.slice(0,70);
 	$("#newsDeck").append(`
-		<div id="article${article.newsId} class="col-12">
-			<div class="card">
+		<div id="article${article.newsId} class="col-12 ">
+			<div class="card shadow mb-4">
 				<div class="card-body">
 				    <h4 class="card-title">${article.title}</h4>
 				    <p class="card-text">${redText}</p>
-				    <p class="btn btn-secondary  card-news-item" id="news${article.newsId}">read more</p>
+				    <p class="btn btn-light  card-news-item" id="news${article.newsId}">read more</p>
 				</div>
 			 </div>
 		</div>
@@ -76,7 +76,7 @@ function newsCardBuilder(article){
 //--------------------------------------- insert Courses -----------------------------------------------
 function courseFeed(){
 	$("#courses").append(`
-		<h3> Courses </h3>
+		<h3 class=" text-light mt-2 rounded text-center"> Courses </h3>
 		<div class="card-deck" id="courseDeck">
 		</div>
 		`)
@@ -92,8 +92,8 @@ function courseFeed(){
 function courseCardBuilder(course){
 
 	$("#courseDeck").append(`
-		<div id="article${course.id}" class="col-12 col-sm-6 col-lg-4">
-			<div class="card">
+		<div id="article${course.id}" class="col-12 col-sm-6 ">
+			<div class="card shadow mb-4">
 				<img class="card-img-top" src="${course.image}" alt="${course.name}">
 				<div class="card-body">
 				    <h4 class="card-title">${course.name}</h4>
