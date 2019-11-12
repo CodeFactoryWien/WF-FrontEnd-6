@@ -57,7 +57,7 @@ function initHome(){
 navBuilder();
 }
 //---------------------------------------End Site Builder---------------------------------------------------
-//-------------------------------------------Nav Builder---------------------------------------------------_
+//-------------------------------------------Nav Builder----------------------------------------------------
 function navBuilder(){
 	for (i = 0; i < menuArr[0].length; i++) {
 	   	$("nav ul").append(`
@@ -66,14 +66,13 @@ function navBuilder(){
 	   		</li>
 	   		`)
 
-		   	if(i>0){
 				var script = document.createElement('script');
 				script.onload = function () {};
 				let path = menuArr[0][i].toLowerCase();
 				script.src = "js/"+path+".js";
 				script.type = "text/javascript";
 				document.head.appendChild(script);
-			}
+				console.log(script)
 
 	   		$("#nav"+i).on("click",function(e){
 				tempId=($(this).attr("id")).slice(3);
@@ -82,6 +81,7 @@ function navBuilder(){
 
 	  			if(tempId==0){
 	  				$("header").css({height: "45vh", transition:"2s"});
+	  				home();
 	  			}else{
 	  				$("header").css({height: "15vh", transition:"2s"});
 	  			}	
