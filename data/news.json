@@ -61,5 +61,5 @@ var newsJson = [
 	"text": "It is Reddit for developers! Reddit is the go-to community for discussing the latest development trends, tech news, and everything else on the busy developer’s mind. If you’re needing a quick fix of the day’s hottest developer news, want to discuss a programming issue that’s been weighing on your mind, or need to vent about your latest coding hiccup, Reddit is the site to visit.",
 	"picUrl": "img/news/img_7.jpg",
 	"link": "https://www.reddit.com/r/programming/"
-	},
+	}
 ];

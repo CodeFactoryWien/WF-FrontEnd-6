@@ -1,7 +1,16 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
+	var news = JSON.stringify(newsJson);
+	news = JSON.parse(news);
+	news.splice(0,1);
+
+	var courses = JSON.stringify(coursesJSON);
+	courses = JSON.parse(courses);
+	courses.splice(0,1);
+
 
 //---------------------------------------Main Content Builder-----------------------------------------------
-function home(){	$("main").append(`
+function home(){
+	$("main").append(`
 			<div class="container-marketing">
 				<div class="row">
 					<div class="col-md-4">
@@ -20,14 +29,77 @@ function home(){	$("main").append(`
 			</div>
 			<div class="container-marketing">
 				<div class="row">
-					<div class="col-10">
-						courses
-					</div>
-					<div class="col-2" id="news">
-						news
-					</div>
+					<div class="col-10" id="courses">					courses					</div>
+					<div class="col-2" id="news"></div>
 				</div>
 			</div>
 
 		`)
+
+newsFeed();
+courseFeed();
+
 };
+
+//--------------------------------------- insert News -----------------------------------------------
+function newsFeed(){
+	$("#news").append(`
+		<h3> coding news </h3>
+		<div class="card-deck" id="newsDeck">
+		</div>
+		`)
+	for(let article of news){
+		newsCardBuilder(article);
+	};
+}
+
+function newsCardBuilder(article){
+	redText = article.text.slice(0,70);
+	$("#newsDeck").append(`
+		<div id="article${article.newsId}"
+			<div class="card">
+				<div class="card-body">
+				    <h4 class="card-title">${article.title}</h4>
+				    <p class="card-text">${redText}</p>
+				    <p class="btn btn-secondary  card-news-item" id="news${article.newsId}">read more</p>
+				</div>
+			 </div>
+		</div>
+		`)
+	$(".card-news-item").on("click",function(e){
+		alert("link zu "+ $(this).attr("id"))
+		//function($(this).attr("name"));
+	})
+
+}
+//--------------------------------------- insert Courses -----------------------------------------------
+function courseFeed(){
+	$("#courses").append(`
+		<h3> Courses </h3>
+		<div class="card-deck" id="courseDeck">
+		</div>
+		`)
+	for(let course of courses){
+		courseCardBuilder(course);
+	};
+}
+function courseCardBuilder(course){
+
+	$("#courseDeck").append(`
+		<div id="article${course.id}"
+			<div class="card">
+				<div class="card-body">
+				    <h4 class="card-title">${course.name}</h4>
+				    <p class="card-text">${course.price}</p>
+				    <p class="btn btn-secondary  card-course-item" id="course${course.id}">read more</p>
+				</div>
+			 </div>
+		</div>
+		`)
+	$(".card-course-item").on("click",function(e){
+		alert("link zu "+ $(this).attr("id"))
+		//function($(this).attr("name"));
+	})
+
+
+}

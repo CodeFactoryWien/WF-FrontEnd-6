@@ -9,7 +9,18 @@
                 nav.classList.add('nav-transparent');
                 nav.classList.remove('nav-colored');
             }
-    });
+    })
+   	for (i = 0; i < menuArr[0].length; i++) {
+				var script = document.createElement('script');
+				script.onload = function () {};
+				let path = menuArr[0][i].toLowerCase();
+				script.src = "data/"+path+".json";
+				script.type = "text/javascript";
+				document.head.appendChild(script);
+				console.log(script)
+	};
+
+
 initHome();
 
 
