@@ -44,7 +44,7 @@ courseFeed();
 //--------------------------------------- insert News -----------------------------------------------
 function newsFeed(){
 	$("#news").append(`
-		<h3 class=" text-light mt-2 rounded text-center"> codingnews </h3>
+		<h1 class=" text-light mt-2 rounded text-center"> CODE-NEWS </h1>
 		<div class="card-deck" id="newsDeck">
 		</div>
 		`)
@@ -76,7 +76,7 @@ function newsCardBuilder(article){
 //--------------------------------------- insert Courses -----------------------------------------------
 function courseFeed(){
 	$("#courses").append(`
-		<h3 class=" text-light mt-2 rounded text-center"> Courses </h3>
+		<h1 class=" text-light mt-2 rounded text-center"> COURSES </h1>
 		<div class="card-deck" id="courseDeck">
 		</div>
 		`)
