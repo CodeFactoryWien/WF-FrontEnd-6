@@ -42,12 +42,4 @@ function renderCourse(){
     		</div>
   		</div>
 	</div>`
-	
-	
-	
-	
-	
-	
-	
-	
 }

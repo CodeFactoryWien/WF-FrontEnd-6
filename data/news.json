@@ -1,13 +1,65 @@
-var newsJson = [{
+var newsJson = [
+	{
 	"newsId": 0,
-	"title": "",
-	"text": "",
-	"picUrl": "",
-	"link": ""
-},{
+	"title": "Firstguide",
+	"text": "If you need help launching your first website or improving your online presence, be sure to check out Firstsiteguide.com. They have an amazing set of tutorials and guides. Bookmark their site and don’t forget to check back in for news, advice, social media and marketing articles to help you navigate the digital highway.",
+	"picUrl": "img/news/img_0.jpg",
+	"link": "https://firstsiteguide.com/"
+	},
+	
+	{
 	"newsId": 1,
-	"title": "Lorem Ipsum 1",
-	"text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-	"picUrl": "",
-	"link": ""
-}];
+	"title": "Programming Praxis",
+	"text": "If you’re looking for a fun way to sharpen your programming skills, Programming Praxis provides enjoyable games to help you pass the idle time in a useful way. It’s very simple, with no leaderboards, scoring, or prizes, offering challenges designed to take about an hour to complete and help you learn a little something along the way.",
+	"picUrl": "img/news/img_1.jpg",
+	"link": "https://programmingpraxis.com/"
+	},
+	
+	{
+	"newsId": 2,
+	"title": "MIT Open Courseware",
+	"text": "MIT Open Courseware makes historical courses straight from MIT professors available to anyone with a thirst for knowledge, free of charge. Complete with video lectures, activities, and much more, you can’t beat access to free state-of-the-art learning on the fly.",
+	"picUrl": "img/news/img_2.jpg",
+	"link": "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/"
+	},
+
+	{
+	"newsId": 3,
+	"title": "StackOverflow",
+	"text": "It’s just like the popular Q&A site Quora, but strictly for developers. StackOverflow is an online community providing learning resources, facilitating a community for knowledge-sharing, and career advancement resources for developers, including job listings.",
+	"picUrl": "img/news/img_3.jpg",
+	"link": "https://stackoverflow.com/"
+	},
+
+	{
+	"newsId": 4,
+	"title": "GitHub",
+	"text": "No list of websites for developers is complete without a mention of GitHub, one of the most widely used code repositories with projects ranging the full spectrum from the open-source to private collaborations. You can host and manage your code on GitHub, make it public and available for use and comment, gather feedback from other professionals, and experiment with millions of open source projects.",
+	"picUrl": "img/news/img_4.jpg",
+	"link": "https://github.com/"
+	},
+
+	{
+	"newsId": 5,
+	"title": "Google Developers",
+	"text": "The internet’s leading entity seeks to inspire coders with tutorials and tips. You’ll also find an abundance of other tools and resources ranging from Google’s many consoles for developers (the Google API Console, Google Play Store Developer Console, and others), training, games, videos, and much more.",
+	"picUrl": "img/news/img_5.jpg",
+	"link": "https://developers.google.com/"
+	},
+
+	{
+	"newsId": 6,
+	"title": "Coding Horror",
+	"text": "A fantastic blog about programming and human factors, Coding Horror is a blog started by Jeff Atwood back in 2004. Atwood says the blog has changed his life, serving as a catalyst for many of his dreams to become reality – beginning with landing his dream job at Vertigo Software in 2005 and ultimately founding Stackoverflow in 2008. Atwood has since moved on from Stackoverflow to other ventures, and he documents it all at Coding Horror.",
+	"picUrl": "img/news/img_6.jpg",
+	"link": "https://blog.codinghorror.com/"
+	},
+
+	{
+	"newsId": 7,
+	"title": "Reddit Programming",
+	"text": "It is Reddit for developers! Reddit is the go-to community for discussing the latest development trends, tech news, and everything else on the busy developer’s mind. If you’re needing a quick fix of the day’s hottest developer news, want to discuss a programming issue that’s been weighing on your mind, or need to vent about your latest coding hiccup, Reddit is the site to visit.",
+	"picUrl": "img/news/img_7.jpg",
+	"link": "https://www.reddit.com/r/programming/"
+	},
+];
