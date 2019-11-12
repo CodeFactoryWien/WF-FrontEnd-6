@@ -1,4 +1,4 @@
-function initCourse(){
+function initTeam(){
 	displayTeam()
 
 }
