@@ -117,6 +117,7 @@ function renderCourse(id){
 		</div>
 	  </div>
 	</div>`
+
 }
 // ${(this.dataset.courseDifficulty).toUpperCase()}
 function renderUsedCourseTech(id){
@@ -146,5 +147,6 @@ function renderUsedCourseTech(id){
 	}
 	document.getElementById("backEndTechList").style.display = "block";
 }
+
 
 
