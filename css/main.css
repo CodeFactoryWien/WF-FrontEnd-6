@@ -7,7 +7,7 @@ header{
 li a {
 	cursor: pointer;
 }
-footer{
+h3, footer{
 	background-color:#2C5C8C;
 	color: white; 
 }
