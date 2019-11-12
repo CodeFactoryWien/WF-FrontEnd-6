@@ -20,40 +20,37 @@ document.querySelector("main").innerHTML = `
 		</tr>
 
 		<tr>
-			<td><i class="fas fa-map-marker-alt"></i></td>
-			<td class="lead"><strong>DEPARTMENT</strong> 1150 Wien, Stutterheimstrasse 16-18, Stiege 3,Top 17b</td>
+			<td></td>
+			<td class="lead pb-3"><strong>DEPARTMENT</strong> 1150 Wien, Stutterheimstrasse 16-18, Stiege 3,Top 17b</td>
 		</tr>
 
 		
 		<tr>
 			<td><i class="fas fa-phone"></i></td>
-			<td class="lead">+43 699 12255185</td>
+			<td class="lead pb-3">+43 699 12255185</td>
 		</tr>
 
 		<tr>
 			<td><i class="fas fa-envelope"></i></td>
-			<td class="lead"><a href="office@j2rs.at" style="color: blue">office@j2rs.at</a></td>
+			<td class="lead pb-3"><a href="office@j2rs.at" style="color: blue">office@j2rs.at</a></td>
 		</tr>
 
 		<tr>
 			<td><i class="fas fa-home"></i></td>
-			<td class="lead"><a href="https://codefactory.wien/" style="color: blue">https://codefactory.wien/</a></td>
+			<td class="lead pb-3"><a href="https://codefactory.wien/" style="color: blue">https://codefactory.wien/</a></td>
 		</tr>
 	</table>
 	
-	<center>
-		<iframe class="shadow bg-white rounded" width="100%" height="400px" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10638.112420921236!2d16.359416!3d48.196443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe543f0731e2b5529!2sCodeFactory!5e0!3m2!1sde!2sat!4v1573477257105!5m2!1sde!2sat" allowfullscreen=""></iframe>
-	</center>
 
 	<!-- OPEN HOURS -->
-	<div class="accordion" id="accordionExample">
+	<div class="accordion" style="margin-left: 13px" id="accordionExample">
 		<button class="btn collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
-			<i class="fas fa-clock"></i> <strong class=" ml-4">Open hours</strong><br>
+			<i class="fas fa-clock"></i><strong class="lead ml-4"><strong>OPEN HOURS</strong><br>
 		</button>
 	</div>
 	
 	<div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionExample">
-		<table class="table table-sm ml-5" width="auto">
+		<table class="table table-sm">
 			<tr>
 				<th scope="col">Monday</th>
 				<td scope="col">09:00 - 17:00</td>
@@ -90,12 +87,17 @@ document.querySelector("main").innerHTML = `
 			</tr>
 		</table>			
 	</div>
-	<hr>
+	
+	
+	<center>
+		<iframe class="shadow bg-white rounded" width="100%" height="400px" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10638.112420921236!2d16.359416!3d48.196443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe543f0731e2b5529!2sCodeFactory!5e0!3m2!1sde!2sat!4v1573477257105!5m2!1sde!2sat" allowfullscreen=""></iframe>
+	</center>
 
 	<!-- MESSAGE -->
+	<hr>
 	<div>
 		<form>
-			<h5>LEAVE A MESSAGE</h5>
+			<h3>LEAVE A MESSAGE</h3>
 			<div class="form-group">
 				<label for="exampleInputName">Name*</label>
 				<div class="form-row">
@@ -120,20 +122,21 @@ document.querySelector("main").innerHTML = `
 				<input type="text" class="form-control" id="exampleInputPhone">
 			</div>
 			
-			<div class="form-group form-check">
-				<input type="checkbox" class="form-check-input" id="exampleCheck1">
-				<label class="form-check-label" for="exampleCheck1">Please call me back</label>
+			<div class="custom-control custom-checkbox">
+			  <input type="checkbox" class="custom-control-input" id="customCheck1">
+			  <small class="form-text text-muted custom-control-label mb-3" for="customCheck1">Please call back</small>
 			</div>
-
+			
 			<div class="form-group">
 				<label for="exampleFormControlTextarea1">Message*</label>
 				<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
 			</div>
-			<small class="form-text text-muted">* Required</small><br>
-			<button type="submit" class="btn btn-primary btn-block" style="background-color: #2c5c8c; border: none">Send Message</button>
+			<small class="form-text text-muted">* Required Fields</small>
+			<button type="submit" class="btn btn-primary btn-block mt-2 opacity" style="background-color: #2c5c8c; border: none">Send Message</button>
 		</form>
 	</div>
 	<hr>
+	
 	<!-- SOCIAL MEDIA ICONS -->
 	<div class="center">
 		<a href="https://www.facebook.com" class="fa fa-facebook opacity"></a>
