@@ -10,6 +10,9 @@ header{
 }
 .nav-colored { background-color:#2C5C8C;  transition: 2s}
 .nav-transparent { background-color:transparent; transition: 2s}
+.title-colored { color: white;  transition: 2s}
+.title-transparent { color:transparent; transition: 2s}
+
 li a {
 	cursor: pointer;
 }

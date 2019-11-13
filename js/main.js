@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],[false,true, false, false, false, false],["⌂", "Courses", "Team", "get in contact", "News","Test your knowledge"]];
+    var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],[false,true, false, false, false, false],["🏠", "Courses", "Team", "get in contact", "News","Test your knowledge"]];
    	for (i = 0; i < menuArr[0].length; i++) {
 				var script = document.createElement('script');
 				script.onload = function () {};
@@ -20,6 +20,15 @@ initHome();
             } else {
                 nav.classList.add('nav-transparent');
                 nav.classList.remove('nav-colored');
+            }
+        var titleMove = document.getElementById('titlemove');
+        if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
+                titleMove.classList.add('title-colored');
+                titleMove.classList.remove('title-transparent');
+                $("#navbarSupportedContent").attr("aria-expanded","false");
+            } else {
+                titleMove.classList.add('title-transparent');
+                titleMove.classList.remove('title-colored');
             }
     })
 
@@ -42,7 +51,10 @@ function initHome(){
 			    <ul class="navbar-nav mr-auto">
 			    </ul>
 			  </div>
+			<p class="fixed-top offset-5 title-colored title-transparent" id="titlemove">title</p>
 			</nav>
+		    
+
 		</header>
 		<main class="container" id="mainDiv"></main>  
 		<footer class="p-4  border-top" >
@@ -93,6 +105,7 @@ function navBuilder(){
 	  			}	
 	  			$("main").empty();
 				window['init'+menuArr[0][tempId]]();
+				$("#titlemove").text(menuArr[0][tempId]);
 
 	   		}).scrollTop();
 	}
