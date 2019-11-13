@@ -21,16 +21,16 @@ function renderCourse(){
 	<div class="card my-4 shadow-lg rounded pt-3 border">
 	<img class="card-img-top mx-auto img-fluid shadow rounded" src="${currentCourse.image}" data-holder-rendered="true" style="width: 18.5rem; display: block;">
 	<div class="card-body pt-0 row">
-		<div class="col-12 display-4 text-dark px-0 pt-0 pb-1 my-4">
-			<p class="col text-center p-1 my-0 mx-auto">${currentCourse.name}</p>
+		<div class="col-12   px-0 pt-0 pb-1 my-4">
+			<h1 class="col text-light text-center rounded">${currentCourse.name}</h1>
 		</div>
 		<p class="col-12 col-md-9 card-text lead text-dark px-4 mx-auto" style="line-height: 1.5">${currentCourse.description}</p>
 		<p class="col-12 text-center h3 lead text-dark card-text">Choose your level</p>
 		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-5 row">
-			<a class="btn btn-dark text-success btn-lg active mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="Basic">Basic</a>
+			<a class="btn btn-dark text-success btn-lg active mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="BASIC">Basic</a>
 		</div>
 		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-5 row">
-			<a class="btn text-danger btn-lg btn-dark active mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="Advanced">Advanced</a>
+			<a class="btn text-danger btn-lg btn-dark active mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="ADVANCED">Advanced</a>
 		</div>
 	</div>
 </div>
@@ -38,11 +38,11 @@ function renderCourse(){
 <div class="accordion" id="courseDetails">
 	  <div class="card shadow-lg p-2">
 		<div class="card-body" id="headingOne">
-			  <h2 class="mb-0 text-center">
-				<button style="font-size: 100%" id="detailsHeading" class="btn btn-lg lead" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+			  <h1 class=" text-center rounded">
+				<button style="font-size: 100%" id="detailsHeading" class="btn btn-lg text-light py-0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
 				 course details
 				</button>
-			</h2>
+			</h1>
 		</div>
 
 		<div id="collapseOne" class="collapse" id="collapseShow" aria-labelledby="headingOne" data-parent="#courseDetails">
@@ -112,9 +112,9 @@ function renderCourse(){
 			</div>
 
 			<div class="my-3 col-12">
-				<p class="col-12 h2 text-center">
-					Technologies
-				</p>
+				<h1 class="col-12 text-light rounded text-center">
+					TECHNOLOGIES
+				</h1>
 				
 			</div>
 			
@@ -191,7 +191,7 @@ function addCourseBtnClick(){
                 scrollTop: $(`#courseDetails`).offset().top
 			}, 600);
 			let courseVersion = e.target.dataset.coursedifficulty
-			$('#detailsHeading').html(`${courseVersion} course`);
+			$('#detailsHeading').html(`${courseVersion} COURSE`);
 			if(courseVersion == "Advanced"){
 				let priceInfo = document.getElementById("coursePriceInfo")
 				priceInfo.innerHTML = parseFloat(currentCourse.price)*2+"€"
