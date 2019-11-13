@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],[false,true, false, false, false, false],["🏠", "Courses", "the team", "contact us", "News","Test your knowledge"]];
+    var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],[false,true, false, false, false, false],["🏠", "Courses", "Team", "Contact us", "News","Test your knowledge"]];
    	for (i = 0; i < menuArr[0].length; i++) {
 		var script = document.createElement('script');
 		script.onload = function () {};
