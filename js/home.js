@@ -88,7 +88,7 @@ function courseFeed(){
 	$(".card-course-item").on("click",function(e){
 			tempId=($(this).attr("id"));
 			tempId=parseInt(tempId.slice(6));
-			initCourse(tempId)
+			initCourse(tempId);
 		//alert("link zu "+ $(this).attr("id"))
 	})
 
