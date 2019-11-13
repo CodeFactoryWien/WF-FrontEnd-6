@@ -52,8 +52,10 @@ function newsFeed(){
 		newsCardBuilder(article);
 	};
 	$(".card-news-item").on("click",function(e){
+		// tempId=($(this).attr("id"));
+		// tempId=parseInt(tempId.slice(6));
+		// initNews(tempId)
 		alert("link zu "+ $(this).attr("id"))
-		//function($(this).attr("name"));
 	})
 
 }
@@ -88,7 +90,6 @@ function courseFeed(){
 			tempId=parseInt(tempId.slice(6));
 			initCourse(tempId)
 		//alert("link zu "+ $(this).attr("id"))
-		//function($(this).attr("name"));
 	})
 
 }

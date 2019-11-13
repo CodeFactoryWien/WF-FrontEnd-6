@@ -32,7 +32,7 @@ function initHome(){
 	$("body").append(`
 		<header>
 			<nav class="navbar navbar-expand-sm navbar-dark fixed-top nav-colored nav-transparent" id="myNav">
-			  <p class="navbar-brand" 	>J₂SR</p>
+			  <img class="logoj2sr navbar-brand" src="./img/j2sr_white_small.png">
 
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -89,7 +89,7 @@ function navBuilder(){
 	  			if(tempId<=1){
 	  				$("header").css({height: "45vh", transition:"2s"});
 	  			}else{
-	  				$("header").css({height: "15vh", transition:"2s"});
+	  				$("header").css({height: "108px", transition:"2s"});
 	  			}	
 	  			$("main").empty();
 				window['init'+menuArr[0][tempId]]();
