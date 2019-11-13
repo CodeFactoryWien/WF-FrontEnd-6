@@ -91,7 +91,7 @@ var quizJsonEng = [{
 	"NextBtn"		: ["If you have chosen, click for question #","evaluation"],
 	"KeineWahl" 	: "Please choose an option to continue",
 	"FinalMessage" 	: "Congratulations",
-	"FinalLoose"	: "sorry, not enough points",
+	"FinalLoose"	: "you should take the basic courses",
 	"Auswertung"	: ["In "," minutes, you have answered "," questions of ", " correctly. "," From this results a grade of: "],
 	"AuswertungSmiley":[" Your grade has been halved because you have not answered the important question correctly. "," Your hunted smiley so far: ","-"],
 	"AuswertTime": ["Question nr. ", " took the most time for you. "],
