@@ -2,3 +2,9 @@
  /* .card{
      border: 1px #2c5c8c;
  } */
+
+ #courseDetails{
+    display: none; 
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+ }
