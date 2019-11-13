@@ -51,7 +51,7 @@ function initHome(){
 			    <ul class="navbar-nav mr-auto">
 			    </ul>
 			  </div>
-			<p class="fixed-top offset-5 title-colored title-transparent" id="titlemove">title</p>
+			<p class="fixed-top offset-5 title-colored title-transparent" id="titlemove">Home</p>
 			</nav>
 		    
 
@@ -126,7 +126,8 @@ function navBuilder(){
 			tempId=($(this).attr("id"));
 			tempId=parseInt(tempId.slice(6));
 			initCourse(tempId)
-			console.log(tempId)
+			console.log(tempId);
+			$("#titlemove").text(menuArr[0][tempId]);
 			//alert(tempId);
 		})
 
