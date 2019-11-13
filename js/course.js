@@ -39,7 +39,7 @@ function renderCourse(id){
 	  <div class="card shadow-lg p-2">
 		<div class="card-body" id="headingOne">
 			  <h2 class="mb-0 text-center">
-				<button style="font-size: 100%" class="btn btn-lg lead" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				<button style="font-size: 100%" id="detailsHeading" class="btn btn-lg lead" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
 				 course details
 				</button>
 			</h2>
@@ -168,7 +168,8 @@ function addCourseBtnClick(){
 			}, 50)
 			$('html, body').animate({
                 scrollTop: $(`#courseDetails`).offset().top
-            }, 1000);
+			}, 600);
+			// $('#detailsHeading').html(e.target.dataset.courseDifficulty);
 
 		})
 	})
