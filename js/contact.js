@@ -20,8 +20,8 @@ document.querySelector("main").innerHTML = `
 		</tr>
 
 		<tr>
-			<td><i class="fas fa-map-marker-alt"></i></td>
-			<td class="lead"><strong>DEPARTMENT</strong> 1150 Wien, Stutterheimstrasse 16-18, Stiege 3,Top 17b</td>
+			<td></td>
+			<td class="lead pb-3"><strong>DEPARTMENT</strong> 1150 Wien, Stutterheimstrasse 16-18, Stiege 3,Top 17b</td>
 		</tr>
 
 		
@@ -41,19 +41,16 @@ document.querySelector("main").innerHTML = `
 		</tr>
 	</table>
 	
-	<center>
-		<iframe class="shadow bg-white rounded" width="100%" height="400px" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10638.112420921236!2d16.359416!3d48.196443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe543f0731e2b5529!2sCodeFactory!5e0!3m2!1sde!2sat!4v1573477257105!5m2!1sde!2sat" allowfullscreen=""></iframe>
-	</center>
 
 	<!-- OPEN HOURS -->
-	<div class="accordion" id="accordionExample">
+	<div class="accordion mt-3" style="margin-left: 13px" id="accordionExample">
 		<button class="btn collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
-			<i class="fas fa-clock"></i> <strong class=" ml-4">Open hours</strong><br>
+			<i class="fas fa-clock"></i><strong class="lead ml-4"><strong>OPEN HOURS</strong><br>
 		</button>
 	</div>
 	
 	<div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionExample">
-		<table class="table table-sm ml-5" width="auto">
+		<table class="table table-sm" width="60%">
 			<tr>
 				<th scope="col">Monday</th>
 				<td scope="col">09:00 - 17:00</td>
@@ -90,50 +87,56 @@ document.querySelector("main").innerHTML = `
 			</tr>
 		</table>			
 	</div>
-	<hr>
+	
+	
+	<center>
+		<iframe class="shadow bg-white rounded" width="100%" height="400px" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10638.112420921236!2d16.359416!3d48.196443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe543f0731e2b5529!2sCodeFactory!5e0!3m2!1sde!2sat!4v1573477257105!5m2!1sde!2sat" allowfullscreen=""></iframe>
+	</center>
 
 	<!-- MESSAGE -->
+	<hr>
 	<div>
 		<form>
-			<h5>LEAVE A MESSAGE</h5>
+			<h4>LEAVE A MESSAGE</h4>
 			<div class="form-group">
 				<label for="exampleInputName">Name*</label>
 				<div class="form-row">
 					<div class="col">
-						<input type="text" class="form-control" placeholder="First name">
+						<input type="text" class="form-control" placeholder="First name" required>
 					</div>
 					
 					<div class="col">
-						<input type="text" class="form-control" placeholder="Last name">
+						<input type="text" class="form-control" placeholder="Last name" required>
 					</div>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address*</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
 				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 			</div>
 
 			<div class="form-group">
 				<label for="exampleInputPhone">Phone*</label>
-				<input type="text" class="form-control" id="exampleInputPhone">
+				<input type="text" class="form-control" id="exampleInputPhone" required>
 			</div>
 			
-			<div class="form-group form-check">
-				<input type="checkbox" class="form-check-input" id="exampleCheck1">
-				<label class="form-check-label" for="exampleCheck1">Please call me back</label>
+			<div class="custom-control custom-checkbox">
+			  <input type="checkbox" class="custom-control-input" id="customCheck1" required>
+			  <small class="form-text text-muted custom-control-label mb-3" for="customCheck1">Please call back</small>
 			</div>
-
+			
 			<div class="form-group">
 				<label for="exampleFormControlTextarea1">Message*</label>
-				<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+				<textarea class="form-control" id="exampleFormControlTextarea1" rows="5" required></textarea>
 			</div>
-			<small class="form-text text-muted">* Required</small><br>
-			<button type="submit" class="btn btn-primary btn-block" style="background-color: #2c5c8c; border: none">Send Message</button>
+			<small class="form-text text-muted">* Required Fields</small>
+			<button type="submit" class="btn btn-dark btn-block mt-2 opacity" style="border: none">SEND MESSAGE</button>
 		</form>
 	</div>
 	<hr>
+	
 	<!-- SOCIAL MEDIA ICONS -->
 	<div class="center">
 		<a href="https://www.facebook.com" class="fa fa-facebook opacity"></a>
@@ -143,7 +146,6 @@ document.querySelector("main").innerHTML = `
 		<a href="https://www.instagram.com/" class="fa fa-instagram opacity"></a>
 	</div>
 </div>
-
 `
 }
 

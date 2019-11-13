@@ -1,18 +1,16 @@
 //---------------------------------------Contact------Builder--------------------------------------------------
 
 function initCourse(id){
-	console.log(id)
 	for(i=0; i<coursesJSON.length; i++){
-		if(coursesJSON.id == id && id.isNaN() == false){
-			id = coursesJSON.id;
+
+		if(id === parseInt(coursesJSON[i].id) && isNaN(id) == false){
+			id = coursesJSON[i].id;
+			break;
 		}
-		else{
-			id = 1;
-		}
+
 	}
 	renderCourse(id);
 	renderUsedCourseTech(id);
-
 }	
 
 //---------------------------------------End contact Builder---------------------------------------------------
@@ -121,12 +119,11 @@ function renderCourse(id){
 }
 // ${(this.dataset.courseDifficulty).toUpperCase()}
 function renderUsedCourseTech(id){
-	
-	
-
-	if(coursesJSON[id].frontEndTech.length > 0){
-		console.log(coursesJSON[id].frontEndTech.length)
+	console.log(coursesJSON[id].frontEndTech.length)
 		console.log(coursesJSON[id].backEndTech.length)
+	
+	if(coursesJSON[id].frontEndTech.length > 0){
+		
 			for(j=0; j < coursesJSON[id].frontEndTech.length; j++){
 			document.getElementById("frontEndTechList").innerHTML += `
 				<li class="mb-3 mt-1 lead">
@@ -144,8 +141,8 @@ function renderUsedCourseTech(id){
 					${coursesJSON[id].backEndTech[j]}
 				</li>`
 		}	
+		document.getElementById("backEndTechList").style.display = "block";
 	}
-	document.getElementById("backEndTechList").style.display = "block";
 }
 
 

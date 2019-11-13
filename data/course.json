@@ -66,12 +66,12 @@ var coursesJSON = [
         "language": "English",
         "location": "CodeFactory, Kettenbrückengasse 23/2/12, 1050 Vienna",   
         "frontEndTech": 
-            ["SQL",
-            "SCRUM & Requirements Engineering","PHP","AJAX",
-            "Symfony PHP framework","WordPress",
-            " Software Testing","Complementary Skills"],
+            [],
         "backEndTech": 
-            [""],
+            ["SQL",
+                "SCRUM & Requirements Engineering","PHP","AJAX",
+                "Symfony PHP framework","WordPress",
+                " Software Testing","Complementary Skills"],
         "times": "Monday to Thursday 9-16 o’clock @ CodeFactory",
         "requirements": "You are motivated and like to work in teams as well as want to learn new things.You either participated in our basic JavaScript and HTML & CSS courses, or even programmed the task from our beginner curriculum. After completing all the individual chapters of the course you are ready to start working as a fully qualified backend web developer."
     },
@@ -85,9 +85,9 @@ var coursesJSON = [
         "language": "English",
         "location": "CodeFactory, Kettenbrückengasse 23/2/12, 1050 Vienna",   
         "frontEndTech": 
-            [""],
+            [],
         "backEndTech": 
-            [""],
+            [],
         "times": "1x per month 9-15 o’clock @ CodeFactory",
         "requirements": "Since this course is aimed at beginners in JavaScript, no specific programming skills are required. Also knowledge about HTML and CSS are not required, but help to visually customize your projects."
     },
@@ -103,7 +103,7 @@ var coursesJSON = [
         "frontEndTech": 
             ["HTML5","CSS3"],
         "backEndTech": 
-            [""],
+            [],
         "times": "1x per month 9-15 o’clock @ CodeFactory",
         "requirements": "You should have skills and abilities to download and use a text editor for editing your web pages, we recommend Sublime text or brackets. You can use another text editor if you want, but it should have the ability to highlight code syntax. You should be able to download and install Google Chrome, as we will be exploring this developer’s tools extensively in this course."
     },
@@ -117,7 +117,7 @@ var coursesJSON = [
         "language": "English",
         "location": "CodeFactory, Kettenbrückengasse 23/2/12, 1050 Vienna",   
         "frontEndTech": 
-            [""],
+            [],
         "backEndTech": 
             ["Java"],
         "times": "Monday to Thursday 9-16 o’clock @ CodeFactory",
@@ -133,7 +133,7 @@ var coursesJSON = [
         "language": "English",
         "location": "CodeFactory, Kettenbrückengasse 23/2/12, 1050 Vienna",   
         "frontEndTech": 
-            [""],
+            [],
         "backEndTech": 
             ["Python"],
         "times": "Monday to Thursday 9-15 o’clock @ CodeFactory",

@@ -44,7 +44,7 @@ courseFeed();
 //--------------------------------------- insert News -----------------------------------------------
 function newsFeed(){
 	$("#news").append(`
-		<h1 class=" text-light mt-2 rounded text-center"> CODE-NEWS </h1>
+		<h1 class=" text-light mt-2 rounded text-center"> NEWS </h1>
 		<div class="card-deck" id="newsDeck">
 		</div>
 		`)
@@ -84,7 +84,9 @@ function courseFeed(){
 		courseCardBuilder(course);
 	};
 	$(".card-course-item").on("click",function(e){
-		initCourse($(this).attr("id").slice(6));
+			tempId=($(this).attr("id"));
+			tempId=parseInt(tempId.slice(6));
+			initCourse(tempId)
 		//alert("link zu "+ $(this).attr("id"))
 		//function($(this).attr("name"));
 	})
