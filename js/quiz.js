@@ -1,35 +1,39 @@
 
-var lang = (localStorage.getItem("lang"));								//**********************************LOCALSTORAGE****Language********************************
-	if (lang == "" || lang == null){lang = "Eng"};
-var grade = localStorage.getItem("quizGrade");  						//**********************************LOCALSTORAGE****GRADE********************************
-var	smileCount = JSON.parse(localStorage.getItem("smileyCount"));
-		if (smileCount == "" || smileCount == null){smileCount = 0};
+// var lang = (localStorage.getItem("lang"));								//**********************************LOCALSTORAGE****Language********************************
+// 	if (lang == "" || lang == null){lang = "Eng"};
+// var grade = localStorage.getItem("quizGrade");  						//**********************************LOCALSTORAGE****GRADE********************************
+var lang = "Eng"; //prov
 var quizData = window["quizJson"+lang];
+
 var questionCounter = 0;
 var logObj = {	};
 var answerObj = {  };
 var quizLength = quizData.length;
 var border = 60; // grenze ab wann das quiz als geschafft gilt in %
-var smileQuest = 6; //Nummer of question who desides the value of the grade. question wrong and grade will be reduced.
+var smileQuest = 1; //Nummer of question who desides the value of the grade. question wrong and grade will be reduced.
 var optChange = 0;
 
-function initQuiz(){introduction()}; //window.onload = introduction();
+function initQuiz(){
+	introduction()
+	questionCounter = 0;
+	smileCount = 0;
+}; //window.onload = introduction();
 
 function introduction(){
 	mainClear();
 
-	let intro = document.createElement("h2");
-		intro.className = "introClass";
+	let intro = document.createElement("h1");
+		intro.className = "introClass text-light mt-2 rounded text-center";
 		intro.textContent = quizData[0].IntroHead;
 		document.getElementById('mainDiv').appendChild(intro);
 
 	let introText = document.createElement("p");
 		introText.className = "introTet";
-		introText.textContent = quizData[0].IntroText +" | " /* + "Smiley Counter: "+ smileCount+ " | " */ + quizData[0].Vorgaenger + grade + " %" ;
+		introText.textContent = quizData[0].IntroText +" | " /* + "Smiley Counter: "+ smileCount+ " | "  + quizData[0].Vorgaenger + grade + " %" */ ;
 		document.getElementById('mainDiv').appendChild(introText);
 	
 	let startBtn = document.createElement("button");
-		startBtn.className = "startBtn";
+		startBtn.className = "startBtn btn btn-dark mb-5 ";
 		startBtn.textContent = quizData[0].StartBtn;
 		startBtn.addEventListener("click", function(){
 			var n = new Date().getTime();
@@ -48,18 +52,18 @@ mainClear();
 thisId = questionCounter;
 
 let qBox = document.createElement("div");
-	qBox.className = "quizcontainer";
+	qBox.className = "quizcontainer mb-5";
 	qBox.id = "quizcontainerID";
 	document.getElementById('mainDiv').appendChild(qBox);
 
-	let qh3 = document.createElement("h3");
-		qh3.className = "question";
+	let qh3 = document.createElement("h1");
+		qh3.className = "question text-light mt-2 rounded text-center";
 		qh3.id = "question"+thisId;
 		qh3.textContent = quizData[0].FrageTitel + thisId;
 		document.getElementById("quizcontainerID").appendChild(qh3);
 
 	let questText = document.createElement("p");
-		questText.className = "questText";
+		questText.className = "questText h3";
 		questText.id = "questText"+thisId;
 		questText.textContent = quizData[thisId].Frage;
 		document.getElementById("quizcontainerID").appendChild(questText);
@@ -70,26 +74,32 @@ let qBox = document.createElement("div");
 		document.getElementById("quizcontainerID").appendChild(qInput);
 
 		for (i=0;i<quizData[thisId].Antworten.length; i++){
-		let antOption = document.createElement("input");
-			antOption.className = "antOption"
-			antOption.id = "Opt"+ i;
-			antOption.type = "radio";
-			antOption.name = "antwort";
-			antOption.value = "ant"+i; // for later, here comes the question ID (quId)
-			antOption.addEventListener("change", function(o){
-				radioChange(o.target.id);
-			});
-			document.getElementById("quizInput"+thisId).appendChild(antOption);
-		let label = document.createElement("label");
-			label.htmlFor = "Opt"+ i;
-			label.textContent = quizData[thisId].Antworten[i];
-			document.getElementById("quizInput"+thisId).appendChild(label); 
-		let br = document.createElement("br");
-			document.getElementById("quizInput"+thisId).appendChild(br);
+			let bootstrapDiv = document.createElement("div");
+				bootstrapDiv.className = "container p-3 pl-5";
+				bootstrapDiv.id = "bootstrapDiv"+i;
+				document.getElementById("quizInput"+thisId).appendChild(bootstrapDiv);
+
+			let antOption = document.createElement("input");
+				antOption.className = "antOption custom-control-input"
+				antOption.id = "Opt"+ i;
+				antOption.type = "radio";
+				antOption.name = "antwort";
+				antOption.value = "ant"+i; // for later, here comes the question ID (quId)
+				antOption.addEventListener("change", function(o){
+					radioChange(o.target.id);
+				});
+				document.getElementById("bootstrapDiv"+i).appendChild(antOption);
+			let label = document.createElement("label");
+				label.htmlFor = "Opt"+ i;
+				label.className = "custom-control-label";
+				label.textContent = quizData[thisId].Antworten[i];
+				document.getElementById("bootstrapDiv"+i).appendChild(label); 
+		// let br = document.createElement("br");
+		// 	document.getElementById("quizInput"+thisId).appendChild(br);
 		}
 
 	let qBtn = document.createElement("button");
-		qBtn.className = "answerBtn";
+		qBtn.className = "answerBtn btn btn-dark";
 		qBtn.id = "answer"+thisId;
 		if (thisId== quizLength-1){
 			qBtn.textContent = quizData[0].NextBtn[1];
@@ -194,14 +204,14 @@ function evaluation(){
 		gradeBool =false
 		}
 
-	smileCount = JSON.parse(localStorage.getItem("smileyCount"));
-		if (smileCount == "" || smileCount == null){smileCount = 0};
+	// smileCount = JSON.parse(localStorage.getItem("smileyCount"));
+	// 	if (smileCount == "" || smileCount == null){smileCount = 0};
 	
-	if (Number(smileCount)== 0){
-		grade = grade * 0.8;
-	}else{
-		grade = grade + (Number(smileCount)/2);
-	}
+	// if (Number(smileCount)== 0){
+	// 	grade = grade * 0.8;
+	// }else{
+	// 	grade = grade + (Number(smileCount)/2);
+	// }
 
 	localStorage.setItem("quizGrade", grade);  //**********************************LOCALSTORAGE************************************
 
@@ -274,7 +284,7 @@ function reView(){
 			reViewBox.textContent += quizData[0].AuswertungSmiley[0];
 		}
 		reViewBox.textContent += " | " + quizData[0].Auswertung[4] + grade.toFixed(2) + "%";
-		reViewBox.textContent += " | " + quizData[0].AuswertungSmiley[1] + smileCount; 
+		// reViewBox.textContent += " | " + quizData[0].AuswertungSmiley[1] + smileCount; 
 		reViewBox.textContent += " | " + quizData[0].AuswertTime[0]+ " " + (langeFrageIndex+1) + " " + quizData[0].AuswertTime[1] + " (" + timeCalc(answerTimeList[langeFrageIndex]) + ")";
 		if (optChange>6){
 			reViewBox.textContent  += " | " +optChange + " " + quizData[0].AuswertChange[0] + " " + quizData[0].AuswertChange[1];
@@ -291,7 +301,7 @@ function reView(){
 		}else{
 			finBtn.textContent = quizData[0].FinBtnBack;
 			finBtn.addEventListener("click", function(){
-				window.open("quiz.html", "_self");
+				initQuiz(); // Button - Changed from the priviors code
 			});			
 		}
 		document.getElementById('mainDiv').appendChild(finBtn);
@@ -322,7 +332,7 @@ function reView(){
 	}
 		finBtn2 = finBtn.cloneNode(true);
 		finBtn2.addEventListener("click", function(){
-				window.open("quiz.html", "_self");
+				initQuiz(); // Button - Changed from the priviors code
 			});
 
 		document.getElementById('mainDiv').appendChild(finBtn2);
