@@ -11,6 +11,7 @@ function initCourse(id){
 	}
 	renderCourse(id);
 	renderUsedCourseTech(id);
+	addCourseBtnClick();
 }	
 
 //---------------------------------------End contact Builder---------------------------------------------------
@@ -26,11 +27,10 @@ function renderCourse(id){
 		<p class="col-12 col-md-9 card-text lead text-dark px-4 mx-auto" style="line-height: 1.5">${coursesJSON[id].description}</p>
 		<p class="col-12 text-center h3 lead text-dark card-text">Choose your level</p>
 		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-5 row">
-			<a class="btn btn-dark text-success btn-lg active mx-auto p-2 px-4 w-100 rounded" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="basic">Basic</a>
+			<a class="btn btn-dark text-success btn-lg active mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="basic">Basic</a>
 		</div>
 		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-5 row">
-			<a class="btn btn-secondar
-			text-danger btn-lg btn-dark active mx-auto p-2 px-4 w-100" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="advanced">Advanced</a>
+			<a class="btn text-danger btn-lg btn-dark active mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="advanced">Advanced</a>
 		</div>
 	</div>
 </div>
@@ -45,7 +45,7 @@ function renderCourse(id){
 			</h2>
 		</div>
 
-		<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#courseDetails">
+		<div id="collapseOne" class="collapse" id="collapseShow" aria-labelledby="headingOne" data-parent="#courseDetails">
 			<div class="card-body row pl-4">
 					
 				
@@ -97,18 +97,24 @@ function renderCourse(id){
 					<p class="pt-2">
 						Requirements:
 					</p>
-						sofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsnsofndsniusafiuwbfsn
+						${coursesJSON[id].requirements}
 				</div>
 			</div>
 
-			<div class="col-12 my-3 text-center h3">
-				Technologies
+			<div class="my-3 col-12">
+				<p class="col-12 h2 text-center">
+					Technologies
+				</p>
+				<div class="row text-center">
+					<div class="col-6 my-1 h4 text-muted mx-auto" style="display: none;" id="frontEndHeading">Front-End</div>
+					<div class="col-6 my-1 h4 text-muted mx-auto" style="display: none" id="backEndHeading">Back-End</div>
+				</div>
 			</div>
 			
-			<ul class="col-lg-5 offset-lg-1 col-10 card-text lead text-dark px-1 mx-auto" id="frontEndTechList" style="display: none">	
+			<ul class="col-lg-5 offset-lg-1 col-10 card-text lead text-dark mx-auto" id="frontEndTechList" style="display: none">	
 			
 			</ul>
-			<ul class="col-lg-5 offset-lg-1 col-10 card-text lead text-dark px-1 mx-auto" id="backEndTechList" style="display: none">	
+			<ul class="col-lg-5 offset-lg-1 col-10 card-text lead text-dark mx-auto" id="backEndTechList" style="display: none">	
 			
 			</ul>
 		 </div>
@@ -121,6 +127,7 @@ function renderCourse(id){
 function renderUsedCourseTech(id){
 	console.log(coursesJSON[id].frontEndTech.length)
 		console.log(coursesJSON[id].backEndTech.length)
+		console.log("hallo")
 	
 	if(coursesJSON[id].frontEndTech.length > 0){
 		
@@ -131,18 +138,40 @@ function renderUsedCourseTech(id){
 				</li>`
 		}
 		document.getElementById("frontEndTechList").style.display = "block";
+		document.getElementById("frontEndHeading").style.display = "block";
+
 	}
 
 	if(coursesJSON[id].backEndTech.length > 0){
 
 			for(j=0; j < coursesJSON[id].backEndTech.length; j++){
 			document.getElementById("backEndTechList").innerHTML += `
-				<li class="mb-3 mt-1 lead">
+			<li class="mb-3 mt-1 lead">
 					${coursesJSON[id].backEndTech[j]}
 				</li>`
 		}	
 		document.getElementById("backEndTechList").style.display = "block";
+		document.getElementById("backEndHeading").style.display = "block";
 	}
+}
+
+function addCourseBtnClick(){
+	let eventBtns = document.querySelectorAll(".extendBtn");
+	eventBtns.forEach(function(elem){
+		elem.addEventListener("click", function(e){
+			document.getElementById("courseDetails").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("courseDetails").style.opacity = "1";
+				setTimeout(function(){
+					document.getElementById("collapseOne").className = "collapse show";
+				}, 50)
+			}, 50)
+			$('html, body').animate({
+                scrollTop: $(`#courseDetails`).offset().top
+            }, 1000);
+
+		})
+	})
 }
 
 
