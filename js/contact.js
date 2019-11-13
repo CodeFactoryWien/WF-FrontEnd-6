@@ -11,7 +11,7 @@ document.querySelector("main").innerHTML = `
 <div class="container box">
 	<table class="mx-auto" width="auto"
 		<tr>
-			<td><strong>LOGO</strong></td>
+			<td>img src="img/ alt="theo"></td>
 		</tr>
 
 		<tr>

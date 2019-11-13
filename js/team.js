@@ -20,7 +20,7 @@ function displayTeam() {
 
 			<div class=" col-lg-6 col-md-10">
 			<div class=" shadow card h-100">
-			<img src="img/team/goran.jpg" class="card-img-top" alt="theo">
+			<img src="img/team/goran.jpg" class="card-img-top" alt="goran">
 			<div class="card-body text-center">
 			<h3 class="card-title ">Goran Stevic</h3>
 			<p class="card-text ">Trainer</p>
@@ -35,7 +35,7 @@ function displayTeam() {
 	<div class="row">
 			<div class=" col-lg-3 col-md-5 ">
 			<div class=" shadow card h-100 ">
-			<img src="img/team/theo.jpg" class="card-img-top" alt="theo">
+			<img src="img/team/jessica.png" class="card-img-top" alt="jessica">
 			<div class="card-body text-center">
 			<h3 class="card-title">Jessica Triltsch</h3>
 			<p class="card-text">Teamleader<br> Teampage</p>
@@ -44,28 +44,29 @@ function displayTeam() {
 			</div>
 			<div class="col-lg-3 col-md-5">
 			<div class="shadow card h-100">
-			<img src="img/team/theo.jpg" class="card-img-top" alt="theo">
+			<img src="img/team/jasmine.png" class="card-img-top" alt="jasmine">
 			<div class="card-body text-center">
 			<h3 class="card-title">Jasmine Wagner</h3>
 			<p class="card-text">Contact Page <br> News Page</p>
 			</div>
 			</div>
 			</div>
+			
 			<div class="col-lg-3 col-md-5">
 			<div class="shadow card h-100">
-			<img src="img/team/theo.jpg" class="card-img-top" alt="theo">
-			<div class="card-body text-center">
-			<h3 class="card-title">Roman Springer</h3>
-			<p class="card-text">Landing Page <br> Chief Designer</p>
-			</div>
-			</div>
-			</div>
-			<div class="col-lg-3 col-md-5">
-			<div class="shadow card h-100">
-			<img src="img/team/theo.jpg" class="card-img-top" alt="theo">
+			<img src="img/team/sebastian.png" class="card-img-top" alt="sebastian">
 			<div class="card-body text-center">
 			<h3 class="card-title">Sebastian Malcher</h3>
 			<p class="card-text">Course Master</p>
+			</div>
+			</div>
+			</div>
+			<div class="col-lg-3 col-md-5">
+			<div class="shadow card h-100">
+			<img src="img/team/roman.png" class="card-img-top" alt="roman">
+			<div class="card-body text-center">
+			<h3 class="card-title">Roman Springer</h3>
+			<p class="card-text">Landing Page <br> Chief Designer</p>
 			</div>
 			</div>
 			</div>
