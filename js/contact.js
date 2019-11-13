@@ -9,18 +9,23 @@ document.querySelector("main").innerHTML = `
 <h1 class="text-light mt-2 rounded text-center">CONTACT</h1>
 
 <div class="container box">
+	<img src="img/j2sr_blue_small.png" width="20%" class="mx-auto d-block">
+
 	<table class="mx-auto" width="auto"
 		<tr>
-			<td><strong>LOGO</strong></td>
-		</tr>
-
-		<tr>
 			<td><i class="fas fa-map-marker-alt"></i></td>
-			<td class="lead"><strong>HEADQUATER</strong> 1050 Wien, Kettenbrückengasse 23/2/12</td>
+			<td>
+				<h4>J2RS GmbH</h4>
+			</td>
 		</tr>
 
 		<tr>
 			<td></td>
+			<td class="lead"><strong>HEADQUATER</strong> 1050 Wien, Kettenbrückengasse 23/2/12</td>
+		</tr>
+
+		<tr>
+			<td class="pb-3"></td>
 			<td class="lead pb-3"><strong>DEPARTMENT</strong> 1150 Wien, Stutterheimstrasse 16-18, Stiege 3,Top 17b</td>
 		</tr>
 
@@ -32,12 +37,12 @@ document.querySelector("main").innerHTML = `
 
 		<tr>
 			<td><i class="fas fa-envelope"></i></td>
-			<td class="lead"><a href="office@j2rs.at" style="color: blue">office@j2rs.at</a></td>
+			<td class="lead"><a href="office@j2rs.at" style="color: blue"> office@j2rs.at</a></td>
 		</tr>
 
 		<tr>
-			<td><i class="fas fa-home"></i></td>
-			<td class="lead"><a href="https://codefactory.wien/" style="color: blue">https://codefactory.wien/</a></td>
+			<td><i class="fas fa-home pb-3"></i></td>
+			<td class="lead pb-3"><a href="https://codefactory.wien/" style="color: blue"> https://codefactory.wien/</a></td>
 		</tr>
 		
 		<!-- OPEN HOURS -->
@@ -45,7 +50,7 @@ document.querySelector("main").innerHTML = `
 			<td><i class="fas fa-clock"></i></td>
 			<td>
 				<div class="accordion" id="accordionExample">
-					<button class="btn collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+					<button class="btn collapsed p-0 m-0" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
 						<strong class="lead"><strong>OPEN HOURS</strong><br>
 					</button>
 				</div>
@@ -105,43 +110,48 @@ document.querySelector("main").innerHTML = `
 	<!-- MESSAGE -->
 	<hr>
 	<div>
-		<form>
+		<form onsubmit="return false">
 			<h4>LEAVE A MESSAGE</h4>
 			<div class="form-group">
 				<label for="exampleInputName">Name*</label>
 				<div class="form-row">
 					<div class="col">
-						<input type="text" class="form-control" placeholder="First name" required>
+						<input id="input1" type="text" class="form-control" placeholder="First name" required>
 					</div>
 					
 					<div class="col">
-						<input type="text" class="form-control" placeholder="Last name" required>
+						<input id="input2" type="text" class="form-control" placeholder="Last name" required>
 					</div>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address*</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+				<input id="input3" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
 				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 			</div>
 
 			<div class="form-group">
 				<label for="exampleInputPhone">Phone*</label>
-				<input type="text" class="form-control" id="exampleInputPhone" required>
+				<input id="input4" type="text" class="form-control" id="exampleInputPhone" required>
 			</div>
 			
-			<div class="custom-control custom-checkbox">
-			  <input type="checkbox" class="custom-control-input" id="customCheck1" required>
-			  <small class="form-text text-muted custom-control-label mb-3" for="customCheck1">Please call back</small>
-			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+			  <small class="form-check-label" for="inlineCheckbox1">Please call me back</small>
+			</div><br><br>
 			
 			<div class="form-group">
 				<label for="exampleFormControlTextarea1">Message*</label>
-				<textarea class="form-control" id="exampleFormControlTextarea1" rows="5" required></textarea>
+				<textarea  id="input5" class="form-control" id="exampleFormControlTextarea1" rows="5" required></textarea>
 			</div>
 			<small class="form-text text-muted">* Required Fields</small>
-			<button type="submit" class="btn btn-dark btn-block mt-2 opacity" style="border: none">SEND MESSAGE</button>
+			
+			<button type="submit" class="btn btn-dark btn-block mt-2 opacity" id="btn_alert" style="border: none">SEND MESSAGE</button>
+			<div id="alert"></div>
+			
+			
+			<alert>
 		</form>
 	</div>
 	<hr>
@@ -154,7 +164,30 @@ document.querySelector("main").innerHTML = `
 		<a href="https://at.linkedin.com/" class="fa fa-linkedin opacity"></a>
 		<a href="https://www.instagram.com/" class="fa fa-instagram opacity"></a>
 	</div>
-</div>
-`
+</div>`
+
+document.getElementById("btn_alert").addEventListener("click", showMessage);
+}
+
+function showMessage(){
+	let input1 = document.getElementById("input1");
+	let input2 = document.getElementById("input2");
+	let input3 = document.getElementById("input3"); //CheckEmail???
+	let input4 = document.getElementById("input4");
+	let input5 = document.getElementById("input5");
+		
+	if(input1.value != "" && input2.value != "" && input3.value != "" && input4.value != "" && input5.value != "") {
+		document.getElementById("alert").innerHTML = `<div class="alert alert-success m-3 text-center" role="alert">Your message has been sent successfully!</div>`;
+		
+		input1.value = "";
+		input2.value = "";
+		input3.value = "";
+		input4.value = "";
+		input5.value = "";
+		
+		setTimeout(function(){
+			document.getElementById("alert").innerHTML = "";
+		}, 5000);
+	}
 }
 

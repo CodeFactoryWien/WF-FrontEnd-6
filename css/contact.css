@@ -3,7 +3,7 @@ button:focus { box-shadow: none !Important; }
 
 iframe { margin: 20px 0; }
 
-i { font-size: 1.2em; color: #2c5c8c }
+i { font-size: 1.2em; color: #2c5c8c; margin: 0 10px; }
 
 .table-small { width: auto; }
 
