@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Contact", "Team","News"],[false,true, false, false, false]];
+    var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],[false,true, false, false, false, false]];
    	for (i = 0; i < menuArr[0].length; i++) {
 				var script = document.createElement('script');
 				script.onload = function () {};
@@ -44,7 +44,7 @@ function initHome(){
 			  </div>
 			</nav>
 		</header>
-		<main class="container"></main>  
+		<main class="container" id="mainDiv"></main>  
 		<footer class="p-4  border-top" >
 			<div class="row">
 			    <div class="col col-6-md">
@@ -52,13 +52,13 @@ function initHome(){
 					&copy; 2019
 			    </div>
 			    <div class="col col-6-md">
+			      	<iframe width="320" height="180" src="https://www.youtube.com/embed/eHS0TGC_Izg?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			    </div>
+			    <div class="col col-6-md">
 			      	<ul>
 						<li> irgendwas</li>
 						<li> irgendwas</li>
 			      	</ul>
-			    </div>
-			    <div class="col col-6-md">
-			      	
 			    </div>
 			</div>
 		</footer>

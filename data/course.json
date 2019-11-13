@@ -12,7 +12,7 @@ var coursesJSON = [
         "frontEndTech": [],
         "backEndTech": [],
         "times": "",
-        "benefits": []
+        "requirements": []
     },
 
     {    
@@ -52,7 +52,7 @@ var coursesJSON = [
             "Bootstrap","Project Documentation",
             "TypeScript","Angular 6.0"],
         "backEndTech": 
-            [""],
+            [],
         "times": "Monday to Thursday 9-16 o’clock @ CodeFactory",
         "requirements": "You are motivated and like to work in teams as well as want to learn new things. You either participated in our basic JavaScript and HTML & CSS courses, or even programmed the task from our beginner curriculum. After completing all the individual chapters of the course you are ready to start working as a fully qualified web developer."
     },
@@ -85,7 +85,7 @@ var coursesJSON = [
         "language": "English",
         "location": "CodeFactory, Kettenbrückengasse 23/2/12, 1050 Vienna",   
         "frontEndTech": 
-            [],
+            ["Javascript"],
         "backEndTech": 
             [],
         "times": "1x per month 9-15 o’clock @ CodeFactory",

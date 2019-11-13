@@ -1,0 +1,395 @@
+var quizJsonGer = [{
+	"quId" : 0,
+	"Richtig" : 1,
+	"Frage" : "Fragentext",
+	"Antworten": ["Antwortmöglichkeit Eins",
+				"Antwortmöglichkeit Zwei",
+				"Antwortmöglichkeit Drei",
+				"Antwortmöglichkeit Vier"],
+	"FrageTitel"	: "Frage ",
+	"IntroHead" 	: "Bist du der/die richtige für uns? Mach unser Quiz",
+	"IntroText" 	: "Wir suchen Verstärkung für unser Team. Bist du gewissenhaft und behältst trotz anstrengender Arbeit Deinen Humor? Ob du zu uns passt zeigt vielleicht das Quizt. Du musst mindestens 60% der Fragen richtige beantworten. Aber überlege gut, eine Frage wiegt sehr schwer. ",
+	"Vorgaenger"	: "Der letzte Anwerber hatte ",
+	"StartBtn" 		: "Klicke hier um das Quiz zu Starten",
+	"NextBtn"		: ["Wenn du gewählt hast, gehe zu Frage ","Zur Auswertung"],
+	"KeineWahl" 	: "Bitte wähle eine Option um weiter zu machen",
+	"FinalMessage" 	: "Gratulation",
+	"FinalLoose"	: "Leider nicht geschafft",
+	"Auswertung"	: ["Du hast in "," Minuten "," Fragen von ", " richtig beantwortet. "," Daraus und aus den erlegten Smileys ergibt sich ein Grade von: "],
+	"AuswertungSmiley":["Dein Grade wurde halbiert, da du die wichtige Frage nicht richtig beantwortet hast.","Deine erlegten Smiley bisher: ",""],
+	"AuswertTime": ["Bei Frage "," hast du am längsten gebraucht. "],
+	"AuswertChange": [" mal hast du dich umentschieden. "," Du bist unentschlossen. "],
+	"reViewNope"	: "Deine Antwort war falsch. Die richtige verraten wir dir aber noch nicht. ",
+	"reViewCorr"	: "Du lagst richtig. ",
+	"FinBtn"		: "Du darfst dich nun anmelden",
+	"FinBtnBack"	:"Versuche es nochmal, vielleicht hast du mehr Glück"
+},
+{
+	"quId" : 1,
+	"Richtig" : 2,
+	"Frage" : "Wann darf die US Flagge verkehrt herum gehisst werden?",
+	"Antworten": ["nie",
+				"am Nationalfeiertag",
+				"bei ernsten Notlagen",
+				"wenn der Ölpreis steigt",
+				"wenn Trump nicht wieder gewählt wird"]
+},
+{
+	"quId" : 2,
+	"Richtig" : 2,
+	"Frage" : "Wieviel wissenschaftliche Studien wurden zum Thema Emojies 2015 veröffentlicht?",
+	"Antworten": ["23", 
+				"2",
+				"400",
+				"462"]
+},
+{
+	"quId" : 3,
+	"Richtig" : 3,
+	"Frage" : "Wie lange dauert es ein hartgekochtes Ei am Mount Everrest zu kochen?",
+	"Antworten": ["nachts 4mal solange wie in den Niederungen",
+				"bei Sonne nur etwas länger",
+				"doppelt so lange wie in Wien",
+				"unendlich lange, weil es nicht hart wird",
+				"das Ei wir explodiern"]
+},
+{
+	"quId" : 4,
+	"Richtig" : 0,
+	"Frage" : "Welcher Städtename ist in den USA am häufigsten?",
+	"Antworten": ["Washington",
+					"Springfield",
+					"Georgetown",
+					"Greenville"
+						]
+},
+{
+	"quId" : 5,
+	"Richtig" : 1,
+	"Frage" : "Google hat eine Belohnung ausgesetzt für die Person, die Googles Software knacken kann. Welche berühmte Zahl liegt der Belohnung zu Grunde?",
+	"Antworten": ["Summe aller Winkel in einem Dreieck",
+					"Kreiszahl Pi",
+					"Die ersten 7 Stellen der Fibonacci-Folge",
+					"Absoluter Nullpunkt"
+				]
+},
+{
+	"quId" : 6,
+	"Richtig" : 2,
+	"Frage" : "Wie findest du die Smiley Jagd auf unserer Seite?",
+	"Antworten": ["So ein BLödsinn",
+					"ganz nett",
+					"witzige Idee",
+					"es nervt schon sehr",
+					"☠ ☠ ☠"
+				]
+},
+{
+	"quId" : 7,
+	"Richtig" : 2,
+	"Frage" : "Welche Millionenstadt in Nordamerika liegt nördlicher als Berlin?",
+	"Antworten": ["Seattle",
+					"Toronto",
+					"keine",
+					"Vancouver"
+				]
+},
+{
+	"quId" : 8,
+	"Richtig" : 3,
+	"Frage" : "Wie gross kann ein PDF Dokument ab Version 7 max sein?",
+	"Antworten": ["32m x 32m",
+					"200 x 200 Zoll",
+					"8K Auflösung",
+					"145 161 km²",
+					"A0"
+				]
+},
+{
+	"quId" : 9,
+	"Richtig" : 3,
+	"Frage" : "Der längste Domainname der Welt gehört der Seite über ...",
+	"Antworten": ["... eine Chinesische Sportart mit 89 Zeichen",
+					"... eine französische SüßSpeise mit 34 Zeichen",
+					"... eine berühmte Person aus einem nordamerikanischen Indianerstamms mit 45 Zeichen ",
+					"... den walisischen Namen eines Bahnhofs in Wales(GB) mit 63 Zeichen"
+				]
+},
+{
+	"quId" : 10,
+	"Richtig" : 0,
+	"Frage" : "Wie schreibt man unsere Trainerin richtig?",
+	"Antworten": [	"Theodora Patkos",
+					"Theodora Pâtkos",
+					"Theodora Patkôs",
+					"Theodora Pathkos",
+				]
+}
+
+
+];
+var quizJsonEng = [{
+	"quId" : 0,
+	"Richtig" : 1,
+	"Frage" : "Fragentext",
+	"Antworten": ["Antwortmöglichkeit Eins",
+				"Antwortmöglichkeit Zwei",
+				"Antwortmöglichkeit Drei",
+				"Antwortmöglichkeit Vier"],
+	"FrageTitel": "Question #",
+	"IntroHead" 	: "Welcome to our Quiz",
+	"IntroText" 	: "We are hiring. Are you conscientious and keep your humor despite exhausting work? Take your chance and try the quiz. You have to answer at least 60% of the questions right. But think well, a question can decide everything. After all, we want to know if you fit in with our team.  ",
+	"Vorgaenger"	: "The last candidate reached ",
+	"StartBtn" 		: "Click here to start the Quiz",
+	"NextBtn"		: ["If you have chosen, click for question #","evaluation"],
+	"KeineWahl" 	: "Please choose an option to continue",
+	"FinalMessage" 	: "Congratulations",
+	"FinalLoose"	: "sorry, not enough points",
+	"Auswertung"	: ["In "," minutes, you have answered "," questions of ", " correctly. "," From this and from the hunted smilies results a grade of: "],
+	"AuswertungSmiley":[" Your grade has been halved because you have not answered the important question correctly. "," Your hunted smiley so far: ","-"],
+	"AuswertTime": ["Question nr. ", " took the most time for you. "],
+	"AuswertChange": ["times you changed your mind. "," You are indecisive. "],
+	"reViewNope"	: " Your answer was wrong. We will not tell you the correct one yet. ",
+	"reViewCorr"	: " You were right. ",
+	"FinBtn"		: "Welcome to our Team, please register now",
+	"FinBtnBack"	: "Try again"
+
+},
+{
+	"quId" : 1,
+	"Richtig" : 2,
+	"Frage" : "When can be the flag of the US turned upside down?",
+	"Antworten": ["Never",
+				"On a public holyday",
+				"In case of an emergency",
+				"When the price of oil rises",
+				"In the case Trump is not going to be re-elected"]
+},
+{
+	"quId" : 2,
+	"Richtig" : 2,
+	"Frage" : "How many scientific studies were published in 2015 regarding the topic of Emojies?",
+	"Antworten": ["23", 
+				"2",
+				"400",
+				"462"]
+},
+{
+	"quId" : 3,
+	"Richtig" : 3,
+	"Frage" : "How long does it take to hardboil an egg on the Mount Everest?",
+	"Antworten": ["Four times longer than on sea level",
+				"In case of sunshine just a bit longer",
+				"Twice as long than in Vienna",
+				"It will take a lifetime and more(never)",
+				"The egg will explode"
+			],
+},
+{
+	"quId" : 4,
+	"Richtig" : 0,
+	"Frage" : "Which of the following city names are the most common in the USA?",
+	"Antworten": ["Washington",
+					"Springfield",
+					"Georgetown",
+					"Greenville"
+						]
+},
+{
+	"quId" : 5,
+	"Richtig" : 1,
+	"Frage" : "Google has created a number in honor of the person who cracked their software. Which famous number serves as a ground for that",
+	"Antworten": ["Sum of all the angels in a triangle",
+					"Pi",
+					"The first seven numbers of the Fibonacci-sequence",
+					"Absolut Zero"
+				]
+},
+{
+	"quId" : 6,
+	"Richtig" : 2,
+	"Frage" : "What do you think of our smiley hounting game?",
+	"Antworten": ["Bollocks",
+					"Cool",
+					"Funny idea",
+					"It's annoying",
+					"☠ ☠ ☠"
+				]
+},
+{
+	"quId" : 7,
+	"Richtig" : 2,
+	"Frage" : "Which city with more than a million habitants is situated on the north compared to Berlin?",
+	"Antworten": ["Seattle",
+					"Toronto",
+					"none of these",
+					"Vancouver"
+				]
+},
+{
+	"quId" : 8,
+	"Richtig" : 3,
+	"Frage" : "How long can be a PDF file from the version nr. 7 onwards?",
+	"Antworten": ["32m x 32m",
+					"200 x 200 Inch",
+					"8K Resolution",
+					"145 161 km²",
+					"A0"
+				]
+},
+{
+	"quId" : 9,
+	"Richtig" : 3,
+	"Frage" : "The longest domain of the world belongs to the site  about..",
+	"Antworten": [	"...a chinese sport with 89 characters",
+					"...a french dessert with 34 characters",
+					"...a famous person from a north-american indian reservation with 45 characters",
+					"...the welsh name of a trainstation in Wales(GB) with 63 characters"
+				]
+},
+{
+	"quId" : 10,
+	"Richtig" : 0,
+	"Frage" : "How do you spell it right?",
+	"Antworten": [	"Theodora Patkos",
+					"Theodora Pâtkos",
+					"Theodora Patkôs",
+					"Theodora Pathkos",
+				]
+}
+
+
+];
+
+var quizJsonHun = [{
+	"quId" : 0,
+	"Richtig" : 1,
+	"Frage" : "Fragentext",
+	"Antworten": ["Antwortmöglichkeit Eins",
+				"Antwortmöglichkeit Zwei",
+				"Antwortmöglichkeit Drei",
+				"Antwortmöglichkeit Vier"],
+	"FrageTitel": "Kérdés #",
+	"IntroHead" 	: "Üdvözlünk a Quiz-ünkben",
+	"IntroText" 	: "Itt dől el, hogy csatlakozhatsz-e a a csapatunkhoz.Minél több kérdésre válaszolsz jól, annál magasabb szintű tagságra lehetsz jogosult. A felvételhez minimum a kérdések 60%-ra jól kell válaszolnod. De gondold at a valaszaidat, mert nem minden kérdés egyenrangú. Azt szeretnénk tudni, hogy passzolsz-e a csapatunkba.",
+	"Vorgaenger"	: "Az előző pályázó a következő eredményt érte el. ",
+	"StartBtn" 		: "Kattints ide a kezdéshez",
+	"NextBtn"		: ["Ha megvagy, kattints és máris jön a következő kérdés","Értékelés"],
+	"KeineWahl" 	: "Válassz egyet a folytatáshoz",
+	"FinalMessage" 	: "Gratulálunk",
+	"FinalLoose"	: "Sajnáljuk, nincs elég pontod",
+	"Auswertung"	: [""," percen belül, válaszoltál "," kérdésre jól  a ", "-ből. "," Ebből és a levadászott smiley-ik számából az eredményed:"],
+	"AuswertungSmiley":[" Az eredményed el lett felezve, mert egy fontos kérdésre nem jól válaszoltál."," Levadászott smiley-ik száma: ","-"],
+	"AuswertTime": ["A  ", "-ik kérdés vette a legtöbb időt igénybe."],
+	"AuswertChange": ["-szer változtattad meg a véleményed "," Határozatlan vagy. "],
+	"reViewNope"	: " A válaszod helytelen. Még nem áruljuk el a megfejtést.",
+	"reViewCorr"	: " A válaszod helyes.",
+	"FinBtn"		: "Üdv a csapatban, kérlek regisztrálj.",
+	"FinBtnBack"	: "Próbáld újra."
+
+},
+{
+	"quId" : 1,
+	"Richtig" : 2,
+	"Frage" : "Mikor szabad megfordítani az amerikai zászlót?",
+	"Antworten": ["Soha",
+				"Ünnepnapokon",
+				"Vészhelyzetben",
+				"Ha növekszik az olajár",
+				"Amennyiben Trumpot nem választják újra"]
+},
+{
+	"quId" : 2,
+	"Richtig" : 2,
+	"Frage" : "Hány tudományos publikáció jelent meg 2015-ben a smileykról?",
+	"Antworten": ["23", 
+				"2",
+				"400",
+				"462"]
+},
+{
+	"quId" : 3,
+	"Richtig" : 3,
+	"Frage" : "Meddig tart megfőzni egy tojást a Mount Everesten?",
+	"Antworten": ["Négyszer annyi ideig mint tengerszinten",
+				"Napos időben egy kicsit tovább",
+				"Kétszer annyi ideig, mint Bécsben",
+				"Soha nem fő meg.",
+				"A tojás felrobbanna"
+			],
+},
+{
+	"quId" : 4,
+	"Richtig" : 0,
+	"Frage" : "Melyik városnév a leggyakoribb az USA-ban?",
+	"Antworten": ["Washington",
+					"Springfield",
+					"Georgetown",
+					"Greenville"
+						]
+},
+{
+	"quId" : 5,
+	"Richtig" : 1,
+	"Frage" : "Google elnevezett egy számot annak a tiszteletére, aki feltörte a szoftverüket. Melyik ismert szám szolgált ennek alapjául?",
+	"Antworten": ["Az angyalok száma egy háromszögben",
+					"A pí értéke",
+					"A Fibonacci-sorozat első hét száma",
+					"Abszolut nulla"
+				]
+},
+{
+	"quId" : 6,
+	"Richtig" : 2,
+	"Frage" : "Mit gondolsz a smiley-s játékról?",
+	"Antworten": ["Hűlyeség",
+					"Király",
+					"Jó ötlet",
+					"Idegesítő",
+					"☠ ☠ ☠"
+				]
+},
+{
+	"quId" : 7,
+	"Richtig" : 2,
+	"Frage" : "Melyik egymillió feletti lakosú város fekszik északabbra Berlinnél?",
+	"Antworten": ["Seattle",
+					"Toronto",
+					"Egyik sem",
+					"Vancouver"
+				]
+},
+{
+	"quId" : 8,
+	"Richtig" : 3,
+	"Frage" : "Milyen hosszú lehet egy PDF dokumentum a 7-es verzió óta?",
+	"Antworten": ["32m x 32m",
+					"200 x 200 Hüvelyk",
+					"8K Felbontású",
+					"145 161 km²",
+					"A0"
+				]
+},
+{
+	"quId" : 9,
+	"Richtig" : 3,
+	"Frage" : "A leghosszabb domain a világon egy olyan oldalé, amely...",
+	"Antworten": [	"...egy kínai sportról van szó és 89 karakter hosszú",
+					"...egy francia desszertet vesz górcső alá és 34 karakter hosszú",
+					"...egy híres személyről szól egy észak-amerikai rezervátumból és 45 karakter hosszú",
+					"...a Wales-i pályaudvar welszi neve és 63 karakter hosszú"
+				]
+},
+{
+	"quId" : 10,
+	"Richtig" : 0,
+	"Frage" : "Hogyan írjuk helyesen?",
+	"Antworten": [	"Theodora Patkos",
+					"Theodora Pâtkos",
+					"Theodora Patkôs",
+					"Theodora Pathkos",
+				]
+}
+
+
+];
