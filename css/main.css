@@ -1,9 +1,12 @@
 header{
-	height: 15vh;
+	height: 108px;
 	background: url('../img/header.jpg') no-repeat ;
-	background-position: -150px -148px;
+	background-position: -50px -108px;
 	color: white !important;
-	font-size: 1.8em !important;
+	font-size: 1.5em !important;
+}
+.logoj2sr{
+	width: 120px;
 }
 .nav-colored { background-color:#2C5C8C;  transition: 2s}
 .nav-transparent { background-color:transparent; transition: 2s}
