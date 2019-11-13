@@ -35,7 +35,8 @@ var coursesJSON = [
             "WordPress","Software Testing",
             "Complementary skills"],
         "times": "Monday to Thursday 9-16 o’clock @ CodeFactory",
-        "requirements": "They are motivated in the team and also to learn independently and to face new challenges. You either participated in our basic JavaScript and HTML & CSS courses, or even programmed the task from our beginner curriculum. After completing all the individual chapters of the course you are ready to start working as a fully qualified web developer."
+        "requirements": "They are motivated in the team and also to learn independently and to face new challenges. You either participated in our basic JavaScript and HTML & CSS courses, or even programmed the task from our beginner curriculum. After completing all the individual chapters of the course you are ready to start working as a fully qualified web developer.",
+        "registrationLink":"https://codefactory.wien/en/registration-full-stack-web-developer-en/" 
     },
     {     
         "id": "2",
@@ -54,7 +55,8 @@ var coursesJSON = [
         "backEndTech": 
             [],
         "times": "Monday to Thursday 9-16 o’clock @ CodeFactory",
-        "requirements": "You are motivated and like to work in teams as well as want to learn new things. You either participated in our basic JavaScript and HTML & CSS courses, or even programmed the task from our beginner curriculum. After completing all the individual chapters of the course you are ready to start working as a fully qualified web developer."
+        "requirements": "You are motivated and like to work in teams as well as want to learn new things. You either participated in our basic JavaScript and HTML & CSS courses, or even programmed the task from our beginner curriculum. After completing all the individual chapters of the course you are ready to start working as a fully qualified web developer.",
+         "registrationLink":"https://codefactory.wien/en/registration-frontend-developer-en/" 
     },
      {     
         "id": "3",
@@ -73,7 +75,8 @@ var coursesJSON = [
                 "Symfony PHP framework","WordPress",
                 " Software Testing","Complementary Skills"],
         "times": "Monday to Thursday 9-16 o’clock @ CodeFactory",
-        "requirements": "You are motivated and like to work in teams as well as want to learn new things.You either participated in our basic JavaScript and HTML & CSS courses, or even programmed the task from our beginner curriculum. After completing all the individual chapters of the course you are ready to start working as a fully qualified backend web developer."
+        "requirements": "You are motivated and like to work in teams as well as want to learn new things.You either participated in our basic JavaScript and HTML & CSS courses, or even programmed the task from our beginner curriculum. After completing all the individual chapters of the course you are ready to start working as a fully qualified backend web developer.",
+        "registrationLink":"https://codefactory.wien/en/registration-backend-developer-en/" 
     },
     {     
         "id": "4",
@@ -89,7 +92,8 @@ var coursesJSON = [
         "backEndTech": 
             [],
         "times": "1x per month 9-15 o’clock @ CodeFactory",
-        "requirements": "Since this course is aimed at beginners in JavaScript, no specific programming skills are required. Also knowledge about HTML and CSS are not required, but help to visually customize your projects."
+        "requirements": "Since this course is aimed at beginners in JavaScript, no specific programming skills are required. Also knowledge about HTML and CSS are not required, but help to visually customize your projects.",
+        "registrationLink":"https://codefactory.wien/en/registration-basiskurs-javascript-en/" 
     },
     {     
         "id": "5",
@@ -105,7 +109,8 @@ var coursesJSON = [
         "backEndTech": 
             [],
         "times": "1x per month 9-15 o’clock @ CodeFactory",
-        "requirements": "You should have skills and abilities to download and use a text editor for editing your web pages, we recommend Sublime text or brackets. You can use another text editor if you want, but it should have the ability to highlight code syntax. You should be able to download and install Google Chrome, as we will be exploring this developer’s tools extensively in this course."
+        "requirements": "You should have skills and abilities to download and use a text editor for editing your web pages, we recommend Sublime text or brackets. You can use another text editor if you want, but it should have the ability to highlight code syntax. You should be able to download and install Google Chrome, as we will be exploring this developer’s tools extensively in this course.",
+          "registrationLink":"https://codefactory.wien/en/registration-basiskurs-html-css-en/"
     },
     {     
         "id": "6",
@@ -121,7 +126,8 @@ var coursesJSON = [
         "backEndTech": 
             ["Java"],
         "times": "Monday to Thursday 9-16 o’clock @ CodeFactory",
-        "requirements": "You are motivated to collaborate and learn in teams and to face new challenges. You have a decent understanding of computer usage and have a good grasp of the English language"
+        "requirements": "You are motivated to collaborate and learn in teams and to face new challenges. You have a decent understanding of computer usage and have a good grasp of the English language",
+       "registrationLink":"https://codefactory.wien/en/registration-java-en/"
     },
     {     
         "id": "7",
@@ -137,6 +143,7 @@ var coursesJSON = [
         "backEndTech": 
             ["Python"],
         "times": "Monday to Thursday 9-15 o’clock @ CodeFactory",
-        "requirements": "The course is very intense, but no prior experience with programming or Python is needed. All you need is your ambitions and motivations. If you do know how to program another language, this course will help you quickly switch to Python."
-    }
+        "requirements": "The course is very intense, but no prior experience with programming or Python is needed. All you need is your ambitions and motivations. If you do know how to program another language, this course will help you quickly switch to Python.",
+        "registrationLink":"https://codefactory.wien/en/python-programming-en/"
+         }
 ]
