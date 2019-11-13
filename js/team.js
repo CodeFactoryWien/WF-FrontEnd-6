@@ -35,7 +35,7 @@ function displayTeam() {
 	<div class="row">
 			<div class=" col-lg-3 col-md-5 ">
 			<div class=" shadow card h-100 ">
-			<img src="img/team/jessica.png" class="card-img-top" alt="jessica">
+			<img src="img/team/Jessica.jpg" class="card-img-top" alt="jessica">
 			<div class="card-body text-center">
 			<h3 class="card-title">Jessica Triltsch</h3>
 			<p class="card-text">Teamleader<br> Teampage</p>
@@ -44,7 +44,7 @@ function displayTeam() {
 			</div>
 			<div class="col-lg-3 col-md-5">
 			<div class="shadow card h-100">
-			<img src="img/team/jasmine.png" class="card-img-top" alt="jasmine">
+			<img src="img/team/Jasmine.jpg" class="card-img-top" alt="jasmine">
 			<div class="card-body text-center">
 			<h3 class="card-title">Jasmine Wagner</h3>
 			<p class="card-text">Contact Page <br> News Page</p>
@@ -54,7 +54,7 @@ function displayTeam() {
 			
 			<div class="col-lg-3 col-md-5">
 			<div class="shadow card h-100">
-			<img src="img/team/sebastian.png" class="card-img-top" alt="sebastian">
+			<img src="img/team/Sebastian.jpg" class="card-img-top" alt="sebastian">
 			<div class="card-body text-center">
 			<h3 class="card-title">Sebastian Malcher</h3>
 			<p class="card-text">Course Master</p>
@@ -63,7 +63,7 @@ function displayTeam() {
 			</div>
 			<div class="col-lg-3 col-md-5">
 			<div class="shadow card h-100">
-			<img src="img/team/roman.png" class="card-img-top" alt="roman">
+			<img src="img/team/Roman.jpg" class="card-img-top" alt="roman">
 			<div class="card-body text-center">
 			<h3 class="card-title">Roman Springer</h3>
 			<p class="card-text">Landing Page <br> Chief Designer</p>
