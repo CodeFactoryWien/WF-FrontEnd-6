@@ -138,7 +138,7 @@ function renderCourse(){
 
 			<div class="col-12 row">
 				<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-5 row">
-					<a class="btn btn-lg btn-dark active mx-auto p-2 px-4 w-100" href="" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="Advanced">Advanced</a>
+					<a class="btn btn-lg btn-dark active mx-auto p-2 px-4 w-100" href="${currentCourse.registrationLink}" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em">Book Now</a>
 				</div>
 			</div>
 		 </div>
@@ -147,7 +147,7 @@ function renderCourse(){
 	</div>`
 
 }
-// ${(this.dataset.courseDifficulty).toUpperCase()}
+
 function renderUsedCourseTech(){
 	
 	if(currentCourse.frontEndTech.length > 0){
@@ -163,7 +163,6 @@ function renderUsedCourseTech(){
 
 	}
 	
-
 	if(currentCourse.backEndTech.length > 0){
 
 			for(j=0; j < currentCourse.backEndTech.length; j++){
@@ -174,12 +173,7 @@ function renderUsedCourseTech(){
 		}	
 		document.getElementById("backEndTechList").style.display = "block";
 		document.getElementById("backEndHeading").style.display = "block";
-	}
-	// <div class="row text-center">
-	//  				<div class="col-6 my-1 h4 text-muted mx-auto" style="display: none;" id="frontEndHeading">Front-End</div>
-	// 			<div class="col-6 my-1 h4 text-muted mx-auto" style="display: none" id="backEndHeading">Back-End</div>
-	// 			</div>
-	
+	}	
 }
 
 function addCourseBtnClick(){
@@ -209,9 +203,7 @@ function addCourseBtnClick(){
 				priceInfo.innerHTML = parseFloat(currentCourse.price)+"€"
 				let durationInfo = document.getElementById("courseDurationInfo")
 				durationInfo.innerHTML = parseFloat(currentCourse.duration)
-			}
-			
-
+			}			
 		})
 	})
 }
