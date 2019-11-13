@@ -1,12 +1,12 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
     var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],[false,true, false, false, false, false],["🏠", "Courses", "the team", "contact us", "News","Test your knowledge"]];
    	for (i = 0; i < menuArr[0].length; i++) {
-				var script = document.createElement('script');
-				script.onload = function () {};
-				let path = menuArr[0][i].toLowerCase();
-				script.src = "data/"+path+".json";
-				script.type = "text/javascript";
-				document.head.appendChild(script);
+		var script = document.createElement('script');
+		script.onload = function () {};
+		let path = menuArr[0][i].toLowerCase();
+		script.src = "data/"+path+".json";
+		script.type = "text/javascript";
+		document.head.appendChild(script);
 	};
 
 
