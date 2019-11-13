@@ -136,18 +136,13 @@ document.querySelector("main").innerHTML = `
 				<input id="input4" type="text" class="form-control" id="exampleInputPhone" required>
 			</div>
 			
-			<div class="form-check form-check-inline">
-			  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-			  <small class="form-check-label" for="inlineCheckbox1">Please call me back</small>
-			</div><br><br>
-			
 			<div class="form-group">
 				<label for="exampleFormControlTextarea1">Message*</label>
 				<textarea  id="input5" class="form-control" id="exampleFormControlTextarea1" rows="5" required></textarea>
 			</div>
 			<small class="form-text text-muted">* Required Fields</small>
 			
-			<button type="submit" class="btn btn-dark btn-block mt-2 opacity" id="btn_alert" style="border: none">SEND MESSAGE</button>
+			<button type="button" class="btn btn-dark btn-block mt-2 opacity" id="btn_alert" style="border: none">SEND MESSAGE</button>
 			<div id="alert"></div>
 			
 			
@@ -176,7 +171,7 @@ function showMessage(){
 	let input4 = document.getElementById("input4");
 	let input5 = document.getElementById("input5");
 		
-	if(input1.value != "" && input2.value != "" && input3.value != "" && input4.value != "" && input5.value != "") {
+	if(input1.value != "" && input2.value != "" && checkEmail(input3.value) == true && input4.value != "" && input5.value != "") {
 		document.getElementById("alert").innerHTML = `<div class="alert alert-success m-3 text-center" role="alert">Your message has been sent successfully!</div>`;
 		
 		input1.value = "";
@@ -185,9 +180,19 @@ function showMessage(){
 		input4.value = "";
 		input5.value = "";
 		
-		setTimeout(function(){
-			document.getElementById("alert").innerHTML = "";
-		}, 5000);
+		setTimeout(function() { document.getElementById("alert").innerHTML = ""; }, 5000);
+	} else {
+		document.getElementById("alert").innerHTML = `<div class="alert alert-danger m-3 text-center" role="alert">Please fill in all fields correctly!</div>`;
 	}
+
+	if(checkEmail(input3.value) == false) {
+		document.getElementById("alert").innerHTML = `<div class="alert alert-danger m-3 text-center" role="alert">Please enter a valid e-mail address!</div>`;
+	}
+}
+
+function checkEmail(mail) {
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+		return (true) 
+	} return (false)
 }
 
