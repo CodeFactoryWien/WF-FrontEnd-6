@@ -3,6 +3,6 @@
 
 img { height: auto; }
 
-.active {
-	
-}
+.active { outline: 2px solid #2c5c8c; }
+
+.x:first-child { display: none; }

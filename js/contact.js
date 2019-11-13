@@ -13,14 +13,14 @@ document.querySelector("main").innerHTML = `
 
 	<table class="mx-auto" width="auto"
 		<tr>
-			<td><i class="fas fa-map-marker-alt"></i></td>
+			<td></td>
 			<td>
-				<h4>J2RS GmbH</h4>
+				<h4>J<sub>2</sub>RS GmbH</h4>
 			</td>
 		</tr>
 
 		<tr>
-			<td></td>
+			<td><i class="fas fa-map-marker-alt"></i></td>
 			<td class="lead"><strong>HEADQUATER</strong> 1050 Wien, Kettenbrückengasse 23/2/12</td>
 		</tr>
 
@@ -128,7 +128,6 @@ document.querySelector("main").innerHTML = `
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address*</label>
 				<input id="input3" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 			</div>
 
 			<div class="form-group">
