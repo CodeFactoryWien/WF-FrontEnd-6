@@ -1,8 +1,11 @@
 header{
-	height: 45vh;
-	background: url('../img/0167e9df8103435b37b166aea72d57b3.jpg') no-repeat ;
+	height: 15vh;
+	background: url('../img/header.jpg') no-repeat ;
+	background-position: -150px -148px;
+	color: white !important;
+	font-size: 1.8em !important;
 }
-.nav-colored { background-color:#2C5C8C; transition: 2s}
+.nav-colored { background-color:#2C5C8C;  transition: 2s}
 .nav-transparent { background-color:transparent; transition: 2s}
 li a {
 	cursor: pointer;

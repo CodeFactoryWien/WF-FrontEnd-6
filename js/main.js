@@ -32,7 +32,7 @@ function initHome(){
 	$("body").append(`
 		<header>
 			<nav class="navbar navbar-expand-sm navbar-dark fixed-top nav-colored nav-transparent" id="myNav">
-			  <p class="navbar-brand" href="index.html">J₂SR</p>
+			  <p class="navbar-brand" 	>J₂SR</p>
 
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -85,15 +85,16 @@ function navBuilder(){
 
 	   		$("#nav"+i).on("click",function(e){
 				tempId=($(this).attr("id")).slice(3);
-	  			$("main").empty();
-				window['init'+menuArr[0][tempId]]();
 
-	  			if(tempId==0){
+	  			if(tempId<=1){
 	  				$("header").css({height: "45vh", transition:"2s"});
 	  			}else{
 	  				$("header").css({height: "15vh", transition:"2s"});
 	  			}	
-	   		});
+	  			$("main").empty();
+				window['init'+menuArr[0][tempId]]();
+
+	   		}).scrollTop();
 	}
 	$("#nav1").empty().off('click').addClass("dropdown").append(`
 		 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -117,6 +118,6 @@ function navBuilder(){
 		})
 
 
-
+	$("header").css({height: "45vh", transition:"2s"});
 }
 //---------------------------------------End-Nav Builder---------------------------------------------------

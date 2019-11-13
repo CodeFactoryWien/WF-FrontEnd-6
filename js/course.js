@@ -11,7 +11,6 @@ function initCourse(id){
 	}
 	renderCourse(id);
 	renderUsedCourseTech(id);
-
 }	
 
 //---------------------------------------End contact Builder---------------------------------------------------
