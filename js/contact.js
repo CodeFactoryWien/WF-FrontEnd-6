@@ -39,55 +39,64 @@ document.querySelector("main").innerHTML = `
 			<td><i class="fas fa-home"></i></td>
 			<td class="lead"><a href="https://codefactory.wien/" style="color: blue">https://codefactory.wien/</a></td>
 		</tr>
+		
+		<!-- OPEN HOURS -->
+		<tr>
+			<td><i class="fas fa-clock"></i></td>
+			<td>
+				<div class="accordion" id="accordionExample">
+					<button class="btn collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+						<strong class="lead"><strong>OPEN HOURS</strong><br>
+					</button>
+				</div>
+			</td>
+		</tr>
+				
+		<tr>
+			<td></td>
+			<td>
+				<div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionExample">
+					<table class="table table-small table-sm">
+						<tr>
+							<th scope="col float-right m-2" style="text-align: right">Monday</th>
+							<td scope="col float-center m-2" style="text-align: center">09:00 - 17:00</td>
+						</tr>
+
+						<tr>
+							<th scope="col" style="text-align: right">Tuesday</th>
+							<td scope="col" style="text-align: center">09:00 - 17:00</td>
+						</tr>
+
+						<tr>
+							<th scope="col" style="text-align: right">Wednesday</th>
+							<td scope="col" style="text-align: center">09:00 - 17:00</td>
+						</tr>
+
+						<tr>
+							<th scope="col" style="text-align: right">Thursday</th>
+							<td scope="col" style="text-align: center">09:00 - 17:00</td>
+						</tr>
+
+						<tr>
+							<th scope="col" style="text-align: right">Friday</th>
+							<td scope="col" style="text-align: center">09:00 - 15:30</td>
+						</tr>
+
+						<tr>
+							<th scope="col" style="text-align: right">Saturday</th>
+							<td scope="col" style="text-align: center">closed</td>
+						</tr>
+
+						<tr>
+							<th scope="col" style="text-align: right">Sunday</th>
+							<td scope="col" style="text-align: center">closed</td>
+						</tr>
+					</table>			
+				</div>
+			</td>
+		</tr>
+
 	</table>
-	
-
-	<!-- OPEN HOURS -->
-	<div class="accordion mt-3" style="margin-left: 13px" id="accordionExample">
-		<button class="btn collapsed p-0" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
-			<i class="fas fa-clock"></i><strong class="lead ml-4"><strong>OPEN HOURS</strong><br>
-		</button>
-	</div>
-	
-	<div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionExample">
-		<table class="table table-sm" width="60%">
-			<tr>
-				<th scope="col">Monday</th>
-				<td scope="col">09:00 - 17:00</td>
-			</tr>
-
-			<tr>
-				<th scope="col">Tuesday</th>
-				<td scope="col">09:00 - 17:00</td>
-			</tr>
-
-			<tr>
-				<th scope="col">Wednesday</th>
-				<td scope="col">09:00 - 17:00</td>
-			</tr>
-
-			<tr>
-				<th scope="col">Thursday</th>
-				<td scope="col">09:00 - 17:00</td>
-			</tr>
-
-			<tr>
-				<th scope="col">Friday</th>
-				<td scope="col">09:00 - 15:30</td>
-			</tr>
-
-			<tr>
-				<th scope="col">Saturday</th>
-				<td scope="col">closed</td>
-			</tr>
-
-			<tr>
-				<th scope="col">Sunday</th>
-				<td scope="col">closed</td>
-			</tr>
-		</table>			
-	</div>
-	
 	
 	<center>
 		<iframe class="shadow bg-white rounded" width="100%" height="400px" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10638.112420921236!2d16.359416!3d48.196443!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe543f0731e2b5529!2sCodeFactory!5e0!3m2!1sde!2sat!4v1573477257105!5m2!1sde!2sat" allowfullscreen=""></iframe>
