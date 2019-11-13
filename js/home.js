@@ -52,10 +52,10 @@ function newsFeed(){
 		newsCardBuilder(article);
 	};
 	$(".card-news-item").on("click",function(e){
-		// tempId=($(this).attr("id"));
-		// tempId=parseInt(tempId.slice(6));
-		// initNews(tempId)
-		alert("link zu "+ $(this).attr("id"))
+		tempId=($(this).attr("id"));
+		tempId=parseInt(tempId.slice(4));
+		initNews(tempId)
+		//alert("link zu "+ $(this).attr("id"))
 	})
 
 }

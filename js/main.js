@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Team", "Contact", "News"],[false,true, false, false, false]];
+    var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],[false,true, false, false, false, false]];
    	for (i = 0; i < menuArr[0].length; i++) {
 				var script = document.createElement('script');
 				script.onload = function () {};
@@ -44,7 +44,7 @@ function initHome(){
 			  </div>
 			</nav>
 		</header>
-		<main class="container"></main>  
+		<main class="container" id="mainDiv"></main>  
 		<footer class="p-4  border-top" >
 			<div class="row">
 			    <div class="col col-6-md">
