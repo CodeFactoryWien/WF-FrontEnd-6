@@ -20,8 +20,8 @@ function renderNews(card_id) {
 	});
 
 	for(i=0; i<newsJson.length; i++){
-		if(card_id == news.newsId) {
-			document.getElementById(news.newsId).classList.add("active");
+		if(card_id == newsJson[i].newsId) {
+			document.getElementById(newsJson[i].newsId).classList.add("active");
 			
 				$("html, body").animate({
 					scrollTop: $(".active").offset().top
