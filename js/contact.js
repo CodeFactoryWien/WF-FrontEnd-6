@@ -5,6 +5,12 @@ function initContact() {
 
 function renderContact() {
 	
+const today = new Date();
+const weekday = today.getDay();
+
+const openHours = ["closed", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 15:30", "closed"];
+const todayOpen = openHours[weekday];
+	
 document.querySelector("main").innerHTML = `
 <h1 class="text-light mt-2 rounded text-center">CONTACT</h1>
 
@@ -187,9 +193,5 @@ function checkEmail(mail) {
 	} return (false)
 }
 
-const today = new Date();
-const weekday = today.getDay();
 
-let openHours = ["closed", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 15:30", "closed"];
-let todayOpen = openHours[weekday];
 
