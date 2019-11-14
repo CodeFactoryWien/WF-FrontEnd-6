@@ -149,15 +149,6 @@ document.querySelector("main").innerHTML = `
 		</form>
 	</div>
 	<hr>
-	
-	<!-- SOCIAL MEDIA ICONS -->
-	<div class="center">
-		<a href="https://www.facebook.com" class="fa fa-facebook opacity"></a>
-		<a href="https://twitter.com/" class="fa fa-twitter opacity"></a>
-		<a href="https://myaccount.google.com" class="fa fa-google opacity"></a>
-		<a href="https://at.linkedin.com/" class="fa fa-linkedin opacity"></a>
-		<a href="https://www.instagram.com/" class="fa fa-instagram opacity"></a>
-	</div>
 </div>`
 
 document.getElementById("btn_alert").addEventListener("click", showMessage);

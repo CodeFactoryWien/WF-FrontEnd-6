@@ -1,5 +1,5 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],[false,true, false, false, false, false],["🏠", "Courses", "Team", "Contact us", "News","Test your knowledge"]];
+    var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],["","Overview", "", "", "", ""],["🏠", "Courses", "Team", "Contact us", "News","Test your knowledge"]];
    	for (i = 0; i < menuArr[0].length; i++) {
 		var script = document.createElement('script');
 		script.onload = function () {};
@@ -21,15 +21,6 @@ initHome();
                 nav.classList.add('nav-transparent');
                 nav.classList.remove('nav-colored');
             }
-        // var titleMove = document.getElementById('titlemove');
-        // if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
-        //         titleMove.classList.add('title-colored');
-        //         titleMove.classList.remove('title-transparent');
-        //         $("#navbarSupportedContent").attr("aria-expanded","false");
-        //     } else {
-        //         titleMove.classList.add('title-transparent');
-        //         titleMove.classList.remove('title-colored');
-        //     }
     })
 
 //-------------------------------------ende-Daten bereitstellen--------------------------------------------
@@ -58,19 +49,43 @@ function initHome(){
 		<main class="container" id="mainDiv"></main>  
 
 		<footer class="p-4  border-top" >
-			<div class="row">
-			    <div class="col col-6-md">
-					<p>J₂S</p>
-					&copy; 2019
-			    </div>
-			    <div class="col col-6-md">
-			      	<iframe width="320" height="180" src="https://www.youtube.com/embed/eHS0TGC_Izg?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			    </div>
-			    <div class="col col-6-md">
-			      	<ul>
-						<li> irgendwas</li>
-						<li> irgendwas</li>
-			      	</ul>
+			<div class="container">
+<ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fa fa-facebook opacity"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fa fa-twitter opacity"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fa fa-google opacity"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fa fa-linkedin opacity"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fa fa-instagram opacity"> </i>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+  
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: J<sub>2</sub>RS GmbH
+  </div>
+  <!-- Copyright -->
+
 			    </div>
 			</div>
 		</footer>
@@ -86,12 +101,12 @@ function navBuilder(){
 	   		<li class="nav-item" id="nav${i}">
 				<a class="nav-link" id="m-${menuArr[0][i]}">${menuArr[2][i]}</a>
 	   		</li>
-	   		`)
-	   	
+	   		`);
+
 				var script = document.createElement('script');
 				script.onload = function () {};
-				let path = menuArr[0][i].toLowerCase();
-				script.src = "js/"+path+".js";
+				let fileName = menuArr[0][i].toLowerCase();
+				script.src = "js/"+fileName+".js";
 				script.type = "text/javascript";
 				document.head.appendChild(script);
 
@@ -106,8 +121,7 @@ function navBuilder(){
 	  			    
 
 	  			$("main").empty();
-				window['init'+menuArr[0][tempId]]();
-				// $("#titlemove").text(menuArr[0][tempId]);
+				window['init'+menuArr[0][tempId]](0);
 
 	   		});
 	}
@@ -129,8 +143,6 @@ function navBuilder(){
 			tempId=parseInt(tempId.slice(6));
 			initCourse(tempId)
 			console.log(tempId);
-			// $("#titlemove").text(menuArr[0][tempId]);
-			//alert(tempId);
 		})
 
 

@@ -27,6 +27,7 @@ h4{
     #navbarSupportedContent {
 		background-color:rgba(44, 92, 140,0.97);
 		padding: 5%;
+		border-radius: 2%
     }
     header{
     	height: 108px;
