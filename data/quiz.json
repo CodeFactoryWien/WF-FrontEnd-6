@@ -148,7 +148,7 @@ var quizJsonEng = [{
 {
 	"quId" : 5,
 	"Richtig" : 1,
-	"Frage" : "A standard navigation tab in Bootstrp is created with:",
+	"Frage" : "A standard navigation tab in Bootstrap is created with:",
 	"Antworten": [" <ul class='navigation-tabs'>",
 					"<ul class='nav nav-tabs'>",
 					"<ul class='nav nav-navbar'>",

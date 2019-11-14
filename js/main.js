@@ -57,48 +57,22 @@ function initHome(){
 
 		</header>
 		<main class="container" id="mainDiv"></main>  
-		<footer class="pt-4 mb-0  border-top" >
-			<div class="container">
-			    
-	
-<ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">
-        <a class="btn-floating btn-fb mx-1">
-          <i class="fa fa-facebook opacity"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-1">
-          <i class="fa fa-twitter opacity"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-gplus mx-1">
-          <i class="fa fa-google opacity"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
-          <i class="fa fa-linkedin opacity"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-dribbble mx-1">
-          <i class="fa fa-instagram opacity"> </i>
-        </a>
-      </li>
-    </ul>
-
-  </div>
-  </div>
+		<footer class="p-4  border-top" >
+			<div class="row">
+			    <div class="col col-6-md">
+					<p>J₂S</p>
+					&copy; 2019
+			    </div>
+			    <div class="col col-6-md">
+			      	<iframe width="320" height="180" src="https://www.youtube.com/embed/eHS0TGC_Izg?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			    </div>
+			    <div class="col col-6-md">
+			      	<ul>
+						<li> irgendwas</li>
+						<li> irgendwas</li>
+			      	</ul>
+			    </div>
 			</div>
-
-  <!-- Copyright -->
-  <div class=" bg-dark footer-copyright text-center py-3">© 2019 Copyright: J<sub>2</sub>RS GmbH
-  </div>
-  <!-- Copyright -->
-
-			    
 		</footer>
 	`);
 	home();

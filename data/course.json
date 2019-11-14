@@ -1,8 +1,8 @@
-var coursesJSON = [
+var courseJson = [
 
     {
         "id": "0",
-        "name": "",
+        "title": "",
         "description": "",
         "image": "",
         "price": "",
@@ -17,7 +17,7 @@ var coursesJSON = [
 
     {    
         "id": "1",
-        "name": "Full Stack Web Developer",
+        "title": "Full Stack Web Developer",
         "description": "The CodeFactory Full Stack Web Developer training course prepares you for your versatile career as a Junior Web Developer. From back-end to front-end programming languages and frameworks you will learn how to use the most popular programs, such as Angular, PHP, WordPress, HTML, CSS and JavaScript. As a Full Stack Web Developer you have comprehensive knowledge in the area of software         development and are proficient in currently relevant programming languages. This allows you to work in both web and software development.        As a generalist you can perform almost any task with your coding skills and often work closely together with project managers by taking care of requirements management, software and test planning as well as programming activities.",
         "image": "./img/course/fullstack.jpg",
         "price": "3990",
@@ -40,7 +40,7 @@ var coursesJSON = [
     },
     {     
         "id": "2",
-        "name": "Front End Developer ",
+        "title": "Front End Developer ",
         "description": "Our full-stack training is structured in two parts and can be booked separately: The first part is the so-called “Frontend Developer” course. The core task of a frontend developer, and thus the goal of this course, is the design anddevelopment of the visual aspects of a web page for internet browsers or the design of app’s. Unlike the backend developer who creates the server-side programming of the website, as a front-end developer the focus is on implementing the layout and, increasingly, client-side programming in modern frameworks such as Angular.",
         "image": "./img/course/frontend.jpg",
         "price": "2499",
@@ -60,7 +60,7 @@ var coursesJSON = [
     },
      {     
         "id": "3",
-        "name": "Back End Developer ",
+        "title": "Back End Developer ",
         "description": "Our full-stack training is divided into two parts and can be booked separately: The second part is the so-called “Backend Developer” course. The core task of a backend developer is the development and maintenance of software and databases that ensure the smooth running of the server operation in the background. In other words, he takes care that the data and services requested by the client program are made available to them, e.g. in the frontend of an application or website.",
         "image": "./img/course/backend.jpg",
         "price": "2490",
@@ -80,7 +80,7 @@ var coursesJSON = [
     },
     {     
         "id": "4",
-        "name": "JavaScript",
+        "title": "JavaScript",
         "description": "This course teaches you what the most basic programming concepts are in JavaScript and how to use them. You get to know data types, functions, loops, control flow and objects.",
         "image": "./img/course/js.jpg",
         "price": "290",
@@ -97,7 +97,7 @@ var coursesJSON = [
     },
     {     
         "id": "5",
-        "name": "Basic Course HTML/CSS",
+        "title": "Basic Course HTML/CSS",
         "description": "In this course, you will learn the building blocks of HTML and CSS to create and design your first website from scratch.",
         "image": "./img/course/htmlcss.jpg",
         "price": "290",
@@ -114,7 +114,7 @@ var coursesJSON = [
     },
     {     
         "id": "6",
-        "name": "Java Developer",
+        "title": "Java Developer",
         "description": "The CodeFactory Java Developer course prepares you for your versatile career as a Java Junior Developer. You will learn how to use create software in Java, use integrated development environments and apply advanced programming concepts to solve different real-life projects and tasks. As a Java Junior Developer you will have good knowledge in the area of software development and will be proficient in syntax, tools and programming concepts. All of this, including your own impressive project-portfolio built throughout the course, will allow you to immediately start your career in the software development industry. As a generalist, you will be able to work productively and collaborate closely with other disciplines such as project managing, test planning as well as programming activities software and test planning as well as programming activities.",
         "image": "./img/course/java.png",
         "price": "2490",
@@ -131,7 +131,7 @@ var coursesJSON = [
     },
     {     
         "id": "7",
-        "name": "Python Programming",
+        "title": "Python Programming",
         "description": "In this course, students learn the fundamentals of Python. Python is a very powerful programming language used for a whole multitude of applications. The huge community around this open source language has created quite a number of tools to effectively work with Python, many of those – specifically for data science. So, analyzing data with Python is as easy as it has never been before! In this intense practice-oriented course, you will start from the very beginning, with variables and simple mathematical operations, and quickly build your way up and learn how to handle complex data structures, such as lists, dictionaries, and Pandas DataFrames. You’ll also learn about Python functions and control flow, you will work with files and at the end write a real project by following provided guidelines.",
           "image": "./img/course/python.jpg",
         "price": "450",
