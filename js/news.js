@@ -15,7 +15,7 @@ function renderNews(card_id) {
 		  <div class="card shadow x" id="${news.newsId}">
 			<img src="${news.picUrl}" class="card-img-top" width="100%" height="auto" style="object-fit: cover">
 			<div class="card-body">
-			  <a href="${news.link}" target="_blank"><h5 class="card-title">${news.title}</h5></a>
+			  <a href="${news.link}" target="_blank"><h5 class="card-title">${news.name}</h5></a>
 			  <p class="card-text">${news.text}</p>
 			</div>
 		  </div>
