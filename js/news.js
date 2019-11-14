@@ -5,7 +5,6 @@ function initNews(card_id) {
 
 function renderNews(card_id) {
 	document.querySelector("main").innerHTML = `
-
 	<h1 class=" text-light rounded text-center">NEWS</h1>
 	<div class="container">
 		<div class="card-columns"></div>
