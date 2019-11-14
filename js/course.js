@@ -26,7 +26,7 @@ function renderCourse(id){
 	<img class="card-img-top mx-auto img-fluid shadow rounded" src="${currentCourse.image}" data-holder-rendered="true" style="width: 18.5rem; display: block;">
 	<div class="card-body pt-0 row">
 		<div class="col-12   px-0 pt-0 pb-1 my-4">
-			<h1 class="col text-light text-center rounded">${currentCourse.name}</h1>
+			<h1 class="col text-light text-center rounded">${currentCourse.title}</h1>
 		</div>
 		<p class="col-12 col-md-9 card-text lead text-dark px-4 mx-auto" style="line-height: 1.5">${currentCourse.description}</p>
 		<p class="col-12 text-center h3 lead text-dark card-text">Choose your level</p>
@@ -252,9 +252,9 @@ function renderCourses(){
 		$("#courseDeck").append(`
 			<div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch text-center">
 				<div class="card shadow mb-4 shadow">
-					<img class="card-img-top shadow" src="${course.image}" alt="${course.name}">
+					<img class="card-img-top shadow" src="${course.image}" alt="${course.title}">
 					<div class="card-body shadow">
-						<h4 class="card-title card-link"><u id="article${course.id}">${course.name}</u></h4>
+						<h4 class="card-title card-link"><u id="article${course.id}">${course.title}</u></h4>
 					</div>
 				 </div>
 			</div>
