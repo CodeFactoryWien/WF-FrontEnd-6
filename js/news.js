@@ -13,7 +13,7 @@ function renderNews(card_id) {
 	newsJson.forEach(function(news) {
 		document.querySelector(".card-columns").innerHTML += `
 		  <div class="card shadow x" id="${news.newsId}">
-			<img src="${news.picUrl}" class="card-img-top" width="100%" height="auto" style="object-fit: cover">
+			<img src="${news.picUrl}" class="card-img-top img" width="100%" height="auto" style="object-fit: cover">
 			<div class="card-body">
 			  <a href="${news.link}" target="_blank"><h5 class="card-title">${news.title}</h5></a>
 			  <p class="card-text">${news.text}</p>

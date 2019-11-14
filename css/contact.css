@@ -1,9 +1,7 @@
 
 button:focus { box-shadow: none !Important; }
-
-iframe { margin: 40px 0; }
-
 i { color: #2c5c8c; margin: 0 10px; }
+iframe { margin: 40px 0; }
 
 .table-small { width: 45%; }
 
@@ -39,8 +37,8 @@ i { color: #2c5c8c; margin: 0 10px; }
 .opacity:hover { opacity: 1; color: white; text-decoration: none; }
 
 
-
-@media screen and (max-width:768px){
+/*-- RESPONSIVE --*/
+@media screen and (max-width: 768px){
 .box { width: 100%; }
 }
 
