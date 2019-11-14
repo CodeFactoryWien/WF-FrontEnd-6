@@ -126,6 +126,10 @@ function navBuilder(){
 		  			};	
 		  			$("main").empty();
 					window['init'+menueItem.title](0);
+					$("html, body").animate({
+						scrollTop: $("body").offset().top	
+					}, 600);
+
 
 		   		});
 		}else{ // wenn untermenüs angefordert werden. aus dem menuetitel generiert zugriff auf die jsondatei und die elemente mit title gefunden
@@ -152,7 +156,11 @@ function navBuilder(){
 						tempId=parseInt(tempId.slice(6));
 						$("header").css({height: "108px", transition:"2s"});
 				  		
-				  		window['init'+menueItem.title](tempId);	
+				  		window['init'+menueItem.title](tempId);
+						$("html, body").animate({
+						scrollTop: $("body").offset().top	
+					}, 600);
+	
 					});
 		   		
 		}
