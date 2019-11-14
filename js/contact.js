@@ -165,13 +165,25 @@ document.querySelector(".open").innerHTML += todayOpen;
 }
 
 function showMessage(){
-	let input1 = document.getElementById("input1");
-	let input2 = document.getElementById("input2");
-	let input3 = document.getElementById("input3"); //CheckEmail???
-	let input4 = document.getElementById("input4");
-	let input5 = document.getElementById("input5");
+	
+	document.getElementById("alert").innerHTML = "";
+	
+	let input1 = document.getElementById("input1");	//First name
+	let input2 = document.getElementById("input2");	//Last name
+	let input3 = document.getElementById("input3"); //Email
+	let input4 = document.getElementById("input4");	//Phone
+	let input5 = document.getElementById("input5");	//Message
+	
+	
+	if(input1.value == "" || input2.value == "" || input3.value == "" || input4.value == "" || input5.value == "") {
+		document.getElementById("alert").innerHTML += `<div class="alert alert-danger m-3 text-center" role="alert">Please fill in all fields correctly!</div>`;
+	}
+
+	if(input3.value != "" && checkEmail(input3.value) == false) {
+		document.getElementById("alert").innerHTML += `<div class="alert alert-danger m-3 text-center" role="alert">Please enter a valid e-mail address!</div>`;
+	}
 		
-	if(input1.value != "" && input2.value != "" && checkEmail(input3.value) == true && input4.value != "" && input5.value != "") {
+	if(input1.value != "" && input2.value != "" && input3.value != "" && checkEmail(input3.value) == true && input4.value != "" && input5.value != "") {
 		document.getElementById("alert").innerHTML = `<div class="alert alert-success m-3 text-center" role="alert">Your message has been sent successfully!</div>`;
 		
 		input1.value = "";
@@ -181,15 +193,7 @@ function showMessage(){
 		input5.value = "";
 		
 		setTimeout(function() { document.getElementById("alert").innerHTML = ""; }, 5000);
-	} else {
-		document.getElementById("alert").innerHTML = `<div class="alert alert-danger m-3 text-center" role="alert">Please fill in all fields correctly!</div>`;
 	}
-
-	if(checkEmail(input3.value) == false) {
-		document.getElementById("alert").innerHTML = `<div class="alert alert-danger m-3 text-center" role="alert">Please enter a valid e-mail address!</div>`;
-	}
-
-
 }
 
 function checkEmail(mail) {

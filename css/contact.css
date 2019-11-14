@@ -5,12 +5,7 @@ iframe { margin: 40px 0; }
 
 i { color: #2c5c8c; margin: 0 10px; }
 
-
 .table-small { width: 45%; }
-
-/*
-tr { line-height: 2em; }
-*/
 
 .center {
 	display: flex;

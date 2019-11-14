@@ -3,8 +3,8 @@
    	for (i = 0; i < menuArr[0].length; i++) {
 		var script = document.createElement('script');
 		script.onload = function () {};
-		let path = menuArr[0][i].toLowerCase();
-		script.src = "data/"+path+".json";
+		let fileName = menuArr[0][i].toLowerCase();
+		script.src = "data/"+fileName+".json";
 		script.type = "text/javascript";
 		document.head.appendChild(script);
 	};
@@ -21,26 +21,26 @@ initHome();
                 nav.classList.add('nav-transparent');
                 nav.classList.remove('nav-colored');
             }
-        var titleMove = document.getElementById('titlemove');
-        if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
-                titleMove.classList.add('title-colored');
-                titleMove.classList.remove('title-transparent');
-                $("#navbarSupportedContent").attr("aria-expanded","false");
-            } else {
-                titleMove.classList.add('title-transparent');
-                titleMove.classList.remove('title-colored');
-            }
+        // var titleMove = document.getElementById('titlemove');
+        // if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
+        //         titleMove.classList.add('title-colored');
+        //         titleMove.classList.remove('title-transparent');
+        //         $("#navbarSupportedContent").attr("aria-expanded","false");
+        //     } else {
+        //         titleMove.classList.add('title-transparent');
+        //         titleMove.classList.remove('title-colored');
+        //     }
     })
 
-
-//-------------------------------------------Daten bereitstellen--------------------------------------------
+//-------------------------------------ende-Daten bereitstellen--------------------------------------------
 //-------------------------------------------Site Builder---------------------------------------------------
 function initHome(){
 	$("title").text("The New Codefactory");
 	$("body").empty();
 	$("body").append(`
+
 		<header>
-			<nav class="navbar navbar-expand-sm navbar-dark fixed-top nav-colored nav-transparent" id="myNav">
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-colored nav-transparent" id="myNav">
 			  <img class="logoj2sr navbar-brand" src="./img/j2sr_white_small.png">
 
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,10 +53,10 @@ function initHome(){
 			  </div>
 			<p class="fixed-top offset-5 title-colored title-transparent" id="titlemove">Home</p>
 			</nav>
-		    
-
 		</header>
+
 		<main class="container" id="mainDiv"></main>  
+
 		<footer class="p-4  border-top" >
 			<div class="container">
 <ul class="list-unstyled list-inline text-center">
@@ -127,11 +127,13 @@ function navBuilder(){
 	  			}else{
 	  				$("header").css({height: "108px", transition:"2s"});
 	  			}	
+	  			    
+
 	  			$("main").empty();
 				window['init'+menuArr[0][tempId]]();
-				$("#titlemove").text(menuArr[0][tempId]);
+				// $("#titlemove").text(menuArr[0][tempId]);
 
-	   		}).scrollTop();
+	   		});
 	}
 	$("#nav1").empty().off('click').addClass("dropdown").append(`
 		 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -151,7 +153,7 @@ function navBuilder(){
 			tempId=parseInt(tempId.slice(6));
 			initCourse(tempId)
 			console.log(tempId);
-			$("#titlemove").text(menuArr[0][tempId]);
+			// $("#titlemove").text(menuArr[0][tempId]);
 			//alert(tempId);
 		})
 

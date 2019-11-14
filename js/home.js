@@ -88,7 +88,13 @@ function courseFeed(){
 	$(".card-course-item").on("click",function(e){
 			tempId=($(this).attr("id"));
 			tempId=parseInt(tempId.slice(6));
+			    $('html, body').animate({
+		        scrollTop: $("#mainDiv").offset().top
+			    }, 500);
+
+			//scroll(0,0);
 			initCourse(tempId);
+
 		//alert("link zu "+ $(this).attr("id"))
 	})
 
