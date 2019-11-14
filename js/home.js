@@ -94,9 +94,9 @@ function courseCardBuilder(courseItem){
 	$("#courseDeck").append(`
 		<div id="article${courseItem.id}" class="col-12 col-sm-6 ">
 			<div class="card shadow mb-4">
-				<img class="card-img-top" src="${courseItem.image}" alt="${courseItem.name}">
+				<img class="card-img-top" src="${courseItem.image}" alt="${courseItem.title}">
 				<div class="card-body">
-				    <h4 class="card-title">${courseItem.name}</h4>
+				    <h4 class="card-title">${courseItem.title}</h4>
 				    <p class="card-text">${courseItem.price}</p>
 				    <p class="btn btn-secondary  card-course-item" id="course${courseItem.id}">read more</p>
 				</div>
