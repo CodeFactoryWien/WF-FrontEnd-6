@@ -233,8 +233,8 @@ function renderCourses(){
 			</div>
 		
 			`)
-		for(let course of courses){
-			courseBuilder(course);
+		for(let cours of course){
+			courseBuilder(cours);
 		};
 
 		let courseBtns = document.querySelectorAll("u[id^=article]")
