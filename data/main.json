@@ -14,13 +14,13 @@ var menueJson = [
 	{
 	"menueId": 2,
 	"title": "Course",
-	"caption": "Overview",
-	"sub": "",
+	"caption": "",
+	"sub": "Overview",
 	},
 	{
 	"menueId": 3,
 	"title": "Team",
-	"caption": "",
+	"caption": "Team",
 	"sub": "",
 	},
 	{

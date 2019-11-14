@@ -5,14 +5,7 @@ var course = grabData("course");
 
 
 var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],["","Overview", "", "", "", ""],["🏠", "Courses", "Team", "Contact us", "News","Test your knowledge"]];
- //   	for (i = 0; i < menuArr[0].length; i++) {
-	// 	var script = document.createElement('script');
-	// 	script.onload = function () {};
-	// 	let fileName = menuArr[0][i].toLowerCase();
-	// 	script.src = "data/"+fileName+".json";
-	// 	script.type = "text/javascript";
-	// 	document.head.appendChild(script);
-	// };
+
 	for (let menueItem of menue){
 		var script = document.createElement('script');
 		script.onload = function () {};
@@ -62,46 +55,48 @@ function initHome(){
 
 		<main class="container" id="mainDiv"></main>  
 
-		<footer class="p-4  border-top" >
+		<footer class="pt-4 mb-0  border-top" >
 			<div class="container">
-				<ul class="list-unstyled list-inline text-center">
-				      <li class="list-inline-item">
-				        <a class="btn-floating btn-fb mx-1">
-				          <i class="fa fa-facebook opacity"> </i>
-				        </a>
-				      </li>
-				      <li class="list-inline-item">
-				        <a class="btn-floating btn-tw mx-1">
-				          <i class="fa fa-twitter opacity"> </i>
-				        </a>
-				      </li>
-				      <li class="list-inline-item">
-				        <a class="btn-floating btn-gplus mx-1">
-				          <i class="fa fa-google opacity"> </i>
-				        </a>
-				      </li>
-				      <li class="list-inline-item">
-				        <a class="btn-floating btn-li mx-1">
-				          <i class="fa fa-linkedin opacity"> </i>
-				        </a>
-				      </li>
-				      <li class="list-inline-item">
-				        <a class="btn-floating btn-dribbble mx-1">
-				          <i class="fa fa-instagram opacity"> </i>
-				        </a>
-				      </li>
-				    </ul>
+			    
+	
+<ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fa fa-facebook opacity"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fa fa-twitter opacity"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fa fa-google opacity"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fa fa-linkedin opacity"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fa fa-instagram opacity"> </i>
+        </a>
+      </li>
+    </ul>
 
-					 </div>
-  
-
-				  <!-- Copyright -->
-				  <div class="footer-copyright text-center py-3">© 2019 Copyright: J<sub>2</sub>RS GmbH
-				  </div>
-				  <!-- Copyright -->
-
-			    </div>
+  </div>
+  </div>
 			</div>
+
+  <!-- Copyright -->
+  <div class="ft footer-copyright text-center py-3">© 2019 Copyright: J<sub>2</sub>RS GmbH
+  </div>
+  <!-- Copyright -->
+
+			    
 		</footer>
 	`);
 	home();
@@ -111,60 +106,84 @@ function initHome(){
 //---------------------------------------End Site Builder---------------------------------------------------
 //-------------------------------------------Nav Builder----------------------------------------------------
 function navBuilder(){
-	for (i = 0; i < menuArr[0].length; i++) {
-	   	$("nav ul").append(`
-	   		<li class="nav-item" id="nav${i}">
-				<a class="nav-link" id="m-${menuArr[0][i]}">${menuArr[2][i]}</a>
-	   		</li>
-	   		`);
-
+	for (let menueItem of menue){
+		if(menueItem.sub == ""){
+			$("nav ul").append(`
+		   		<li class="nav-item" id="nav${menueItem.menueId}">
+					<a class="nav-link">${menueItem.caption}</a>
+		   		</li>
+		   		`);
+			
 				var script = document.createElement('script');
-				script.onload = function () {};
-				let fileName = menuArr[0][i].toLowerCase();
-				script.src = "js/"+fileName+".js";
-				script.type = "text/javascript";
-				document.head.appendChild(script);
+					script.onload = function () {};
+					let fileName = menueItem.title.toLowerCase();
+					script.src = "js/"+fileName+".js";
+					script.type = "text/javascript";
+					document.head.appendChild(script);
 
-	   		$("#nav"+i).on("click",function(e){
-				tempId=($(this).attr("id")).slice(3);
+		   		$("#nav"+menueItem.menueId).on("click",function(e){
+					tempId=($(this).attr("id")).slice(3);
+		  			if(tempId<=1){
+		  				$("header").css({height: "45vh", transition:"2s"});
+		  			}else{
+		  				$("header").css({height: "108px", transition:"2s"});
+		  			};	
+		  			$("main").empty();
+					window['init'+menueItem.title](0);
 
-	  			if(tempId<=1){
-	  				$("header").css({height: "45vh", transition:"2s"});
-	  			}else{
-	  				$("header").css({height: "108px", transition:"2s"});
-	  			}	
-	  			    
-	  			$("main").empty();
-				window['init'+menuArr[0][tempId]](0);
+		   		});
+		}else{
+			$("nav ul").append(`
+		   		<li class="nav-item" id="nav${menueItem.menueId}">
 
-	   		});
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          ${menueItem.title}
+			        </a>
+			        <div id="nav${menueItem.menueId}" class="dropdown-menu" aria-labelledby="navbarDropdown">
+			        	<a class="dropdown-item" id="course0">${menueItem.sub}</a>
+			        	<div class="dropdown-divider"></div>
+			        </div>
+		   		</li>
+					`);
+					for (let item of course){
+						$(".dropdown-menu").append(`
+							<a class="dropdown-item" id="course${item.id}" >${item.name}</a>
+						`);
+						
+					}
+		   		
+//-------------------------------
+
+		}
 	}
-	$("#nav1").empty().off('click').addClass("dropdown").append(`
-		 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ${menuArr[0][1]}
-        </a>
-        <div id="dd-course" class="dropdown-menu" aria-labelledby="navbarDropdown">
-        	<a class="dropdown-item" id="course0">${menuArr[1][1]}</a>
-        	<div class="dropdown-divider"></div>
-        </div>
-		`)
-	for (let item of course){
-		$("#dd-course").append(`
-			<a class="dropdown-item" id="course${item.id}" >${item.name}</a>
-		`)
-	}
-	$("#dd-course .dropdown-item").on("click", function(e){
- 			$("main").empty();
-			tempId=($(this).attr("id"));
-			tempId=parseInt(tempId.slice(6));
-				  			if(tempId<=1){
-	  				$("header").css({height: "45vh", transition:"2s"});
-	  			}else{
-	  				$("header").css({height: "108px", transition:"2s"});
-	  			}
-			initCourse(tempId)
-			console.log(tempId);
-		})
+	// ----- 
+
+	// $("#nav2").empty().off('click').addClass("dropdown").append(`
+	// 	 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ //          ${menuArr[0][1]}
+ //        </a>
+ //        <div id="dd-course" class="dropdown-menu" aria-labelledby="navbarDropdown">
+ //        	<a class="dropdown-item" id="course0">${menuArr[1][1]}</a>
+ //        	<div class="dropdown-divider"></div>
+ //        </div>
+	// 	`)
+	// for (let item of course){
+	// 	$("#dd-course").append(`
+	// 		<a class="dropdown-item" id="course${item.id}" >${item.name}</a>
+	// 	`)
+	// }
+	// $("#dd-course .dropdown-item").on("click", function(e){
+ // 			$("main").empty();
+	// 		tempId=($(this).attr("id"));
+	// 		tempId=parseInt(tempId.slice(6));
+	// 			  			if(tempId<=1){
+	//   				$("header").css({height: "45vh", transition:"2s"});
+	//   			}else{
+	//   				$("header").css({height: "108px", transition:"2s"});
+	//   			}
+	// 		initCourse(tempId)
+	// 		console.log(tempId);
+	// 	})
 
 
 	$("header").css({height: "45vh", transition:"2s"});
@@ -177,4 +196,4 @@ function grabData(name){
 	name.splice(0,1);
 	return name;
 }
-//---------------------------------------Needfull Things---------------------------------------------------
+//--------------------------------end----Needfull Things---------------------------------------------------

@@ -12,7 +12,7 @@ const openHours = ["closed", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", 
 const todayOpen = openHours[weekday];
 	
 document.querySelector("main").innerHTML = `
-<h1 class="text-light mt-2 rounded text-center">CONTACT</h1>
+<h1 class="text-light rounded text-center">CONTACT</h1>
 
 <div class="container box">
 	<img src="img/j2sr_blue_small.png" width="20%" class="mx-auto d-block">
