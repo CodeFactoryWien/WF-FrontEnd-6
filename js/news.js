@@ -26,11 +26,11 @@ function renderNews(card_id) {
 		if(card_id == newsJson[i].newsId) {
 			document.getElementById(newsJson[i].newsId).classList.add("active");
 			$("html, body").animate({
-				scrollTop: $(".active").offset().top-150
+				scrollTop: $(".active").offset().top
 			}, 600);
+			setTimeout(function() { document.querySelector(".active").classList.remove("active"); }, 3000);
 		}
 	}
 	
-	setTimeout(function() { document.querySelector(".active").classList.remove("active"); }, 3000);
 }
 

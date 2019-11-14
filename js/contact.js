@@ -5,6 +5,12 @@ function initContact() {
 
 function renderContact() {
 	
+const today = new Date();
+const weekday = today.getDay();
+
+const openHours = ["closed", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 15:30", "closed"];
+const todayOpen = openHours[weekday];
+	
 document.querySelector("main").innerHTML = `
 <h1 class="text-light mt-2 rounded text-center">CONTACT</h1>
 
@@ -149,6 +155,7 @@ document.querySelector("main").innerHTML = `
 		</form>
 	</div>
 	<hr>
+	<iframe lass="shadow bg-white rounded" width="100%" height="315px" frameborder="0" src="https://www.youtube.com/embed/eHS0TGC_Izg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>`
 
 document.getElementById("btn_alert").addEventListener("click", showMessage);
@@ -187,9 +194,5 @@ function checkEmail(mail) {
 	} return (false)
 }
 
-const today = new Date();
-const weekday = today.getDay();
 
-let openHours = ["closed", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 15:30", "closed"];
-let todayOpen = openHours[weekday];
 
