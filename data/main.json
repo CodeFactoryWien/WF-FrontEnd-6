@@ -14,7 +14,7 @@ var menueJson = [
 	{
 	"menueId": 2,
 	"title": "Course",
-	"caption": "",
+	"caption": "Courses",
 	"sub": "Overview",
 	},
 	{
