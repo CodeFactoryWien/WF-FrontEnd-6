@@ -81,7 +81,7 @@ function courseFeed(){
 			    $('html, body').animate({
 		        scrollTop: $("#mainDiv").offset().top
 		    }, 500);
-
+			  console.log(tempId)
 			//scroll(0,0);
 			initCourse(tempId);
 
@@ -97,7 +97,6 @@ function courseCardBuilder(courseItem){
 				<img class="card-img-top" src="${courseItem.image}" alt="${courseItem.title}">
 				<div class="card-body">
 				    <h4 class="card-title">${courseItem.title}</h4>
-				    <p class="card-text">${courseItem.price}</p>
 				    <p class="btn btn-secondary  card-course-item" id="course${courseItem.id}">read more</p>
 				</div>
 			 </div>
