@@ -1,6 +1,17 @@
 //---------------------------------------Contact------Builder--------------------------------------------------
 
 function initCourse(id){
+	 if(id == 0){
+		renderCourses();
+	 }
+	 else{
+		renderCourse(id);
+	 }	
+}	
+
+//---------------------------------------End contact Builder---------------------------------------------------
+function renderCourse(id){
+	let currentCourse;
 	for(i=0; i<coursesJSON.length; i++){
 
 		if(id === parseInt(coursesJSON[i].id) && isNaN(id) == false){
@@ -9,13 +20,6 @@ function initCourse(id){
 		}
 
 	}
-	renderCourse();
-	renderUsedCourseTech()
-	addCourseBtnClick();
-}	
-
-//---------------------------------------End contact Builder---------------------------------------------------
-function renderCourse(){
 
 	document.querySelector("main").innerHTML = `
 	<div class="card my-4 shadow-lg rounded pt-3 border">
@@ -47,9 +51,7 @@ function renderCourse(){
 
 		<div id="collapseOne" class="collapse" id="collapseShow" aria-labelledby="headingOne" data-parent="#courseDetails">
 			<div class="card-body row pl-4">
-					
-				
-				
+						
 				<ul class="col-lg-6 col-10 card-text lead text-dark mx-auto list-group list-group-flush px-3">
 				<li class="list-group-item mx-auto w-100 text-center">
 					<div class="row">
@@ -145,10 +147,12 @@ function renderCourse(){
 		</div>
 	  </div>
 	</div>`
+	renderUsedCourseTech(currentCourse);
+	addCourseBtnClick(currentCourse);
 
 }
 
-function renderUsedCourseTech(){
+function renderUsedCourseTech(currentCourse){
 	
 	if(currentCourse.frontEndTech.length > 0){
 		
@@ -160,7 +164,6 @@ function renderUsedCourseTech(){
 		}
 		document.getElementById("frontEndTechList").style.display = "block";
 		document.getElementById("frontEndHeading").style.display = "block";
-
 	}
 	
 	if(currentCourse.backEndTech.length > 0){
@@ -176,7 +179,7 @@ function renderUsedCourseTech(){
 	}	
 }
 
-function addCourseBtnClick(){
+function addCourseBtnClick(currentCourse){
 	let eventBtns = document.querySelectorAll(".extendBtn");
 	eventBtns.forEach(function(elem){
 		elem.addEventListener("click", function(e){
@@ -192,13 +195,13 @@ function addCourseBtnClick(){
 			}, 600);
 			let courseVersion = e.target.dataset.coursedifficulty
 			$('#detailsHeading').html(`${courseVersion} COURSE`);
-			if(courseVersion == "Advanced"){
+			if(courseVersion == "ADVANCED"){
 				let priceInfo = document.getElementById("coursePriceInfo")
 				priceInfo.innerHTML = parseFloat(currentCourse.price)*2+"€"
 				let durationInfo = document.getElementById("courseDurationInfo")
 				durationInfo.innerHTML = parseFloat(currentCourse.duration)*2
 			}
-			if(courseVersion == "Basic"){
+			if(courseVersion == "BASIC"){
 				let priceInfo = document.getElementById("coursePriceInfo")
 				priceInfo.innerHTML = parseFloat(currentCourse.price)+"€"
 				let durationInfo = document.getElementById("courseDurationInfo")
@@ -216,6 +219,49 @@ function renderWeeks(duration){
 		return "Week"
 	}
 }
+
+function renderCourses(){
+	
+		$("main").append(`
+		
+			<div class="row">
+				<div class="col-11 mx-auto my-2 card shadow-lg" id="courses">
+					<h1 class=" text-light mt-2 rounded text-center"> COURSES </h1>
+					<div class="card-deck justify-content-center" id="courseDeck">
+					</div>
+				</div>
+			</div>
+		
+			`)
+		for(let course of courses){
+			courseBuilder(course);
+		};
+
+		let courseBtns = document.querySelectorAll("h4[id^=article]")
+		courseBtns.forEach(function(elem){
+			elem.addEventListener("click", function(e){
+				console.log("hhhh")
+				let nextCourseId = e.target.id;
+				console.log(nextCourseId.substring(7,8))
+				renderCourse(parseInt(nextCourseId.substring(7,8)));
+			})
+		})
+	
+	}
+	function courseBuilder(course){
+	
+		$("#courseDeck").append(`
+			<div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch text-center">
+				<div class="card shadow mb-4 shadow">
+					<img class="card-img-top shadow" src="${course.image}" alt="${course.name}">
+					<div class="card-body shadow">
+						<h4 class="card-title card-link" id="article${course.id}"><u>${course.name}</u></h4>
+					</div>
+				 </div>
+			</div>
+			`)	
+	}
+
 
 
 
