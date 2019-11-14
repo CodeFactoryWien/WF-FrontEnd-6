@@ -70,7 +70,7 @@ document.querySelector("main").innerHTML = `
 					<table class="table table-small table-sm">
 						<tr>
 							<th scope="col float-right m-2" style="text-align: right">Monday</th>
-<td scope="col float-center m-2" style="text-align: center">${openHours[1]}</td>
+							<td scope="col float-center m-2" style="text-align: center">${openHours[1]}</td>
 						</tr>
 
 						<tr>
