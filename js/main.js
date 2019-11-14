@@ -103,11 +103,13 @@ function navBuilder(){
 	  			}else{
 	  				$("header").css({height: "108px", transition:"2s"});
 	  			}	
+	  			    
+
 	  			$("main").empty();
 				window['init'+menuArr[0][tempId]]();
-				$("#titlemove").text(menuArr[0][tempId]);
+				// $("#titlemove").text(menuArr[0][tempId]);
 
-	   		}).scrollTop();
+	   		});
 	}
 	$("#nav1").empty().off('click').addClass("dropdown").append(`
 		 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -127,7 +129,7 @@ function navBuilder(){
 			tempId=parseInt(tempId.slice(6));
 			initCourse(tempId)
 			console.log(tempId);
-			$("#titlemove").text(menuArr[0][tempId]);
+			// $("#titlemove").text(menuArr[0][tempId]);
 			//alert(tempId);
 		})
 
