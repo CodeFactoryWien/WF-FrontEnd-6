@@ -1,12 +1,25 @@
 //-------------------------------------------Daten bereitstellen--------------------------------------------
-    var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],["","Overview", "", "", "", ""],["🏠", "Courses", "Team", "Contact us", "News","Test your knowledge"]];
-   	for (i = 0; i < menuArr[0].length; i++) {
+var menue = grabData("menue");
+var news = grabData("news");
+var course = grabData("course");
+
+
+var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],["","Overview", "", "", "", ""],["🏠", "Courses", "Team", "Contact us", "News","Test your knowledge"]];
+ //   	for (i = 0; i < menuArr[0].length; i++) {
+	// 	var script = document.createElement('script');
+	// 	script.onload = function () {};
+	// 	let fileName = menuArr[0][i].toLowerCase();
+	// 	script.src = "data/"+fileName+".json";
+	// 	script.type = "text/javascript";
+	// 	document.head.appendChild(script);
+	// };
+	for (let menueItem of menue){
 		var script = document.createElement('script');
 		script.onload = function () {};
-		let fileName = menuArr[0][i].toLowerCase();
+		let fileName = menueItem.title.toLowerCase();
 		script.src = "data/"+fileName+".json";
 		script.type = "text/javascript";
-		document.head.appendChild(script);
+		document.head.appendChild(script);	
 	};
 
 
@@ -51,41 +64,41 @@ function initHome(){
 
 		<footer class="p-4  border-top" >
 			<div class="container">
-<ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">
-        <a class="btn-floating btn-fb mx-1">
-          <i class="fa fa-facebook opacity"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-1">
-          <i class="fa fa-twitter opacity"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-gplus mx-1">
-          <i class="fa fa-google opacity"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
-          <i class="fa fa-linkedin opacity"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-dribbble mx-1">
-          <i class="fa fa-instagram opacity"> </i>
-        </a>
-      </li>
-    </ul>
+				<ul class="list-unstyled list-inline text-center">
+				      <li class="list-inline-item">
+				        <a class="btn-floating btn-fb mx-1">
+				          <i class="fa fa-facebook opacity"> </i>
+				        </a>
+				      </li>
+				      <li class="list-inline-item">
+				        <a class="btn-floating btn-tw mx-1">
+				          <i class="fa fa-twitter opacity"> </i>
+				        </a>
+				      </li>
+				      <li class="list-inline-item">
+				        <a class="btn-floating btn-gplus mx-1">
+				          <i class="fa fa-google opacity"> </i>
+				        </a>
+				      </li>
+				      <li class="list-inline-item">
+				        <a class="btn-floating btn-li mx-1">
+				          <i class="fa fa-linkedin opacity"> </i>
+				        </a>
+				      </li>
+				      <li class="list-inline-item">
+				        <a class="btn-floating btn-dribbble mx-1">
+				          <i class="fa fa-instagram opacity"> </i>
+				        </a>
+				      </li>
+				    </ul>
 
-  </div>
+					 </div>
   
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright: J<sub>2</sub>RS GmbH
-  </div>
-  <!-- Copyright -->
+				  <!-- Copyright -->
+				  <div class="footer-copyright text-center py-3">© 2019 Copyright: J<sub>2</sub>RS GmbH
+				  </div>
+				  <!-- Copyright -->
 
 			    </div>
 			</div>
@@ -135,7 +148,7 @@ function navBuilder(){
         	<div class="dropdown-divider"></div>
         </div>
 		`)
-	for (let item of courses){
+	for (let item of course){
 		$("#dd-course").append(`
 			<a class="dropdown-item" id="course${item.id}" >${item.name}</a>
 		`)
@@ -157,3 +170,11 @@ function navBuilder(){
 	$("header").css({height: "45vh", transition:"2s"});
 }
 //---------------------------------------End-Nav Builder---------------------------------------------------
+//---------------------------------------Needfull Things---------------------------------------------------
+function grabData(name){
+	var name = JSON.stringify(window[name+"Json"]);
+	name = JSON.parse(name);
+	name.splice(0,1);
+	return name;
+}
+//---------------------------------------Needfull Things---------------------------------------------------
