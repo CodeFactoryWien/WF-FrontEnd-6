@@ -157,12 +157,13 @@ function navBuilder(){
 				  				$("header").css({height: "45vh", transition:"2s"});
 				  			}else{
 				  				$("header").css({height: "108px", transition:"2s"});
-				  			}
+				  			};
 						initCourse(tempId)
 						console.log(tempId);
 					});
 		   		
-
+		}
+	}
 	$("header").css({height: "45vh", transition:"2s"});
 }
 //---------------------------------------End-Nav Builder---------------------------------------------------
