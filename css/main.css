@@ -23,3 +23,12 @@ h1, footer{
 h4{
 	color:#2C5C8C ;
 }
+@media (max-width: 480px) {
+    #navbarSupportedContent {
+		background-color:rgba(44, 92, 140,0.97);
+		padding: 5%;
+    }
+    header{
+    	height: 108px;
+    }
+}
