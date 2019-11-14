@@ -23,9 +23,12 @@ function renderNews(card_id) {
 	for(i=1; i<newsJson.length; i++){
 		if(card_id == newsJson[i].newsId) {
 			document.getElementById(newsJson[i].newsId).classList.add("active");
-			$("html, body").animate({
-				scrollTop: $(".active").offset().top
+			setTimeout(function(){
+				$("html, body").animate({
+				scrollTop: $(".active").offset().top-140
 			}, 600);
+			}, 300);
+			
 			setTimeout(function() { document.querySelector(".active").classList.remove("active"); }, 3000);
 		}
 	}
