@@ -119,7 +119,6 @@ function navBuilder(){
 	  				$("header").css({height: "108px", transition:"2s"});
 	  			}	
 	  			    
-
 	  			$("main").empty();
 				window['init'+menuArr[0][tempId]](0);
 
@@ -130,6 +129,8 @@ function navBuilder(){
           ${menuArr[0][1]}
         </a>
         <div id="dd-course" class="dropdown-menu" aria-labelledby="navbarDropdown">
+        	<a class="dropdown-item" id="course0">${menuArr[1][1]}</a>
+        	<div class="dropdown-divider"></div>
         </div>
 		`)
 	for (let item of courses){
