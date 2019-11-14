@@ -191,7 +191,7 @@ function addCourseBtnClick(currentCourse){
 				}, 50)
 			}, 50)
 			$('html, body').animate({
-                scrollTop: $(`#courseDetails`).offset().top
+                scrollTop: $(`#courseDetails`).offset().top-120
 			}, 600);
 			let courseVersion = e.target.dataset.coursedifficulty
 			$('#detailsHeading').html(`${courseVersion} COURSE`);
