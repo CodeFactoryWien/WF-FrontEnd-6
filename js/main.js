@@ -13,8 +13,16 @@ var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],["","Overvie
 		script.src = "data/"+fileName+".json";
 		script.type = "text/javascript";
 		document.head.appendChild(script);	
-	};
+	
+		var script = document.createElement('script');
+		script.onload = function () {};
+		let fileName2 = menueItem.title.toLowerCase();
+		script.src = "js/"+fileName2+".js";
+		script.type = "text/javascript";
+		document.head.appendChild(script);
 
+		console.log(script);
+	};
 
 initHome();
     window.addEventListener('scroll', function (e) {
@@ -111,13 +119,6 @@ function navBuilder(){
 					<a class="nav-link">${menueItem.caption}</a>
 		   		</li>
 		   		`);
-			
-				var script = document.createElement('script');
-					script.onload = function () {};
-					let fileName = menueItem.title.toLowerCase();
-					script.src = "js/"+fileName+".js";
-					script.type = "text/javascript";
-					document.head.appendChild(script);
 
 		   		$("#nav"+menueItem.menueId).on("click",function(e){
 					tempId=($(this).attr("id")).slice(3);
