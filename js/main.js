@@ -26,6 +26,7 @@ initHome();
 //-------------------------------------ende-Daten bereitstellen--------------------------------------------
 //-------------------------------------------Site Builder---------------------------------------------------
 function initHome(){
+
 	$("title").text("The New Codefactory");
 	$("body").empty();
 	$("body").append(`
@@ -92,6 +93,7 @@ function initHome(){
 	`);
 	home();
 	navBuilder();
+
 }
 //---------------------------------------End Site Builder---------------------------------------------------
 //-------------------------------------------Nav Builder----------------------------------------------------
@@ -142,6 +144,11 @@ function navBuilder(){
  			$("main").empty();
 			tempId=($(this).attr("id"));
 			tempId=parseInt(tempId.slice(6));
+				  			if(tempId<=1){
+	  				$("header").css({height: "45vh", transition:"2s"});
+	  			}else{
+	  				$("header").css({height: "108px", transition:"2s"});
+	  			}
 			initCourse(tempId)
 			console.log(tempId);
 		})
