@@ -12,10 +12,10 @@ function initCourse(id){
 //---------------------------------------End contact Builder---------------------------------------------------
 function renderCourse(id){
 	let currentCourse;
-	for(i=0; i<coursesJSON.length; i++){
+	for(i=0; i<coursesJson.length; i++){
 
-		if(id === parseInt(coursesJSON[i].id) && isNaN(id) == false){
-			currentCourse = coursesJSON[i];
+		if(id === parseInt(coursesJson[i].id) && isNaN(id) == false){
+			currentCourse = coursesJson[i];
 			break;
 		}
 
@@ -246,7 +246,6 @@ function renderCourses(){
 				renderCourse(parseInt(nextCourseId));
 			})
 		})
-	
 	}
 	function courseBuilder(course){
 	
