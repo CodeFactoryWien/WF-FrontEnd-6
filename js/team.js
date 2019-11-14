@@ -5,11 +5,11 @@ function initTeam() {
 
 function displayTeam() {
     document.querySelector("main").innerHTML += `<div>
-		<h1 class=" text-light mt-2 rounded text-center">TRAINER</h1>
+		<h1 class=" text-light rounded text-center">TRAINER</h1>
 		<div class="container marketing">
 		<div class="row ">
 			<div class=" col-lg-6 col-md-10">
-			<div class=" shadow card h-100">
+			<div class="t1 shadow card h-100">
 			<img src="img/team/theo.jpg" class="card-img-top" alt="theo">
 			<div class="card-body text-center">
 			<h3 class="card-title">Theodora Patkos</h3>
@@ -19,7 +19,7 @@ function displayTeam() {
 			</div>
 
 			<div class=" col-lg-6 col-md-10">
-			<div class=" shadow card h-100">
+			<div class="t1 shadow card h-100">
 			<img src="img/team/goran.jpg" class="card-img-top" alt="goran">
 			<div class="card-body text-center">
 			<h3 class="card-title ">Goran Stevic</h3>
@@ -29,12 +29,12 @@ function displayTeam() {
 			</div>
 		
 	</div>
-	<h1 class="text-light mt-2 rounded text-center">STUDENTS</h1>
+	<h1 class="text-light rounded text-center">STUDENTS</h1>
 	
 		
 	<div class="row">
 			<div class=" col-lg-3 col-md-5 ">
-			<div class=" shadow card h-100 ">
+			<div class="t1 shadow card h-100 ">
 			<img src="img/team/Jessica.jpg" class="card-img-top" alt="jessica">
 			<div class="card-body text-center">
 			<h3 class="card-title">Jessica Triltsch</h3>
@@ -43,7 +43,7 @@ function displayTeam() {
 			</div>
 			</div>
 			<div class="col-lg-3 col-md-5">
-			<div class="shadow card h-100">
+			<div class="t1 shadow card h-100">
 			<img src="img/team/Jasmine.jpg" class="card-img-top" alt="jasmine">
 			<div class="card-body text-center">
 			<h3 class="card-title">Jasmine Wagner</h3>
@@ -53,7 +53,7 @@ function displayTeam() {
 			</div>
 			
 			<div class="col-lg-3 col-md-5">
-			<div class="shadow card h-100">
+			<div class="t1 shadow card h-100">
 			<img src="img/team/Sebastian.jpg" class="card-img-top" alt="sebastian">
 			<div class="card-body text-center">
 			<h3 class="card-title">Sebastian Malcher</h3>
@@ -62,7 +62,7 @@ function displayTeam() {
 			</div>
 			</div>
 			<div class="col-lg-3 col-md-5">
-			<div class="shadow card h-100">
+			<div class="t1 shadow card h-100">
 			<img src="img/team/Roman.jpg" class="card-img-top" alt="roman">
 			<div class="card-body text-center">
 			<h3 class="card-title">Roman Springer</h3>
@@ -74,11 +74,11 @@ function displayTeam() {
 	</div>
 	
 </div>
-<h1 class=" text-light mt-2 rounded text-center">OUR STUDENTS SAY</h1>
+<h1 class=" text-light rounded text-center">OUR STUDENTS SAY</h1>
 
 		<div class="row mb-2">
 			<div class=" col-lg-6 col-md-10">
-			<div class="shadow card h-100">
+			<div class=" t1 shadow card h-100">
 			<img src="img/team/benjamin.jpg" class="card-img-top" alt="theo">
 			<div class="card-body text-center">
 			<h3 class="card-title">Benjamnin (21)</h3>
@@ -88,7 +88,7 @@ function displayTeam() {
 			</div>
 
 			<div class=" col-lg-6 col-md-10">
-			<div class="shadow card h-100">
+			<div class="t1 shadow card h-100">
 			<img src="img/team/judith.jpg" class="card-img-top" alt="theo">
 			<div class="card-body text-center">
 			<h3 class="card-title ">Judith (40)</h3>

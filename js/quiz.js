@@ -23,7 +23,7 @@ function introduction(){
 	mainClear();
 
 	let intro = document.createElement("h1");
-		intro.className = "introClass text-light mt-2 rounded text-center";
+		intro.className = "introClass text-light rounded text-center";
 		intro.textContent = quizData[0].IntroHead;
 		document.getElementById('mainDiv').appendChild(intro);
 

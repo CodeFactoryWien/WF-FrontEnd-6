@@ -4,6 +4,7 @@ header{
 	background-position: -50px -108px;
 	color: white !important;
 	font-size: 1.5em !important;
+
 }
 .logoj2sr{
 	width: 120px;
@@ -16,9 +17,17 @@ header{
 li a {
 	cursor: pointer;
 }
-h1, footer{
+h1{
 	background-color:#2C5C8C;
-	color: white; 
+	color: white;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+footer {
+	color: white;
+	margin-bottom: 1em;
+	margin-top: 1em;
+
 }
 h4{
 	color:#2C5C8C ;
