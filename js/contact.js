@@ -57,7 +57,7 @@ document.querySelector("main").innerHTML = `
 			<td>
 				<div class="accordion" id="accordionExample">
 					<button class="btn collapsed p-0 m-0" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
-						<strong class="lead"><strong>OPEN HOURS</strong><small class="open"> <b>Today</b> </small>
+						<strong class="lead"><strong>OPEN HOURS</strong><small class="open"> <b class="ml-2 mr-1">Today</b> </small>
 					</button>
 				</div>
 			</td>
