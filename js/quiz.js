@@ -25,7 +25,7 @@ function introduction(){
 	if(kursNr != ""){	
 		for (itemC of course){
 			if (itemC.id == kursNr){
-				kursNrText = itemC.title;
+				kursNrText = "TEST for: "+ itemC.title;
 			};
 		};
 	}else{kursNrText = ""};
@@ -295,7 +295,7 @@ function reView(){
 		// reViewBox.textContent += " | " + quizData[0].AuswertungSmiley[1] + smileCount; 
 		reViewBox.textContent += " | " + quizData[0].AuswertTime[0]+ " " + (langeFrageIndex+1) + " " + quizData[0].AuswertTime[1] + " (" + timeCalc(answerTimeList[langeFrageIndex]) + ")";
 		if (optChange>6){
-			reViewBox.textContent  += " | " +optChange + " " + quizData[0].AuswertChange[0] + " " + quizData[0].AuswertChange[1];
+			reViewBox.textContent  += " | " +optChange + " " + quizData[0].AuswertChange[0] ;
 		}
 		document.getElementById('mainDiv').appendChild(reViewBox);
 		
@@ -304,7 +304,7 @@ function reView(){
 		if (grade > border){
 			finBtn.textContent = quizData[0].FinBtn;
 			finBtn.addEventListener("click", function(){
-				window.open("addMember.html", "_self");
+				initCourse(kursNr); // Button - Changed from the priviors code
 			});
 		}else{
 			finBtn.textContent = quizData[0].FinBtnBack;

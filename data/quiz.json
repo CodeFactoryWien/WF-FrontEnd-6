@@ -90,7 +90,7 @@ var quizJsonEng = [{
 	"StartBtn" 		: "Click here to start the Test",
 	"NextBtn"		: ["If you have chosen, click for question #","evaluation"],
 	"KeineWahl" 	: "Please choose an option to continue",
-	"FinalMessage" 	: "Congratulations",
+	"FinalMessage" 	: "Congratulations, you should take the advanced course",
 	"FinalLoose"	: "you should take the basic courses",
 	"Auswertung"	: ["In "," minutes, you have answered "," questions of ", " correctly. "," From this results a grade of: "],
 	"AuswertungSmiley":[" Your grade has been halved because you have not answered the important question correctly. "," Your hunted smiley so far: ","-"],
@@ -98,8 +98,8 @@ var quizJsonEng = [{
 	"AuswertChange": ["times you changed your mind. "," You are indecisive. "],
 	"reViewNope"	: " Your answer was wrong. We will not tell you the correct one yet. ",
 	"reViewCorr"	: " You were right. ",
-	"FinBtn"		: "Welcome to our Team, please register now",
-	"FinBtnBack"	: "Try again"
+	"FinBtn"		: "back to Course, choose advanced",
+	"FinBtnBack"	: "back to Course, choose basic"
 
 },
 {
