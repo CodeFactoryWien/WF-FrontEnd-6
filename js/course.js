@@ -271,6 +271,7 @@ function quizBtn(){
 	document.querySelector(".quizBtn").addEventListener("click", function(e){
 		initQuiz(parseInt(e.target.dataset.courseid))
 	})
+	
 }
 
 
