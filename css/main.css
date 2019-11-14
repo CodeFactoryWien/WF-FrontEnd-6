@@ -36,6 +36,15 @@ footer {
 h4{
 	color:#2C5C8C ;
 }
+
+.btn:hover{
+	cursor: pointer!important;
+}
+
+a:hover{
+	cursor: pointer!important;
+}
+
 @media (max-width: 480px) {
     #navbarSupportedContent {
 		background-color:rgba(44, 92, 140,0.97);

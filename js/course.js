@@ -29,16 +29,16 @@ function renderCourse(id){
 			<h1 class="col text-light text-center rounded">${currentCourse.title}</h1>
 		</div>
 		<p class="col-12 col-md-9 card-text lead text-dark px-4 mx-auto" style="line-height: 1.5">${currentCourse.description}</p>
-		<p class="col-12 text-center lead font-weight-bold text-dark card-text">Choose your level</p>
-		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-3 row">
+		<p class="col-12 h-3 text-center lead font-weight-bold text-dark">Choose your level</p>
+		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 row">
 			<a class="btn btn-dark text-success btn-lg mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="BASIC">Basic</a>
 		</div>
-		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-3 row">
+		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 row">
 			<a class="btn text-danger btn-lg btn-dark mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="ADVANCED">Advanced</a>
 		</div>
-		<p class="col-12 text-center lead font-weight-bold text-dark card-text mt-3">Not sure about your level of expertise? Try our quiz!</p>
-		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-3 row">
-			<a class="btn text-light btn-lg btn-dark mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="ADVANCED">Advanced</a>
+		<p class="col-12 h-3 text-center lead font-weight-bold text-dark mt-3">Not sure about your level of expertise? Try our quiz!</p>
+		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 row">
+			<a class="btn text-light btn-lg btn-dark mx-auto p-2 px-4 w-100" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseID="${currentCourse.id}">Try it!</a>
 		</div>
 	</div>
 </div>
