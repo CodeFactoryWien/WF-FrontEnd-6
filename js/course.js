@@ -237,13 +237,13 @@ function renderCourses(){
 			courseBuilder(course);
 		};
 
-		let courseBtns = document.querySelectorAll("h4[id^=article]")
+		let courseBtns = document.querySelectorAll("u[id^=article]")
 		courseBtns.forEach(function(elem){
 			elem.addEventListener("click", function(e){
 				console.log("hhhh")
-				let nextCourseId = e.target.id;
-				console.log(nextCourseId.substring(7,8))
-				renderCourse(parseInt(nextCourseId.substring(7,8)));
+				let nextCourseId = e.target.id.substring(7,8)
+				console.log(nextCourseId)
+				renderCourse(parseInt(nextCourseId));
 			})
 		})
 	
@@ -255,7 +255,7 @@ function renderCourses(){
 				<div class="card shadow mb-4 shadow">
 					<img class="card-img-top shadow" src="${course.image}" alt="${course.name}">
 					<div class="card-body shadow">
-						<h4 class="card-title card-link" id="article${course.id}"><u>${course.name}</u></h4>
+						<h4 class="card-title card-link"><u id="article${course.id}">${course.name}</u></h4>
 					</div>
 				 </div>
 			</div>
