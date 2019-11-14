@@ -110,7 +110,7 @@ document.querySelector("main").innerHTML = `
 	<!-- MESSAGE -->
 	<hr>
 	<div>
-		<form onsubmit="return false">
+		<form onsubmit="return false" name="formular">
 			<h4>LEAVE A MESSAGE</h4>
 			<div class="form-group">
 				<label for="exampleInputName">Name*</label>
@@ -185,13 +185,7 @@ function showMessage(){
 		
 	if(input1.value != "" && input2.value != "" && input3.value != "" && checkEmail(input3.value) == true && input4.value != "" && input5.value != "") {
 		document.getElementById("alert").innerHTML = `<div class="alert alert-success m-3 text-center" role="alert">Your message has been sent successfully!</div>`;
-		
-		input1.value = "";
-		input2.value = "";
-		input3.value = "";
-		input4.value = "";
-		input5.value = "";
-		
+		document.formular.reset()
 		setTimeout(function() { document.getElementById("alert").innerHTML = ""; }, 5000);
 	}
 }
@@ -202,13 +196,9 @@ function checkEmail(mail) {
 	} return (false)
 }
 
-
 const today = new Date();
 const weekday = today.getDay();
 
 let openHours = ["closed", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 15:30", "closed"];
 let todayOpen = openHours[weekday];
-
-
-
 
