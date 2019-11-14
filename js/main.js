@@ -3,25 +3,22 @@ var menue = grabData("menue");
 var news = grabData("news");
 var course = grabData("course");
 
+for (let menueItem of menue){
+	var script = document.createElement('script');
+	script.onload = function () {};
+	let fileName = menueItem.title.toLowerCase();
+	script.src = "data/"+fileName+".json";
+	script.type = "text/javascript";
+	document.head.appendChild(script);	
 
-var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],["","Overview", "", "", "", ""],["🏠", "Courses", "Team", "Contact us", "News","Test your knowledge"]];
+	var script = document.createElement('script');
+	script.onload = function () {};
+	let fileName2 = menueItem.title.toLowerCase();
+	script.src = "js/"+fileName2+".js";
+	script.type = "text/javascript";
+	document.head.appendChild(script);
 
-	for (let menueItem of menue){
-		var script = document.createElement('script');
-		script.onload = function () {};
-		let fileName = menueItem.title.toLowerCase();
-		script.src = "data/"+fileName+".json";
-		script.type = "text/javascript";
-		document.head.appendChild(script);	
-	
-		var script = document.createElement('script');
-		script.onload = function () {};
-		let fileName2 = menueItem.title.toLowerCase();
-		script.src = "js/"+fileName2+".js";
-		script.type = "text/javascript";
-		document.head.appendChild(script);
-
-	};
+};
 
 initHome();
     window.addEventListener('scroll', function (e) {
@@ -153,13 +150,13 @@ function navBuilder(){
 			 			$("main").empty();
 						tempId=($(this).attr("id"));
 						tempId=parseInt(tempId.slice(6));
-							  			if(tempId<=1){
+						if(tempId<=1){
 				  				$("header").css({height: "45vh", transition:"2s"});
 				  			}else{
 				  				$("header").css({height: "108px", transition:"2s"});
 				  			};
-						initCourse(tempId)
-						console.log(tempId);
+				  		window['init'+menueItem.title](tempId);	
+						//initCourse(tempId)
 					});
 		   		
 		}

@@ -85,7 +85,7 @@ var quizJsonEng = [{
 				"Antwortmöglichkeit Vier"],
 	"FrageTitel": "QUESTION #",
 	"IntroHead" 	: "TEST YOUR KNOWLEDGE",
-	"IntroText" 	: "You can test your programming skills to have a easier decision with course is the best vor you ",
+	"IntroText" 	: "You can test your programming skills to have a easier decision which course is the best vor you ",
 	"Vorgaenger"	: "The last candidate reached ",
 	"StartBtn" 		: "Click here to start the Test",
 	"NextBtn"		: ["If you have chosen, click for question #","evaluation"],

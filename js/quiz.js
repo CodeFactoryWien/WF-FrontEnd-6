@@ -13,7 +13,8 @@ var border = 60; // grenze ab wann das quiz als geschafft gilt in %
 var smileQuest = 1; //Nummer of question who desides the value of the grade. question wrong and grade will be reduced.
 var optChange = 0;
 
-function initQuiz(){
+function initQuiz(gKursNr){
+	kursNr = gKursNr
 	introduction()
 	questionCounter = 0;
 	smileCount = 0;
@@ -21,6 +22,13 @@ function initQuiz(){
 
 function introduction(){
 	mainClear();
+	if(kursNr != ""){	
+		for (itemC of course){
+			if (itemC.id == kursNr){
+				kursNrText = itemC.title;
+			};
+		};
+	}else{kursNrText = ""};
 
 	let intro = document.createElement("h1");
 		intro.className = "introClass text-light rounded text-center";
@@ -29,7 +37,7 @@ function introduction(){
 
 	let introText = document.createElement("p");
 		introText.className = "introTet";
-		introText.textContent = quizData[0].IntroText +" | " /* + "Smiley Counter: "+ smileCount+ " | "  + quizData[0].Vorgaenger + grade + " %" */ ;
+		introText.textContent = quizData[0].IntroText +" | " + kursNrText /* + "Smiley Counter: "+ smileCount+ " | "  + quizData[0].Vorgaenger + grade + " %" */ ;
 		document.getElementById('mainDiv').appendChild(introText);
 	
 	let startBtn = document.createElement("button");
@@ -301,7 +309,7 @@ function reView(){
 		}else{
 			finBtn.textContent = quizData[0].FinBtnBack;
 			finBtn.addEventListener("click", function(){
-				initQuiz(); // Button - Changed from the priviors code
+				initCourse(kursNr); // Button - Changed from the priviors code
 			});			
 		}
 		document.getElementById('mainDiv').appendChild(finBtn);
@@ -332,7 +340,7 @@ function reView(){
 	}
 		finBtn2 = finBtn.cloneNode(true);
 		finBtn2.addEventListener("click", function(){
-				initQuiz(); // Button - Changed from the priviors code
+				initCourse(kursNr); // Button - Changed from the priviors code
 			});
 
 		document.getElementById('mainDiv').appendChild(finBtn2);
