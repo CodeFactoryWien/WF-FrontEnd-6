@@ -1,13 +1,3 @@
-//-------------------------------------------Daten bereitstellen--------------------------------------------
-	var news = JSON.stringify(newsJson);
-	news = JSON.parse(news);
-	news.splice(0,1);
-
-	var courses = JSON.stringify(coursesJSON);
-	courses = JSON.parse(courses);
-	courses.splice(0,1);
-
-
 //---------------------------------------Main Content Builder-----------------------------------------------
 function home(){
 	$("main").append(`
@@ -82,15 +72,15 @@ function courseFeed(){
 		<div class="card-deck" id="courseDeck">
 		</div>
 		`)
-	for(let course of courses){
-		courseCardBuilder(course);
+	for(let courseItem of course){
+		courseCardBuilder(courseItem);
 	};
 	$(".card-course-item").on("click",function(e){
 			tempId=($(this).attr("id"));
 			tempId=parseInt(tempId.slice(6));
 			    $('html, body').animate({
 		        scrollTop: $("#mainDiv").offset().top
-			    }, 500);
+		    }, 500);
 
 			//scroll(0,0);
 			initCourse(tempId);
@@ -99,16 +89,16 @@ function courseFeed(){
 	})
 
 }
-function courseCardBuilder(course){
+function courseCardBuilder(courseItem){
 
 	$("#courseDeck").append(`
-		<div id="article${course.id}" class="col-12 col-sm-6 ">
+		<div id="article${courseItem.id}" class="col-12 col-sm-6 ">
 			<div class="card shadow mb-4">
-				<img class="card-img-top" src="${course.image}" alt="${course.name}">
+				<img class="card-img-top" src="${courseItem.image}" alt="${courseItem.name}">
 				<div class="card-body">
-				    <h4 class="card-title">${course.name}</h4>
-				    <p class="card-text">${course.price}</p>
-				    <p class="btn btn-secondary  card-course-item" id="course${course.id}">read more</p>
+				    <h4 class="card-title">${courseItem.name}</h4>
+				    <p class="card-text">${courseItem.price}</p>
+				    <p class="btn btn-secondary  card-course-item" id="course${courseItem.id}">read more</p>
 				</div>
 			 </div>
 		</div>
@@ -116,3 +106,4 @@ function courseCardBuilder(course){
 
 
 }
+//---------------------------------------Needfull Things---------------------------------------------------
