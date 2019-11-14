@@ -110,7 +110,7 @@ document.querySelector("main").innerHTML = `
 	<!-- MESSAGE -->
 	<hr>
 	<div>
-		<form onsubmit="return false">
+		<form onsubmit="return false" name="formular">
 			<h4>LEAVE A MESSAGE</h4>
 			<div class="form-group">
 				<label for="exampleInputName">Name*</label>
@@ -149,15 +149,6 @@ document.querySelector("main").innerHTML = `
 		</form>
 	</div>
 	<hr>
-	
-	<!-- SOCIAL MEDIA ICONS -->
-	<div class="center">
-		<a href="https://www.facebook.com" class="fa fa-facebook opacity"></a>
-		<a href="https://twitter.com/" class="fa fa-twitter opacity"></a>
-		<a href="https://myaccount.google.com" class="fa fa-google opacity"></a>
-		<a href="https://at.linkedin.com/" class="fa fa-linkedin opacity"></a>
-		<a href="https://www.instagram.com/" class="fa fa-instagram opacity"></a>
-	</div>
 </div>`
 
 document.getElementById("btn_alert").addEventListener("click", showMessage);
@@ -165,31 +156,29 @@ document.querySelector(".open").innerHTML += todayOpen;
 }
 
 function showMessage(){
-	let input1 = document.getElementById("input1");
-	let input2 = document.getElementById("input2");
-	let input3 = document.getElementById("input3"); //CheckEmail???
-	let input4 = document.getElementById("input4");
-	let input5 = document.getElementById("input5");
+	
+	document.getElementById("alert").innerHTML = "";
+	
+	let input1 = document.getElementById("input1");	//First name
+	let input2 = document.getElementById("input2");	//Last name
+	let input3 = document.getElementById("input3"); //Email
+	let input4 = document.getElementById("input4");	//Phone
+	let input5 = document.getElementById("input5");	//Message
+	
+	
+	if(input1.value == "" || input2.value == "" || input3.value == "" || input4.value == "" || input5.value == "") {
+		document.getElementById("alert").innerHTML += `<div class="alert alert-danger m-3 text-center" role="alert">Please fill in all fields correctly!</div>`;
+	}
+
+	if(input3.value != "" && checkEmail(input3.value) == false) {
+		document.getElementById("alert").innerHTML += `<div class="alert alert-danger m-3 text-center" role="alert">Please enter a valid e-mail address!</div>`;
+	}
 		
-	if(input1.value != "" && input2.value != "" && checkEmail(input3.value) == true && input4.value != "" && input5.value != "") {
+	if(input1.value != "" && input2.value != "" && input3.value != "" && checkEmail(input3.value) == true && input4.value != "" && input5.value != "") {
 		document.getElementById("alert").innerHTML = `<div class="alert alert-success m-3 text-center" role="alert">Your message has been sent successfully!</div>`;
-		
-		input1.value = "";
-		input2.value = "";
-		input3.value = "";
-		input4.value = "";
-		input5.value = "";
-		
+		document.formular.reset()
 		setTimeout(function() { document.getElementById("alert").innerHTML = ""; }, 5000);
-	} else {
-		document.getElementById("alert").innerHTML = `<div class="alert alert-danger m-3 text-center" role="alert">Please fill in all fields correctly!</div>`;
 	}
-
-	if(checkEmail(input3.value) == false) {
-		document.getElementById("alert").innerHTML = `<div class="alert alert-danger m-3 text-center" role="alert">Please enter a valid e-mail address!</div>`;
-	}
-
-
 }
 
 function checkEmail(mail) {
@@ -198,13 +187,9 @@ function checkEmail(mail) {
 	} return (false)
 }
 
-
 const today = new Date();
 const weekday = today.getDay();
 
 let openHours = ["closed", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 15:30", "closed"];
 let todayOpen = openHours[weekday];
-
-
-
 

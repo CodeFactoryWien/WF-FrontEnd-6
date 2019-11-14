@@ -1,19 +1,5 @@
 
 
-.card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 6;
-  }
-  
-  @include media-breakpoint-only(xl) {
-    column-count: 6;
-  }
-  
-    @include media-breakpoint-only(lg) {
-    column-count: 6;
-  }
-
-}
 
 .card-columns { margin-top: 20px; }
 
@@ -22,3 +8,20 @@ img { height: auto; }
 .active { box-shadow: 0 0 0 0.3rem rgba(0,123,255,.4) !Important; }
 
 .x:first-child { display: none; }
+
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+/*
+sm
+md
+lg
+xl
+*/
