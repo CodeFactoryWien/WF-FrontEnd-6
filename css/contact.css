@@ -1,11 +1,12 @@
 
 button:focus { box-shadow: none !Important; }
 
-iframe { margin: 20px 0; }
+iframe { margin: 40px 0; }
 
-i { font-size: 1.2em; color: #2c5c8c; margin: 0 10px; }
+i { color: #2c5c8c; margin: 0 10px; }
 
-.table-small { width: auto; }
+
+.table-small { width: 45%; }
 
 /*
 tr { line-height: 2em; }
@@ -24,6 +25,7 @@ tr { line-height: 2em; }
 
 /*-- FONT AWESOME --*/
 .fa {
+	font-size: 1.2em;
 	margin: 10px 5px;
 	padding: 15px;
 	width: 50px;

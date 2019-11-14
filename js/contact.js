@@ -51,7 +51,7 @@ document.querySelector("main").innerHTML = `
 			<td>
 				<div class="accordion" id="accordionExample">
 					<button class="btn collapsed p-0 m-0" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
-						<strong class="lead"><strong>OPEN HOURS</strong><br>
+						<strong class="lead"><strong>OPEN HOURS</strong><small class="open"> <b>Today</b> </small>
 					</button>
 				</div>
 			</td>
@@ -64,37 +64,37 @@ document.querySelector("main").innerHTML = `
 					<table class="table table-small table-sm">
 						<tr>
 							<th scope="col float-right m-2" style="text-align: right">Monday</th>
-							<td scope="col float-center m-2" style="text-align: center">09:00 - 17:00</td>
+<td scope="col float-center m-2" style="text-align: center">${openHours[1]}</td>
 						</tr>
 
 						<tr>
 							<th scope="col" style="text-align: right">Tuesday</th>
-							<td scope="col" style="text-align: center">09:00 - 17:00</td>
+							<td scope="col" style="text-align: center">${openHours[2]}</td>
 						</tr>
 
 						<tr>
 							<th scope="col" style="text-align: right">Wednesday</th>
-							<td scope="col" style="text-align: center">09:00 - 17:00</td>
+							<td scope="col" style="text-align: center">${openHours[3]}</td>
 						</tr>
 
 						<tr>
 							<th scope="col" style="text-align: right">Thursday</th>
-							<td scope="col" style="text-align: center">09:00 - 17:00</td>
+							<td scope="col" style="text-align: center">${openHours[4]}</td>
 						</tr>
 
 						<tr>
 							<th scope="col" style="text-align: right">Friday</th>
-							<td scope="col" style="text-align: center">09:00 - 15:30</td>
+							<td scope="col" style="text-align: center">${openHours[5]}</td>
 						</tr>
 
 						<tr>
 							<th scope="col" style="text-align: right">Saturday</th>
-							<td scope="col" style="text-align: center">closed</td>
+							<td scope="col" style="text-align: center">${openHours[6]}</td>
 						</tr>
 
 						<tr>
 							<th scope="col" style="text-align: right">Sunday</th>
-							<td scope="col" style="text-align: center">closed</td>
+							<td scope="col" style="text-align: center">${openHours[0]}</td>
 						</tr>
 					</table>			
 				</div>
@@ -127,7 +127,7 @@ document.querySelector("main").innerHTML = `
 
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address*</label>
-				<input id="input3" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+				<input id="input3" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 			</div>
 
 			<div class="form-group">
@@ -161,6 +161,7 @@ document.querySelector("main").innerHTML = `
 </div>`
 
 document.getElementById("btn_alert").addEventListener("click", showMessage);
+document.querySelector(".open").innerHTML += todayOpen;
 }
 
 function showMessage(){
@@ -187,6 +188,8 @@ function showMessage(){
 	if(checkEmail(input3.value) == false) {
 		document.getElementById("alert").innerHTML = `<div class="alert alert-danger m-3 text-center" role="alert">Please enter a valid e-mail address!</div>`;
 	}
+
+
 }
 
 function checkEmail(mail) {
@@ -194,4 +197,14 @@ function checkEmail(mail) {
 		return (true) 
 	} return (false)
 }
+
+
+const today = new Date();
+const weekday = today.getDay();
+
+let openHours = ["closed", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 17:00", "09:00 - 15:30", "closed"];
+let todayOpen = openHours[weekday];
+
+
+
 
