@@ -12,10 +12,10 @@ function initCourse(id){
 //---------------------------------------End contact Builder---------------------------------------------------
 function renderCourse(id){
 	let currentCourse;
-	for(i=0; i<coursesJson.length; i++){
+	for(i=0; i<courseJson.length; i++){
 
-		if(id === parseInt(coursesJson[i].id) && isNaN(id) == false){
-			currentCourse = coursesJson[i];
+		if(id === parseInt(courseJson[i].id) && isNaN(id) == false){
+			currentCourse = courseJson[i];
 			break;
 		}
 
