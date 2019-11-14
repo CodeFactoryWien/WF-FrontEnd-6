@@ -8,7 +8,7 @@ function displayTeam() {
 		<h1 class=" text-light rounded text-center">TRAINER</h1>
 		<div class="container marketing">
 		<div class="row ">
-			<div class=" col-lg-6 col-md-10">
+			<div class=" col-lg-6 col-md-12">
 			<div class="t1 shadow card h-100">
 			<img src="img/team/theo.jpg" class="card-img-top" alt="theo">
 			<div class="card-body text-center">
@@ -18,7 +18,7 @@ function displayTeam() {
 			</div>
 			</div>
 
-			<div class=" col-lg-6 col-md-10">
+			<div class=" col-lg-6 col-md-12">
 			<div class="t1 shadow card h-100">
 			<img src="img/team/goran.jpg" class="card-img-top" alt="goran">
 			<div class="card-body text-center">
@@ -33,7 +33,7 @@ function displayTeam() {
 	
 		
 	<div class="row">
-			<div class=" col-lg-3 col-md-5 ">
+			<div class=" col-lg-3 col-md-6 ">
 			<div class="t1 shadow card h-100 ">
 			<img src="img/team/Jessica.jpg" class="card-img-top" alt="jessica">
 			<div class="card-body text-center">
@@ -42,7 +42,7 @@ function displayTeam() {
 			</div>
 			</div>
 			</div>
-			<div class="col-lg-3 col-md-5">
+			<div class="col-lg-3 col-md-6">
 			<div class="t1 shadow card h-100">
 			<img src="img/team/Jasmine.jpg" class="card-img-top" alt="jasmine">
 			<div class="card-body text-center">
@@ -52,7 +52,7 @@ function displayTeam() {
 			</div>
 			</div>
 			
-			<div class="col-lg-3 col-md-5">
+			<div class="col-lg-3 col-md-6">
 			<div class="t1 shadow card h-100">
 			<img src="img/team/Sebastian.jpg" class="card-img-top" alt="sebastian">
 			<div class="card-body text-center">
@@ -61,7 +61,7 @@ function displayTeam() {
 			</div>
 			</div>
 			</div>
-			<div class="col-lg-3 col-md-5">
+			<div class="col-lg-3 col-md-6">
 			<div class="t1 shadow card h-100">
 			<img src="img/team/Roman.jpg" class="card-img-top" alt="roman">
 			<div class="card-body text-center">
@@ -77,7 +77,7 @@ function displayTeam() {
 <h1 class=" text-light rounded text-center">OUR STUDENTS SAY</h1>
 
 		<div class="row mb-2">
-			<div class=" col-lg-6 col-md-10">
+			<div class=" col-lg-6 col-md-12">
 			<div class=" t1 shadow card h-100">
 			<img src="img/team/benjamin.jpg" class="card-img-top" alt="theo">
 			<div class="card-body text-center">
@@ -87,7 +87,7 @@ function displayTeam() {
 			</div>
 			</div>
 
-			<div class=" col-lg-6 col-md-10">
+			<div class=" col-lg-6 col-md-12">
 			<div class="t1 shadow card h-100">
 			<img src="img/team/judith.jpg" class="card-img-top" alt="theo">
 			<div class="card-body text-center">
