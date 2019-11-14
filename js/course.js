@@ -38,7 +38,7 @@ function renderCourse(id){
 		</div>
 		<p class="col-12 h-3 text-center lead font-weight-bold text-dark mt-3">Not sure about your level of expertise? Try our quiz!</p>
 		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 row">
-			<a class="btn text-light btn-lg btn-dark mx-auto p-2 px-4 w-100" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseID="${currentCourse.id}">Try it!</a>
+			<a class="btn text-light btn-lg btn-dark mx-auto p-2 px-4 w-100 quizBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseID="${currentCourse.id}">Try it!</a>
 		</div>
 	</div>
 </div>
@@ -153,6 +153,7 @@ function renderCourse(id){
 	</div>`
 	renderUsedCourseTech(currentCourse);
 	addCourseBtnClick(currentCourse);
+	quizBtn()
 
 }
 
@@ -250,20 +251,27 @@ function renderCourses(){
 				renderCourse(parseInt(nextCourseId));
 			})
 		})
-	}
-	function courseBuilder(course){
+}
 	
-		$("#courseDeck").append(`
-			<div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch text-center">
-				<div class="card shadow mb-4 shadow">
-					<img class="card-img-top shadow" src="${course.image}" alt="${course.title}">
-					<div class="card-body shadow">
-						<h4 class="card-title card-link"><u id="article${course.id}">${course.title}</u></h4>
-					</div>
-				 </div>
+function courseBuilder(course){
+	
+	$("#courseDeck").append(`
+		<div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-stretch text-center">
+			<div class="card shadow mb-4 shadow">
+				<img class="card-img-top shadow" src="${course.image}" alt="${course.title}">
+				<div class="card-body shadow">
+					<h4 class="card-title card-link"><u id="article${course.id}">${course.title}</u></h4>
+				</div>
 			</div>
-			`)	
-	}
+		</div>
+	`)	
+}
+
+function quizBtn(){
+	document.querySelector(".quizBtn").addEventListener("click", function(e){
+		initQuiz(parseInt(e.target.dataset.courseid))
+	})
+}
 
 
 
