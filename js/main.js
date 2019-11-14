@@ -21,7 +21,6 @@ var menuArr = [["Home", "Course", "Team", "Contact", "News","Quiz"],["","Overvie
 		script.type = "text/javascript";
 		document.head.appendChild(script);
 
-		console.log(script);
 	};
 
 initHome();
@@ -109,7 +108,6 @@ function initHome(){
 	`);
 	home();
 	navBuilder();
-
 }
 //---------------------------------------End Site Builder---------------------------------------------------
 //-------------------------------------------Nav Builder----------------------------------------------------
@@ -133,59 +131,37 @@ function navBuilder(){
 					window['init'+menueItem.title](0);
 
 		   		});
-		}else{
+		}else{ // wenn untermenüs angefordert werden. aus dem menuetitel generiert zugriff auf die jsondatei und die elemente mit title gefunden
 			$("nav ul").append(`
-		   		<li class="nav-item" id="nav${menueItem.menueId}">
+		   		<li class="nav-item dropdown" id="nav${menueItem.menueId}">
 
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          ${menueItem.title}
+			          ${menueItem.caption}
 			        </a>
-			        <div id="nav${menueItem.menueId}" class="dropdown-menu" aria-labelledby="navbarDropdown">
+			        <div id="ddm${menueItem.menueId}" class="dropdown-menu" aria-labelledby="navbarDropdown">
 			        	<a class="dropdown-item" id="course0">${menueItem.sub}</a>
 			        	<div class="dropdown-divider"></div>
 			        </div>
 		   		</li>
 					`);
 					for (let item of course){
-						$(".dropdown-menu").append(`
-							<a class="dropdown-item" id="course${item.id}" >${item.name}</a>
+						$("#ddm"+menueItem.menueId).append(`
+							<a class="dropdown-item" id="course${item.id}">${item.title}</a>
 						`);
-						
 					}
+					$("#ddm"+menueItem.menueId+" .dropdown-item").on("click", function(e){
+			 			$("main").empty();
+						tempId=($(this).attr("id"));
+						tempId=parseInt(tempId.slice(6));
+							  			if(tempId<=1){
+				  				$("header").css({height: "45vh", transition:"2s"});
+				  			}else{
+				  				$("header").css({height: "108px", transition:"2s"});
+				  			}
+						initCourse(tempId)
+						console.log(tempId);
+					});
 		   		
-//-------------------------------
-
-		}
-	}
-	// ----- 
-
-	// $("#nav2").empty().off('click').addClass("dropdown").append(`
-	// 	 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
- //          ${menuArr[0][1]}
- //        </a>
- //        <div id="dd-course" class="dropdown-menu" aria-labelledby="navbarDropdown">
- //        	<a class="dropdown-item" id="course0">${menuArr[1][1]}</a>
- //        	<div class="dropdown-divider"></div>
- //        </div>
-	// 	`)
-	// for (let item of course){
-	// 	$("#dd-course").append(`
-	// 		<a class="dropdown-item" id="course${item.id}" >${item.name}</a>
-	// 	`)
-	// }
-	// $("#dd-course .dropdown-item").on("click", function(e){
- // 			$("main").empty();
-	// 		tempId=($(this).attr("id"));
-	// 		tempId=parseInt(tempId.slice(6));
-	// 			  			if(tempId<=1){
-	//   				$("header").css({height: "45vh", transition:"2s"});
-	//   			}else{
-	//   				$("header").css({height: "108px", transition:"2s"});
-	//   			}
-	// 		initCourse(tempId)
-	// 		console.log(tempId);
-	// 	})
-
 
 	$("header").css({height: "45vh", transition:"2s"});
 }
