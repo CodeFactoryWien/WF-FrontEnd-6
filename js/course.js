@@ -31,10 +31,10 @@ function renderCourse(id){
 		<p class="col-12 col-md-9 card-text lead text-dark px-4 mx-auto" style="line-height: 1.5">${currentCourse.description}</p>
 		<p class="col-12 text-center h3 lead text-dark card-text">Choose your level</p>
 		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-5 row">
-			<a class="btn btn-dark text-success btn-lg active mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="BASIC">Basic</a>
+			<a class="btn btn-dark text-success btn-lg mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="BASIC">Basic</a>
 		</div>
 		<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-5 row">
-			<a class="btn text-danger btn-lg btn-dark active mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="ADVANCED">Advanced</a>
+			<a class="btn text-danger btn-lg btn-dark mx-auto p-2 px-4 w-100 extendBtn" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em" data-courseDifficulty="ADVANCED">Advanced</a>
 		</div>
 	</div>
 </div>
@@ -140,7 +140,7 @@ function renderCourse(id){
 
 			<div class="col-12 row">
 				<div class="col-10 col-md-7 col-lg-4 mx-auto my-2 mt-lg-5 row">
-					<a class="btn btn-lg btn-dark active mx-auto p-2 px-4 w-100" href="${currentCourse.registrationLink}" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em">Book Now</a>
+					<a class="btn btn-lg btn-dark mx-auto p-2 px-4 w-100" href="${currentCourse.registrationLink}" role="button" aria-pressed="true" style="letter-spacing: 2px; font-size: 1.5em">Book Now</a>
 				</div>
 			</div>
 		 </div>
