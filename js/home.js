@@ -78,8 +78,8 @@ function courseFeed(){
 	$(".card-course-item").on("click",function(e){
 			tempId=($(this).attr("id"));
 			tempId=parseInt(tempId.slice(6));
-			    $('html, body').animate({
-		        scrollTop: $("#mainDiv").offset().top
+			 $('html, body').animate({
+		        scrollTop: $("#mainDiv").offset().top-100
 		    }, 500);
 			  console.log(tempId)
 			//scroll(0,0);
