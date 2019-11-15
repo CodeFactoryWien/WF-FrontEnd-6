@@ -249,6 +249,9 @@ function renderCourses(){
 				let nextCourseId = e.target.id.substring(7,8)
 				console.log(nextCourseId)
 				renderCourse(parseInt(nextCourseId));
+				$('html, body').animate({
+					scrollTop: $(`body`).offset().top-120
+				}, 1000);
 			})
 		})
 }
@@ -271,7 +274,7 @@ function quizBtn(){
 	document.querySelector(".quizBtn").addEventListener("click", function(e){
 		initQuiz(parseInt(e.target.dataset.courseid))
 	})
-	
+
 }
 
 
